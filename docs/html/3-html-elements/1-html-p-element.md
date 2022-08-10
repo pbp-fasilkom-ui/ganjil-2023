@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-sidebar_label: <p> - Paragraph
+sidebar_position: 1
+sidebar_label: <p> Paragraph
 ---
 
 # &lt;p&gt; - Paragraph
