@@ -3,9 +3,11 @@ import Editor from "@monaco-editor/react"
 
 export interface CodeEditorProps {
     defaultValue: string
+    editorHeight?: string
+    outputHeight?: string
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue, editorHeight = "40vh", outputHeight = "30vh" }) => {
     const [value, setValue] = React.useState(defaultValue)
     const outputRef = React.useRef(null)
 
@@ -19,7 +21,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
         <div style={{ marginBottom: "1rem" }}>
             <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
                 <Editor
-                    height="40vh"
+                    height={editorHeight}
                     defaultLanguage="html"
                     defaultValue={defaultValue}
                     theme="vs-dark"
@@ -32,8 +34,8 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
                     }}
                 />
             </div>
-            <h4 style={{marginTop: "1rem"}}>Output:</h4>
-            <iframe style={{width: "100%", minHeight: "30vh", backgroundColor: "white", borderRadius: "0.5rem"}} ref={outputRef} />
+            <h4 style={{ marginTop: "1rem" }}>Output:</h4>
+            <iframe style={{ width: "100%", minHeight: outputHeight, backgroundColor: "white", borderRadius: "0.5rem" }} ref={outputRef} />
         </div>
     )
 }
