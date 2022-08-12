@@ -1,30 +1,17 @@
 ---
 sidebar_position: 2
-sidebar_label: "Struktur Dasar Dokumen HTML"
+sidebar_label: "Struktur Dasar Dokumen"
 ---
+
+import CodeEditor from "@site/src/components/CodeEditor"
+import { baseExample } from "@site/src/data/examples"
 
 # HTML - Struktur Dasar
 
 Sebuah dokumen HTML tersusun atas elemen-elemen yang didefinisikan menggunakan sebuah **HTML tag**. HTML tag pada umumnya selalu ditulis secara berpasangan, dimana definisi sebuah elemen dimulai dengan *opening tag* yang memiliki nama dari elemen yang diapit dengan simbol panah (contoh: `<html>`) dan ditutup dengan *closing tag* yang berbentuk mirip dengan opening tag, namun diawali dengan `</` (contoh: `</html>`), dengan konten yang ingin kalian tampilkan pada website berada di antara kedua tag tersebut.
 
-Berikut ini adalah contoh sebuah page HTML sederhana:
-
-```html
-<!-- Anda bisa menggunakan ini sebagai dasar untuk bereksperimen/tugas -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        Hello, World!
-    </body>
-</html>
-```
-
+### Contoh Halaman HTML Sederhana
+<CodeEditor defaultValue={baseExample} />
 
 Setiap elemen pada dokumen tersebut mewakili sebuah elemen pada halaman website yang akan di-render. Berikut ini adalah kegunaan dari setiap elemen yang ada pada dokumen tersebut:
 - `<html>`: Elemen utama dari dokumen yang menjadi *parent* dari semua elemen lain-nya

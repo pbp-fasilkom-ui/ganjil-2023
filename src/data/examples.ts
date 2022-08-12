@@ -1,3 +1,17 @@
+export const baseExample = `<!-- Anda bisa menggunakan ini sebagai dasar untuk bereksperimen/tugas -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
+</html>`
+
 export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <head>
@@ -76,6 +90,108 @@ export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
             <img src="https://cs.ui.ac.id/wp-content/uploads/2021/06/logo-fasilkom-white-2.png" />
         </a>
+    </body>
+</html>
+`
+
+export const imgExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h4>Ini adalah gambar</h4>
+        <img src="https://via.placeholder.com/300x150" />
+
+        <h4>Gambar ini tidak bisa di load</h4>
+        <img src="lasflkasjf" alt="Unloadable Image" />
+
+        <h4>Gambar ini memiliki custom width 250px (Original Size: 300x150)</h4>
+        <img src="https://via.placeholder.com/300x150" width="250px" />
+    </body>
+</html>
+`
+
+export const buttonExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h4>Button dengan sendirinya tidak melakukan apapun</h4>
+        <button>Does Nothing</button>
+
+        <h4>Button ini adalah link</h4>
+        <a href="https://google.com/" target="_blank">
+            <button>Open Google</button>
+        </a>
+
+        <h4>Button ini akan menampilkan sebuah popup menggunakan JavaScript</h4>
+        <button id="click-me">Click Me</button>
+        <script>
+            // Line ini akan assign sebuah arrow function ke event onclick pada button.
+            // () => alert("Clicked!") memiliki arti "buatlah fungsi
+            // tak bernama yang membuat popup dengan tulisan 'Clicked!'
+            document.getElementById("click-me").onclick = () => alert("Clicked!")
+        </script>
+    </body>
+</html>
+`
+
+export const containerExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Dengan div kita dapat mengaplikasikan sebuah CSS style ke sekelompok elemen -->
+        <div style="background-color: lightgrey;">
+            <h3>Artikel 1</h3>
+            <p>Lorem ipsum yadda yadda this is the first article</p>
+        </div>
+        <!-- Kita juga dapat mengaplikasikan style positioning ke kelompok elemen ini untuk memisahkannya dari container sebelumnya -->
+        <div style="background-color: grey; margin-top: 2rem">
+            <h3>Artikel 2</h3>
+            <p>Lorem ipsum yadda yadda this is the second article</p>
+        </div>
+    </body>
+</html>
+`
+
+export const containerExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h4>Kelompok ini akan tersusun secara vertikal</h4>
+        <div>
+            <div style="background-color: lightgrey;">
+                <h3>Artikel 1</h3>
+                <p>Lorem ipsum yadda yadda this is the first article</p>
+            </div>
+            <div style="background-color: grey; margin-top: 2rem">
+                <h3>Artikel 2</h3>
+                <p>Lorem ipsum yadda yadda this is the second article</p>
+            </div>
+        </div>
+
+        <!-- Berbagai macam recipe untuk layouting page akan dibahas di bagian Common Recipes -->
+        <h4>Kelompok ini akan tersusun secara horizontal</h4>
+        <div style="display: flex; align-items: center;">
+            <div style="background-color: lightgrey;">
+                <h3>Artikel 1</h3>
+                <p>Lorem ipsum yadda yadda this is the first article</p>
+            </div>
+            <div style="background-color: grey; margin-left: 1rem;">
+                <h3>Artikel 2</h3>
+                <p>Lorem ipsum yadda yadda this is the second article</p>
+            </div>
+        </div>
     </body>
 </html>
 `

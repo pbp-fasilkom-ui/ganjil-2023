@@ -1,0 +1,32 @@
+---
+sidebar_position: 5
+sidebar_label: <button> Button
+title: <button> Button
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import CodeEditor from "@site/src/components/CodeEditor"
+import { buttonExample } from "@site/src/data/examples"
+
+# &lt;button&gt; - Button
+Elemen button adalah elemen yang dapat digunakan untuk menampilkan sebuah tombol di halaman web. Elemen button dapat didefinisikan dengan `<button></button>`.
+
+### Fungsi Button
+- Sebagai link apabila di-wrap dengan `<a></a>`
+- Sebagai trigger untuk submisi form apabila di-wrap dengan `<form></form>`
+- Sebagai trigger untuk kode JavaScript apabila digunakan bersama dengan `<script></script>`
+
+### Daftar Atribut Button
+- `id`: ID dari button yang digunakan sebagai *identifier* unik.
+- `name`: Nama dari button (digunakan saat button berada didalam `<form></form>`).
+- `value`: Value yang di-represent oleh button (digunakan saat button berada didalam `<form></form>`).
+- `disabled`: Variabel yang menentukan apakah button dimatikan. Dapat bernilai `true` atau `false`.
+- `onclick`: Kode JavaScript yang akan di-eksekusi ketika button diklik.
+
+### Contoh Penggunaan
+<Tabs>
+    <TabItem value="example1" label="Button" default>
+        <CodeEditor defaultValue={buttonExample} />
+    </TabItem>
+</Tabs> 

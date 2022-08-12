@@ -1,0 +1,32 @@
+---
+sidebar_position: 6
+sidebar_label: <div> Container
+title: <div> Container
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import CodeEditor from "@site/src/components/CodeEditor"
+import { containerExample1, containerExample2 } from "@site/src/data/examples"
+
+# &lt;div&gt; - Container
+Elemen div atau container yang dapat digunakan untuk menggabungkan beberapa elemen kedalam satu elemen gabungan.
+
+Elemen ini **sangat berguna** dalam mengimplementasikan layout yang lebih kompleks karena memungkinkan kita mengaplikasikan CSS style untuk positioning dan penampilan ke masing-masing kelompok komponen.
+
+Tanpa menggunakan container, akan **sangat susah** atau bahkan **tidak mungkin** untuk mengatur posisi sekelompok elemen pada halaman dengan rapih, sehingga elemen ini adalah elemen yang fundamental. 
+
+### Beberapa Fungsi Container
+- Mempermudah management elemen pada sebuah page yang kompleks.
+- Memungkinkan kita membagi sebuah halaman menjadi beberapa bagian terpisah.
+- Bersama dengan CSS dapat digunakan untuk memposisikan sekelompok elemen relatif terhadap halaman (misal ke bagian tengah halaman).
+
+### Contoh Penggunaan
+<Tabs>
+    <TabItem value="example1" label="Mengelompokkan Elemen" default>
+        <CodeEditor defaultValue={containerExample1} />
+    </TabItem>
+    <TabItem value="example2" label="Memposisikan Sekelompok Elemen">
+        <CodeEditor defaultValue={containerExample2} />
+    </TabItem>
+</Tabs> 
