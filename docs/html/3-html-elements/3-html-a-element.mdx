@@ -2,6 +2,8 @@
 sidebar_position: 3
 sidebar_label: <a> Anchor
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 import CodeEditor from "@site/src/components/CodeEditor"
 import { anchorExample1, anchorExample2 } from "@site/src/data/examples"
@@ -18,12 +20,13 @@ Link yang ingin dituju oleh elemen anchor dapat didefinisikan dengan memberikan 
   - `_blank`: Buka link pada halaman baru.
   - `_parent`: Buka link pada halaman *parent* (khusus untuk iframe).
 
-
-### Example 1: Text content as link
-Berikut ini adalah contoh penggunaan anchor tag pada sebuah halaman HTML:
-<CodeEditor defaultValue={anchorExample1} />
-
-### Example 2: Non-text content as link
-Selain untuk teks, anchor tag juga dapat digunakan untuk mengubah elemen non-teks seperti gambar dan button menjadi link:
-<CodeEditor defaultValue={anchorExample2} />
+### Contoh Penggunaan
+<Tabs>
+    <TabItem value="example1" label="Elemen teks sebagai link" default>
+        <CodeEditor defaultValue={anchorExample1} />
+    </TabItem>
+    <TabItem value="example2" label="Elemen non-teks sebagai link">
+        <CodeEditor defaultValue={anchorExample2} />
+    </TabItem>
+</Tabs>
  

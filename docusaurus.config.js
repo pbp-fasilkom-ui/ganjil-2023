@@ -59,6 +59,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+      },
       navbar: {
         title: 'PBP0',
         logo: {
@@ -90,8 +93,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHub - Contribute Here',
+                href: 'https://github.com/Meta502/pbp0',
               },
             ],
           },

@@ -47,9 +47,11 @@ export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
             <a href="#">Halo, saya adalah link</a>
         </p>
         <p>
+            <!-- Target _parent digunakan karena kode output di render dalam sebuah iframe -->
             <a href="https://google.com/" target="_parent">Link ini akan membuka Google di page yang sama</a>
         </p>
         <p>
+            <!-- Target _blank akan membuka link pada page baru -->
             <a href="https://scele.cs.ui.ac.id/" target="_blank">Link ini akan membuka SCELE di tab baru</a>
         </p>
         <p>

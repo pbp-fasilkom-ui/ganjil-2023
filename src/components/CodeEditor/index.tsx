@@ -17,7 +17,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
 
     return (
         <div style={{ marginBottom: "1rem" }}>
-            <h4>Code:</h4>
             <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
                 <Editor
                     height="40vh"
