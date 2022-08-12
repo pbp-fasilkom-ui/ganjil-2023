@@ -2,22 +2,15 @@ export const baseExample = `<!-- Anda bisa menggunakan ini sebagai dasar untuk b
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
     <body>
-        Hello, World!
+        <p>Hello, World!</p>
     </body>
 </html>`
 
 export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <h2>Berikut ini adalah contoh paragraf</h2>
         <p>
@@ -35,10 +28,6 @@ export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA 
 
 export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <h1>Saya adalah h1</h1>
         <h2>Saya adalah h2</h2>
@@ -52,10 +41,6 @@ export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 
 export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <p>
             <a href="#">Halo, saya adalah link</a>
@@ -77,10 +62,6 @@ export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 
 export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <p>Clickable Button</p>
         <a href="https://google.com" target="_blank">
@@ -96,10 +77,6 @@ export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 
 export const imgExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <h4>Ini adalah gambar</h4>
         <img src="https://via.placeholder.com/300x150" />
@@ -115,10 +92,6 @@ export const imgExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUT
 
 export const buttonExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <h4>Button dengan sendirinya tidak melakukan apapun</h4>
         <button>Does Nothing</button>
@@ -142,10 +115,6 @@ export const buttonExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI 
 
 export const containerExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <!-- Dengan div kita dapat mengaplikasikan sebuah CSS style ke sekelompok elemen -->
         <div style="background-color: lightgrey;">
@@ -163,10 +132,6 @@ export const containerExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA
 
 export const containerExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
     <body>
         <h4>Kelompok ini akan tersusun secara vertikal</h4>
         <div>
