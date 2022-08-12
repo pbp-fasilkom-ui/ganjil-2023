@@ -1,11 +1,8 @@
 export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
     </head>
     <body>
         <h2>Berikut ini adalah contoh paragraf</h2>
@@ -23,13 +20,10 @@ export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA 
 `
 
 export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
     </head>
     <body>
         <h1>Saya adalah h1</h1>
@@ -40,5 +34,46 @@ export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
         <h6>Saya adalah h6</h6>
     </body>
 </html>
+`
 
+export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>
+            <a href="#">Halo, saya adalah link</a>
+        </p>
+        <p>
+            <a href="https://google.com/" target="_parent">Link ini akan membuka Google di page yang sama</a>
+        </p>
+        <p>
+            <a href="https://scele.cs.ui.ac.id/" target="_blank">Link ini akan membuka SCELE di tab baru</a>
+        </p>
+        <p>
+            Link dapat juga diselipkan diantara teks <a href="#">seperti ini</a>
+        </p>
+    </body>
+</html>
+`
+
+export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Clickable Button</p>
+        <a href="https://google.com" target="_blank">
+            <button>Button juga dapat dirubah menjadi link</button>
+        </a>
+        <p>Clickable Image</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <img src="https://cs.ui.ac.id/wp-content/uploads/2021/06/logo-fasilkom-white-2.png" />
+        </a>
+    </body>
+</html>
 `

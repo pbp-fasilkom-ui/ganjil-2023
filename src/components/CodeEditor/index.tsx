@@ -16,7 +16,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
     }, [value])
 
     return (
-        <div>
+        <div style={{ marginBottom: "1rem" }}>
             <h4>Code:</h4>
             <div style={{ borderRadius: "0.5rem", overflow: "hidden" }}>
                 <Editor
@@ -25,6 +25,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
                     defaultValue={defaultValue}
                     theme="vs-dark"
                     onChange={(value) => setValue(value)}
+                    loading="Loading Code Editor..."
                     options={{
                         minimap: {
                             enabled: false
@@ -33,7 +34,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ defaultValue }) => {
                 />
             </div>
             <h4 style={{marginTop: "1rem"}}>Output:</h4>
-            <iframe style={{width: "100%", minHeight: "40vh", backgroundColor: "white", borderRadius: "0.5rem"}} ref={outputRef} />
+            <iframe style={{width: "100%", minHeight: "30vh", backgroundColor: "white", borderRadius: "0.5rem"}} ref={outputRef} />
         </div>
     )
 }

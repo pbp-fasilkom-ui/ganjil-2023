@@ -10,7 +10,7 @@ Sebuah dokumen HTML tersusun atas elemen-elemen yang didefinisikan menggunakan s
 Berikut ini adalah contoh sebuah page HTML sederhana:
 
 ```html
-<!-- You can also use this as a base later on in tutorials/assignments -->
+<!-- Anda bisa menggunakan ini sebagai dasar untuk bereksperimen/tugas -->
 <!DOCTYPE html>
 <html>
     <head>
