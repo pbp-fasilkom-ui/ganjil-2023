@@ -10,7 +10,7 @@ const Playground: React.FC = () => {
       <div style={{ padding: "3rem" }}>
         <h1 style={{ fontSize: "2.5rem" }}>HTML Playground</h1>
         <p>Feel free to experiment using this code editor.</p>
-        <CodeEditor editorHeight='40vh' outputHeight='50vh' defaultValue={baseExample} />
+        <CodeEditor editorHeight='40vh' outputHeight='100vh' defaultValue={baseExample} />
       </div>
     </Layout>
   )
