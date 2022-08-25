@@ -386,7 +386,7 @@ Contoh:
 
 Setelah kamu melakukan prosedur di atas, aplikasi Django barumu siap untuk di-_deploy_ ke Heroku. Apabila kamu membuka tab GitHub Actions di repositorimu, terlihat bahwa _workflow_ sudah berjalan namun berstatus gagal karena terdapat _error_ yang mengatakan bahwa terdapat beberapa parameter dalam proses _deployment_ yang tidak ditemukan. Hal itu terjadi karena kamu belum mengonfigurasi parameter yang dibutuhkan oleh _workflow_. Sekarang, kamu akan melakukan konfigurasi terhadap parameter tersebut.
 
-> Pastikan sebelumnya kamu telah memiliki akun Heroku dan telah membuat sebuah aplikasi Heroku.<br>
+> Pastikan sebelumnya kamu telah memiliki akun Heroku dan telah membuat sebuah aplikasi Heroku.<br />
 > Silakan baca README pada _root_ repositori PBP untuk melihat cara membuat akun dan aplikasi Heroku.
 
 1. Salin API Key dari akun kamu. API Key dapat kamu temukan di `Account Settings -> API Key`. Simpanlah API Key beserta informasi tentang aplikasi Heroku kamu pada file teks dengan format berikut:
