@@ -7,9 +7,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'PBP0',
-  tagline: 'Pebepeh',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  tagline: 'An Intro to Web Development and Mobile Development',
+  url: 'https://pbp-fasilkom-ui.github.io',
+  baseUrl: process.env.NODE_ENV.toLowerCase() == "production" ? '/pbp0' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -19,7 +19,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Meta502', // Usually your GitHub org/user name.
+  organizationName: 'pbp-fasilkom-ui', // Usually your GitHub org/user name.
   projectName: 'pbp0', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: 'GitHub - Contribute Here',
-                href: 'https://github.com/Meta502/pbp0',
+                href: 'https://github.com/pbp-fasilkom-ui/pbp0',
               },
             ],
           },
