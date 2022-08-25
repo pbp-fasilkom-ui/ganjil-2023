@@ -9,7 +9,7 @@ export const baseExample = `<!-- Anda bisa menggunakan ini sebagai dasar untuk b
     </body>
 </html>`
 
-export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const paragraphExample = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <h2>Berikut ini adalah contoh paragraf</h2>
@@ -26,7 +26,7 @@ export const paragraphExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA 
 </html>
 `
 
-export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const headingExample = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <h1>Saya adalah h1</h1>
@@ -39,7 +39,7 @@ export const headingExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 </html>
 `
 
-export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const anchorExample1 = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <p>
@@ -60,12 +60,12 @@ export const anchorExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 </html>
 `
 
-export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const anchorExample2 = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <p>Clickable Button</p>
         <a href="https://google.com" target="_blank">
-            <button>Button juga dapat dirubah menjadi link</button>
+            <button>Button juga dapat diubah menjadi link</button>
         </a>
         <p>Clickable Image</p>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
@@ -75,7 +75,7 @@ export const anchorExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI
 </html>
 `
 
-export const imgExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const imgExample = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <h4>Ini adalah gambar</h4>
@@ -90,7 +90,7 @@ export const imgExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUT
 </html>
 `
 
-export const buttonExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+export const buttonExample = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
 <html>
     <body>
         <h4>Button dengan sendirinya tidak melakukan apapun</h4>
@@ -113,7 +113,7 @@ export const buttonExample = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI 
 </html>
 `
 
-export const containerExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
+export const containerExample1 = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
 <html>
     <body>
         <!-- Dengan div kita dapat mengaplikasikan sebuah CSS style ke sekelompok elemen -->
@@ -130,7 +130,7 @@ export const containerExample1 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA
 </html>
 `
 
-export const containerExample2 = `<!-- RUBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
+export const containerExample2 = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUPUT -->
 <html>
     <body>
         <h4>Kelompok ini akan tersusun secara vertikal</h4>

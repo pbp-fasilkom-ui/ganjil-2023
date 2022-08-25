@@ -10,7 +10,7 @@ title: Important Notes
 ## Google is your Friend.
 **Ingat bahwa dalam mempelajari *platform-based development*, sumber dari internet adalah teman kalian!**
 
-Jangan ragu untuk mencari resource ataupun artikel di Google (ataupun StackOverflow hehe) mengenai masalah yang kalian alami selama mempelajari materi ini, karena dengan waktu kalian dapat menggabungkan ilmu-ilmu yang didapatkan untuk menyelesaikan masalah baru yang belum pernah kalian temukan sebelumnya.
+Jangan ragu untuk mencari resource ataupun artikel di Google (ataupun StackOverflow hehe) mengenai masalah yang kalian alami selama mempelajari materi ini, karena dengan begitu kalian dapat menggabungkan ilmu-ilmu yang didapatkan untuk menyelesaikan masalah baru yang belum pernah kalian temukan sebelumnya.
 
 ## Experiment, Experiment, Experiment.
 **Experimentation is the way to learn and consolidate.**

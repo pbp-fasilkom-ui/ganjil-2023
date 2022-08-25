@@ -9,5 +9,5 @@ Hypertext Markup Language atau sering disingkat sebagai HTML adalah sebuah marku
 
 Bagian tutorial ini akan membahas tentang dasar-dasar dari HTML, mulai dari elemen minimum yang dibutuhkan untuk membuat sebuah page HTML sampai dengan elemen-elemen dasar yang akan sering digunakan selama perjalanan kalian di PBP.
 
-**Apabila kalian sudah familiar dengan HTML, kalian dapat langsung melanjutkan tutorial ini ke bagian selanjutnya.**
+**Jika kalian sudah familiar dengan HTML, kalian dapat langsung melanjutkan tutorial ini ke bagian selanjutnya.**
 
