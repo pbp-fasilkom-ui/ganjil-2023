@@ -14,7 +14,17 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  plugins: [],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'assignments',
+        path: 'assignments',
+        routeBasePath: 'assignments',
+        sidebarPath: require.resolve('./sidebars.js')
+      }
+    ]
+  ],
 
 
   // GitHub pages deployment config.
@@ -73,7 +83,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guide',
+          },
+          {
+            to: "/assignments/tutorial/tutorial-0",
+            position: 'left',
+            label: 'Assignments'
           },
           {
             to: 'playground',
