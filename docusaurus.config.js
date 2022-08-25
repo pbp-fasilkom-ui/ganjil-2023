@@ -9,7 +9,7 @@ const config = {
   title: 'PBP0',
   tagline: 'An Intro to Web Development and Mobile Development',
   url: 'https://pbp-fasilkom-ui.github.io',
-  baseUrl: process.env.NODE_ENV?.toLowerCase() == "production" ? '/pbp0/' : '/',
+  baseUrl: process.env.NODE_ENV?.toLowerCase() == "production" ? '/ganjil-2023/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -30,7 +30,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'pbp-fasilkom-ui', // Usually your GitHub org/user name.
-  projectName: 'pbp0', // Usually your repo name.
+  projectName: 'ganjil-2023', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
