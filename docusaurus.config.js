@@ -9,7 +9,7 @@ const config = {
   title: 'PBP0',
   tagline: 'An Intro to Web Development and Mobile Development',
   url: 'https://pbp-fasilkom-ui.github.io',
-  baseUrl: process.env.NODE_ENV.toLowerCase() == "production" ? '/pbp0' : '/',
+  baseUrl: process.env.NODE_ENV?.toLowerCase() == "production" ? '/pbp0/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
