@@ -1,3 +1,8 @@
+---
+sidebar_label: Lab 0
+sidebar_position: 1
+---
+
 # Lab 0: Basic git (on GitHub) dan Deployment Aplikasi Django
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022
