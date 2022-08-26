@@ -8,7 +8,7 @@
     "description": "The label for category HTML in sidebar defaultSidebar"
   },
   "sidebar.defaultSidebar.category.Elemen HTML": {
-    "message": "Elemen HTML",
-    "description": "The label for category Elemen HTML in sidebar defaultSidebar"
+    "message": "HTML Element",
+    "description": "The label for category HTML Element in sidebar defaultSidebar"
   }
 }
