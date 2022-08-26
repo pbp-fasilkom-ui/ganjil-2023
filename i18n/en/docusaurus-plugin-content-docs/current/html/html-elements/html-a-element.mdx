@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+sidebar_label: <a> Anchor
+title: <a> Anchor
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import CodeEditor from "@site/src/components/CodeEditor"
+import { anchorExample1, anchorExample2 } from "@site/src/data/examples"
+
+# &lt;a&gt; - Anchor
+Elemen anchor adalah elemen yang dapat digunakan untuk membuat link ke situs lain di internet (termasuk situs yang sama dengan page yang sedang dikunjungi). Elemen anchor dapat didefinisikan dengan menggunakan tag `<a></a>`
+
+Link yang ingin dituju oleh elemen anchor dapat didefinisikan dengan memberikan atribut href ke anchor tag yang nilainya berupa string URL.
+
+#### Daftar Atribut Anchor Tag:
+- `href`: URL yang ingin dituju
+- `target`: Target window dimana halaman akan dibuka. Dapat memiliki nilai sebagai berikut:
+  - `_self`: Buka link pada halaman yang sama (default).
+  - `_blank`: Buka link pada halaman baru.
+  - `_parent`: Buka link pada halaman *parent* (khusus untuk iframe).
+
+### Contoh Penggunaan
+<Tabs>
+    <TabItem value="example1" label="Elemen teks sebagai link" default>
+        <CodeEditor defaultValue={anchorExample1} />
+    </TabItem>
+    <TabItem value="example2" label="Elemen non-teks sebagai link">
+        <CodeEditor defaultValue={anchorExample2} />
+    </TabItem>
+</Tabs>
+ 
