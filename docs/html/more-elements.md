@@ -9,7 +9,7 @@ Seluruh elemen yang sudah dibahas sebelumnya adalah beberapa elemen yang paling 
 
 Namun terdapat lebih banyak lagi elemen lainnya yang mungkin dibutuhkan pada kasus-kasus tertentu (secara keseluruhan terdapat sekitar 132 jenis tag pada standar HTML5), sehingga tidak semuanya dapat dibahas pada tutorial ini.
 
-Apabila kalian mengalami kebingungan atau ingin tahu lebih banyak elemen yang tersedia pada HTML5, maka kalian dapat menggunakan resource-resource dibawah ini untuk mempelajarinya.
+Apabila kalian mengalami kebingungan atau ingin tahu lebih banyak terkait elemen yang tersedia pada HTML5, maka kalian dapat menggunakan resource-resource dibawah ini untuk mempelajarinya.
 
 ### Recommended Resources
 - W3Schools (recommended for beginners) [Link](https://www.w3schools.com/html/)
