@@ -38,6 +38,11 @@ const config = {
   i18n: {
     defaultLocale: 'id',
     locales: ['id', 'en'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-AU',
+      }
+    }
   },
 
   presets: [
