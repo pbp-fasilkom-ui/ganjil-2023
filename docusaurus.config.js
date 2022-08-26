@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pemrograman Berbasis Platform',
-  tagline: 'Ganjil 2022/2023',
+  title: 'Platform-based Programming',
+  tagline: 'Odd Semester 2022/2023',
   url: 'https://pbp-fasilkom-ui.github.io',
   baseUrl: process.env.NODE_ENV?.toLowerCase() == "production" ? '/ganjil-2023/' : '/',
   onBrokenLinks: 'throw',
