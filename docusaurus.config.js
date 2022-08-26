@@ -90,6 +90,10 @@ const config = {
             to: 'playground',
             label: 'Playground',
             position: 'right',
+          },
+          {
+            type: "localeDropdown",
+            position: "left"
           }
         ],
       },
