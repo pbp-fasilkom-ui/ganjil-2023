@@ -20,7 +20,8 @@ find a programming tutorial that tell you to do certain things without providing
 any explanation. You may also find a code snippet that might be relevant to a
 problem you are having but turns out the code is outdated and does not match
 with the latest standard in the industry. Or even worse, the code that you find
-might cause a security issue in your app or the server that runs your app.
+might cause a security issue in your app or in the infrastructure that runs your
+app.
 
 Some tips if you are getting stuck:
 
