@@ -5,12 +5,15 @@ title: More Elements
 ---
 
 # More Elements
-Seluruh elemen yang sudah dibahas sebelumnya adalah beberapa elemen yang paling sering digunakan ketika membuat sebuah website.
 
-Namun terdapat lebih banyak lagi elemen lainnya yang mungkin dibutuhkan pada kasus-kasus tertentu (secara keseluruhan terdapat sekitar 132 jenis tag pada standar HTML5), sehingga tidak semuanya dapat dibahas pada tutorial ini.
+In this document, we only mentioned the subset of HTML elements that frequently
+used when building a website. There are many more HTML elements out there that
+we have not covered in the tutorial. If we are referring to the HTML5 standard,
+there are at least **132** HTML elements, and not all of them might be applicable
+in this course.
 
-Apabila kalian mengalami kebingungan atau ingin tahu lebih banyak terkait elemen yang tersedia pada HTML5, maka kalian dapat menggunakan resource-resource dibawah ini untuk mempelajarinya.
+If you want to learn more about the elements available in the HTML5 standard,
+you can read the following resources:
 
-### Recommended Resources
-- W3Schools (recommended for beginners) [Link](https://www.w3schools.com/html/)
-- MDN Web Docs (more in-depth, but complicated) [Link](https://developer.mozilla.org/en-US/docs/Web/HTML)
+-  [W3Schools (recommended for beginners)](https://www.w3schools.com/html/)
+-  [Mozilla Developer Network Web Docs (more in-depth)](https://developer.mozilla.org/en-US/docs/Web/HTML)
