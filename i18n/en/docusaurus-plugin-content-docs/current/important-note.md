@@ -53,10 +53,11 @@ plagiarism since it will be noted in your academic record if proven to be true.
 
 ## Learn by Doing
 
-Programming is a skill that must be **exercised**. You cannot learn programming
-by looking at code examples or reading the textbook. To gain proficiency, you
-have to practice. Do some experiments with the code and build stuff. By doing so,
-you will get experience and reinforce your understanding to the learning materials.
+Programming is a skill that must be **exercised**. You will not get complete
+understanding when learning programming only by looking at code examples or
+reading the textbook. To gain proficiency, you have to practice. Do some
+experiments with the code and build stuff. By doing so, you will get experience
+and reinforce your understanding to the learning materials.
 
 [StackOverflow]: https://stackoverflow.com
 [DuckDuckGo]: https://duckduckgo.com
