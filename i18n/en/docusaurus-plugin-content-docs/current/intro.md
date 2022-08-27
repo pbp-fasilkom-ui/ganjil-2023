@@ -14,5 +14,4 @@ free to discuss with your classmates and the teaching team (i.e lecturers and
 teaching assistants). We have a proverb in Indonesian, _"Malu bertanya, sesat di jalan"_,
 that roughly translates to English as _"You will get lost if you are afraid to ask for directions"_.
 We are a social creature, so it is inevitable to have some form of interaction
-and communication with other human being. In short, do not afraid to speak out
-your mind!
+and communication with other human being. Do not afraid to speak out your mind!

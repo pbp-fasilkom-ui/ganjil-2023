@@ -18,9 +18,9 @@ Since almost everyone can make and publish content on the Internet, the quality
 of the content may be questionable and not uniformly good. For example, you may
 find a programming tutorial that tell you to do certain things without providing
 any explanation. You may also find a code snippet that might be relevant to a
-problem you currently facing but turns out the code is outdated and does not
-match with the latest standard in the industry. Or even worse, the code that you
-find might cause a security issue in your app or the server that runs your app.
+problem you are having but turns out the code is outdated and does not match
+with the latest standard in the industry. Or even worse, the code that you find
+might cause a security issue in your app or the server that runs your app.
 
 Some tips if you are getting stuck:
 
@@ -50,11 +50,11 @@ on your own understanding. Taking other people's work/solution is considered
 as stealing (and plagiarism). Surely you do not want to get accused for
 plagiarism since it will be noted in your academic record if proven to be true.
 
-## Learning by Doing
+## Learn by Doing
 
-Programming is a skill that must be practiced. You cannot learn programming by
-looking at code examples or reading the textbook. To gain proficiency, you have
-to practice. Do some experiments with the code and build stuff. By doing so,
+Programming is a skill that must be **exercised**. You cannot learn programming
+by looking at code examples or reading the textbook. To gain proficiency, you
+have to practice. Do some experiments with the code and build stuff. By doing so,
 you will get experience and reinforce your understanding to the learning materials.
 
 [StackOverflow]: https://stackoverflow.com
