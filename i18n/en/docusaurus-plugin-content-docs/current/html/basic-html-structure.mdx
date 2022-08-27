@@ -1,0 +1,36 @@
+---
+sidebar_position: 2
+sidebar_label: "Basic HTML Document Structure"
+---
+
+import CodeEditor from "@site/src/components/CodeEditor";
+import { baseExample } from "@site/src/data/examples";
+
+# Basic HTML Document Structure
+
+An HTML document comprises of elements that defined using HTML tags. An HTML
+tag usually written in pair. It means that the element has an **opening tag**
+and a **closing tag** with the same name as the element. They are written by
+enclosing the name of the element between `<` and `>` symbols. The opening tag
+encloses the name with `<` and `>`, while the closing tag has an extra `/`
+symbol appended after the `<` symbol. Between the opening tag and closing tag,
+you can provide a value that either a plain string or another HTML element.
+
+## Basic HTML Example
+
+<CodeEditor defaultValue={baseExample} />
+
+Each HTML element in the HTML document represents an element in Web page that
+rendered in the Web browser. For example, the following is the list of HTML
+elements used in the example along with the explanation of their purpose:
+
+-  `<html>`: The main element (or, the root element) of the document where
+   every other elements must become the child of this element. If you are
+   taking or have taken data structures course, `<html>` serves as the root
+   of a HTML document that follows a tree data structure.
+-  `<head>`: Contains the information/metadata about the website.
+   -  `<meta>`: Defines the additional information to be parsed by the Web
+      browser when rendering the page.
+   - `<title>`: Defines the title of the website.
+-  `<body>`: Contains the elements that represent the contents and layout
+   of the website.

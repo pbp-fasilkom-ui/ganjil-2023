@@ -1,0 +1,58 @@
+---
+sidebar_position: 3
+sidebar_label: "HTML Attributes"
+---
+
+import CodeEditor from "@site/src/components/CodeEditor"
+
+# HTML Attributes
+
+By default, an HTML element has a default behaviour that will be determine how
+the tag should be processed by the Web browser. The behaviour can be customised
+by embedding additional information called **HTML attributes** into the element.
+
+## Structure of an HTML Tag with Attributes
+
+An HTML element may have more than one attributes. Each attribute can be
+separated using **spaces** or **new lines**. The following subsections will
+explain the difference and provide an example.
+
+### Example 1: Using Spaces
+
+We can create an anchor tag (`<a>`) to define a link to another location in a
+Web page or a Web site. The following code snippet is an example of an `<a>`
+tag:
+
+```html
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">A cool video on YouTube</a>
+```
+
+The `<a>` tag above encloses a text value (i.e `A cool video on YouTube`) and
+has two attributes separated with empty spaces. The explanation for each
+attribute is as follows:
+
+-  `href` attribute that is used to point to a location. In the example above,
+   `href` contains a URL to a video on YouTube.
+-  `target` attribute determines how the link will be opened by the Web browser.
+   `_blank` value will make the Web browser to open the link in a new window.
+
+### Example 2: Using New Lines
+
+If you are going to define quite amount of attributes in an HTML element or
+some of the attributes will have lengthy values, then you can separate the
+attributes using new lines (`\n`) as depicted in the following code snippet:
+
+```html
+<a
+  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  target="_blank"
+  style="color: red;"
+>
+  A cool video on YouTube
+</a>
+```
+
+The `<a>` tag above has three attributes: `href`, `target`, and `style`. The
+`href` and `target` attributes behave as described in previous subsection. The
+`style` attribute defines how the element will be styled and displayed by the
+Web browser using in-line cascading style sheet (CSS).

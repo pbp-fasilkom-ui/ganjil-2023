@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.defaultSidebar.category.HTML": {
+    "message": "HTML",
+    "description": "The label for category HTML in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Elemen HTML": {
+    "message": "Elemen HTML",
+    "description": "The label for category Elemen HTML in sidebar defaultSidebar"
+  }
+}
