@@ -3,276 +3,239 @@ sidebar_label: Lab 0
 sidebar_position: 1
 ---
 
-# Lab 0: Git Basics and Django Application Deployment
+# Lab 0: Basic git (on GitHub) and Deployment Django Application
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+Platform Based Programming (CSGE602022) - Organized by Faculty of Computer Science University of Indonesia, Odd Term 2022/2023
 
 ---
 
-## Tujuan Pembelajaran
+## Learning Goals
 
-Setelah menyelesaikan tutorial ini, mahasiswa diharapkan untuk dapat:
+After completed this tutorial, student expected to:
+- Understand basic git commands that you need to know to work on application project.
+- Uses basic git commands you need to know to work on app projects.
+- Create a local and online git repository (GitHub).
+- Added a remote between the local git repository and its counterpart on GitHub.
+- Understand branching in git and able to do merge requests/pull requests.
+- Deploy Django applications on Heroku.
 
-- Mengerti perintah-perintah dasar git yang perlu diketahui untuk mengerjakan proyek aplikasi.
-- Menggunakan perintah-perintah dasar git yang perlu diketahui untuk mengerjakan proyek aplikasi.
-- Membuat repositori git lokal dan daring (GitHub).
-- Menambahkan remote antara repositori git lokal dan pasangannya pada GitHub.
-- Memahami branching pada git dan mampu melakukan _merge request/pull request_.
-- Melakukan deployment aplikasi Django pada Heroku.
+## Git Introductions
 
-## Pengenalan git
+In your life as a Computer Science or Information Systems student, you may have used a version control system. One that you might use is the undo feature in the text editor. When you make a mistake, you can revert to a time before you made a mistake with the undo feature. Another example is when you work on a document collaboratively on Google Drive, you can see every change made in the document and you can revert to the previous changes.
 
-Dalam kehidupanmu sebagai mahasiswa Ilmu Komputer atau Sistem Informasi, kamu mungkin pernah menggunakan sebuah **version control system**. Salah satu yang mungkin kamu pakai adalah fitur _undo_ pada _text editor_. Ketika kamu membuat suatu kesalahan, kamu bisa mengembalikan kesalahanmu ke waktu sebelum kamu membuat kesalahan dengan fitur _undo_ tersebut. Contoh lain adalah ketika kamu mengerjakan dokumen secara kolaboratif di Google Drive, kamu bisa melihat setiap perubahan yang dilakukan di dokumen tersebut dan kamu bisa mengembalikan ke perubahan sebelumnya.
+In this tutorial, you will learn about a version control system called git. git is a version control system commonly used to track changes to software artifacts such as source code, HTML pages, or stylesheets. Git will record the changes that occur to your work as a series of commits from the oldest commits to the newest commits. The change is like a graph where nodes represent a commit and directed edge(s) represent the relationship between a commit and the previous commit.
 
-Pada tutorial ini, kamu akan mempelajari sebuah _version control system_ bernama [git](https://git-scm.com). git merupakan sebuah _version control system_ yang umum digunakan untuk melacak perubahan pada artefak-artefak perangkat lunak seperti _source code_, halaman HTML, atau _stylesheet_. git akan mencatat perubahan-perubahan yang terjadi pada pekerjaan kamu sebagai sebuah rangkaian _**commit**_ yang tersusun dari _commit_ terlama hingga _commit_ yang terbaru. Perubahan tersebut seperti sebuah _graph_ yang mana node merepresentasikan sebuah _commit_ dan _directed edge(s)_ merepresentasikan hubungan antara suatu _commit_ dengan _commit_ sebelumnya.
+Don't worry if you are still unfamiliar with terminology such as: node, edge, and graph. You will learn more about it in the Data Structures & Algorithms and Discrete Mathematics courses.
 
-> Jangan khawatir jika kamu masih asing dengan terminologi seperti: _node_, _edge_, dan
-> _graph_. Kamu akan mempelajarinya lebih lanjut dalam mata kuliah Struktur Data &
-> Algoritma dan Matematika Diskret.
+Before doing this tutorial and the following tutorials, make sure you have installed the following tools:
+- Git
+- Python (latest version)
+- EditorConfig
+- A good text editor or IDE, such as Vim, Visual Studio Code, Sublime, or PyCharm.
 
-Sebelum melakukan tutorial ini dan tutorial-tutorial selanjutnya, pastikan kamu telah
-memasang _tools_ berikut:
+Whatever your choice of text editor, try to learn to use vim. Vim is the standard text editor used in git. At least learn how to navigate using the hjkl key and operate the editor in NORMAL mode (example: :w, :q, :wq, ESC key to switch NORMAL mode, and i to switch to INSERT mode).
 
-- [git](https://git-scm.com/downloads)
-- [Python (Latest Version)](https://www.python.org/downloads/)
-- [EditorConfig](http://editorconfig.org)
-- _Text editor_ atau IDE yang **baik**, seperti
-  [Vim](http://www.vim.org/download.php),
-  [Visual Studio Code](https://code.visualstudio.com/),
-  [Sublime](https://www.sublimetext.com/), atau
-  [PyCharm](https://www.jetbrains.com/pycharm/).
+To shorten this tutorial document, how to install and configure each equipment can be seen via the link above.
 
-  > Apapun pilihan teks editormu, cobalah untuk belajar menggunakan vim.
-  > Vim merupakan teks editor standar yang digunakan di git. Setidaknya
-  > pelajari bagaimana navigasi menggunakan tombol `hjkl` dan mengoperasikan
-  > editor pada NORMAL mode (contoh: `:w`, `:q`, `:wq`, tombol `ESC` untuk
-  > beralih mode NORMAL, dan `i` untuk beralih ke mode INSERT). 
+## Tutorial: Basic git and GitHub
 
-Untuk meringkas dokumen tutorial ini, cara penginstalan dan konfigurasi masing-masing
-perlengkapan dapat dilihat melalui tautan diatas.
+1. Open a command prompt or your favorite shell. If you are using Windows, use git Bash or cmd (only applicable if you have added the path to the git executable folder to PATH in the environment variable). If you are using a Unix-based OS (Linux or Mac OS), you can use a shell that is available on your OS, such as bash.
 
-## Tutorial: Basic git dan GitHub
+While you can use GUI applications such as the built-in GUI git, gitKraken, or SourceTree, we recommend using shell commands. The shell is one of the most commonly used tools in web development, especially when you have to deploy your web application to a remote server. It will be very useful if you know the shell and git commands when the GUI is not accessible. Executing commands through the shell is also faster than using the GUI.
 
-1.  Bukalah _command prompt_ atau _shell_ favoritmu. Jika kamu menggunakan Windows, gunakan `git Bash` atau `cmd` (hanya berlaku jika kamu telah menambahkan path ke _folder executable_ git ke PATH di _environment variable_). Jika kamu menggunakan OS berbasis Unix (Linux atau Mac OS), kamu bisa menggunakan _shell_ yang tersedia pada OS-mu, seperti [bash](https://www.gnu.org/software/bash/).
+2. Change the directory to the folder you will use to save your work. Use the cd command to navigate to the directory you want.
+3. Create a new folder to store files related to this tutorial. Try to create a folder called git-exercise and change directory (cd) to that folder.
+4. In that directory, type git init to create an empty git repository.
+5. Try executing the git status command to see the status of your repository when the command is executed.
 
-    > Walaupun kamu bisa menggunakan aplikasi GUI seperti built-in GUI git, 
-    > [gitKraken](https://www.gitkraken.com), atau
-    > [SourceTree](https://www.sourcetree.com), **kami merekomendasikan untuk
-    > menggunakan perintah melalui _shell_**. _Shell_ merupakan salah satu tools
-    > yang paling umum digunakan saat pengembangan Web, terutama saat kamu harus
-    > men-deploy aplikasi web kamu ke _remote server_. Akan sangat berguna jika
-    > kamu mengetahui perintah _shell_ dan git ketika GUI tidak dapat diakses.
-    > Mengeksekusi perintah melalui _shell_ juga **lebih cepat** dibandingkan
-    > menggunakan GUI.
+Now, you have successfully created your first local git repository. Before continuing with the tutorial, there are a few configurations you should do to your local git repository:
 
-2.  Ubah direktori ke _folder_ yang akan kamu gunakan untuk menyimpan pekerjaanmu. Gunakan perintah `cd` untuk melakukan navigasi ke direktori yang kamu inginkan.
+1. Set the username and email that will be associated with your work to this git repository.
 
-3.  Buat _folder_ baru untuk menyimpan file yang berhubungan dengan tutorial ini. Cobalah untuk membuat _folder_ bernama `git-exercise` dan ubah direktori (`cd`) ke _folder_ tersebut.
+```bash
+git config user.name "<NAME>"
+git config user.email "<EMAIL>"
+```
 
-4.  Dalam direktori tersebut, ketik `git init` untuk membuat repositori git kosong.
+example:
+```bash
+git config user.name "Adrian Holovaty"
+git config user.email "adrian.holovaty@ui.ac.id"
+```
 
-5.  Cobalah untuk mengeksekusi perintah `git status` untuk melihat status dari repositori kamu ketika perintah tersebut dijalankan.
+2. If you are in a proxy (example: using a PC in Fasilkom lab), you must set HTTP proxy in git configuration.
 
-Saat ini, kamu telah berhasil membuat respositori git lokal pertamamu. Sebelum melanjutkan tutorial, ada beberapa konfigurasi yang harus kamu lakukan ke repositori git lokalmu:
+```bash
+git config http.proxy <PROXYHOST>:<PORT>
+```
 
-1.  Atur _username_ dan _email_ yang akan diasosiasikan dengan pekerjaanmu ke repositori git ini.
+Example (if you are using a PC in Fasilkom Lab):
 
-    ```bash
-    git config user.name "<NAME>"
-    git config user.email "<EMAIL>"
-    ```
+```bash
+git config http.proxy 152.118.24.10:8080
+```
 
-    Contoh:
+3. If you want to set the configuration globally (for each local repository), add the --global flag to the git config call.
+4. If you want to know the configuration set to your local repository, you can use the following command.
 
-    ```bash
-    git config user.name "Adrian Holovaty"
-    git config user.email "adrian.holovaty@ui.ac.id"
-    ```
+```bash
+git config --list --local
+```
 
-2.  Jika kamu ada dalam sebuah proxy (contoh: menggunakan PC di lab Fasilkom), kamu harus mengatur HTTP _proxy_ pada konfigurasi git.
+After setting up the git repository, please proceed to the tutorial instructions.
 
-    ```bash
-    git config http.proxy <PROXYHOST>:<PORT>
-    ```
+1. Create a new file called README.md in the directory you initiated with the git repository and write your name, NPM, and class on the first, third, and fifth lines of the README.md file.
 
-    Contoh (Jika kamu menggunakan PC di lab Fasilkom):
+Example:
+```
+Name    : Adrian Holovaty
 
-    ```bash
-    git config http.proxy 152.118.24.10:8080
-    ```
+NPM     : 1006123456
 
-3.  Jika kamu ingin mengatur konfigurasi secara global (untuk setiap repositori lokal), tambahkan _flag_ `--global` pada pemanggilan `git config`.
+Class   : Z
+```
+2. Execute the git status command in bash. Note that there is an untracked file named README.md. This indicates that there are files that have not been tracked by git.
+3. Tell git to track changes to README.md.
 
-4.  Jika kamu ingin mengetahui konfigurasi yang diatur ke repositori lokalmu, kamu bisa menggunakan perintah berikut.
+```bash
+git add README.md
+```
+4. Execute the git status command again. The status message will change from the previous execution. Now the file is entered in the Changes to be committed section. This indicates the file will be tracked by git on the next commit.
 
-    ```bash
-    git config --list --local
-    ```
+Even if you executed the git add command, the README.md file is not fully tracked by git. git add simply tells git to put changes from that file into the staging area.
 
-Setelah mengatur repositori git, silakan melanjutkan ke instruksi tutorial.
+5. To permanently save changes to git, execute the command git commit. A text editor will appear to type a message describing the commits you have made and which will be stored in the git history.
 
-1.  Buat file baru dengan nama `README.md` dalam direktori yang kamu inisiasi dengan repositori git dan tulis nama, NPM, dan kelas pada baris **pertama**, **ketiga**,  dan **kelima** pada file `README.md` tersebut.
+A commit can mean changes you made to the local repository. The changes can be in the form of additions, changes in files, or deletion of one or more files.
 
-    Contoh:
+6. Once you have finished writing the commit message, save it and exit the text editor you used to write the message. All changes will be saved as commits and will be saved in git history.
 
-    ```
-    Nama    : Adrian Holovaty
+You just created a local git repository and started monitoring changes to a file in the repository. If you want to share your work with a tutor or with your team, you will need to set up the repository to be accessible via the Internet. To do this, you'll need to put a copy of your local repository into an online git repository like GitHub.
 
-    NPM     : 1006123456
+1. Open GitHub using your favorite web browser.
+2. Create a new account or an account that you have if you have registered before following this tutorial.
+3. Create a new repository called My First Repo and go to the repository page. Make sure you set project visibility to public.
+4. Find and click the clone button on the repository page. Note that there are two types of ways to clone a repository: HTTPS and SSH. Copy the URL that uses HTTPS.
+5. Update your local git repository so that all commits can be stored in your GitHub repository. Use the command git remote add origin <URL_REPOSITORY> and use the URL you copied earlier as an argument to the command.
 
-    Kelas   : Z
-    ```
-2.  Eksekusi perintah `git status` dalam _bash_. Perhatikan bahwa terdapat _untracked file_ bernama `README.md`. Ini menandakan bahwa ada file yang belum di-_track_ oleh git.
+```bash
+git remote add origin <URL_REPOSITORY>
+```
 
-3.  Beri tahu git untuk men-_track_ perubahan yang ada pada `README.md`.
+example:
+```bash
+git remote add origin https://github.com/adrianholovaty/my-first-repo.git
+```
 
-    ```bash
-    git add README.md
-    ```
+`git remote add origin` will tell the local repository to add a path named origin pointing to the given URL. That way, you can save all your commits to an online repository using the git push command.
 
-4.  Eksekusi perintah `git status` lagi. Pesan status akan berubah dari eksekusi sebelumnya. Sekarang file tersebut masuk pada bagian _Changes to be committed_. Ini menandakan file tersebut akan di-_track_ oleh git pada _commit_ selanjutnya.
+6. To save all commits to the online repository on GitHub, execute the git push command. You'll also need to add the name of the remote and branch to be uploaded (or pushed).
 
-    > Walaupun kamu sudah mengeksekusi perintah `git add`, file `README.md` belum sepenuhnya di-_track_ oleh git. `git add` hanya memberi tahu git untuk memasukan perubahan dari file tersebut ke dalam _staging area_.
+```bash
+git push -u <REMOTE_NAME> <DEFAULT_BRANCH>
+```
+Example:
+```bash
+git push -u origin main
+```
 
-5.  Untuk menyimpan perubahan secara permanen ke dalam git, eksekusi perintah `git commit`. _Text editor_ akan muncul untuk mengetikkan pesan yang menggambarkan _commit_ yang telah kamu buat dan akan disimpan pada riwayat git.
+git push will instruct git to upload all commits on the local main branch to the repository pointed to by remote origin. The -u flag ensures that the git push call when the main branch is active will be sent to the main branch at origin.
 
-    > Sebuah _commit_ dapat berarti perubahan yang kamu lakukan pada repositori lokal. Perubahan tersebut dapat berupa penambahan, perubahan dalam file, atau penghapusan satu atau lebih file.
+7. Take a look at your GitHub repository page. You will see your file is successfully saved and accessible on GitHub.
 
-6.  Setelah kamu selesai menulis pesan _commit_, simpan dan keluar dari _text editor_ yang kamu gunakan untuk menulis pesan. Semua perubahan akan disimpan sebagai _commit_ dan akan disimpan dalam riwayat git.
+You can also download (clone) other git repositories to your computer. Try to make a copy of yout repository on GitHub in a different directory on your computer.
 
-Kamu baru saja membuat repositori git lokal dan mulai memantau perubahan dari suatu file yang ada pada repositori. Jika kamu ingin membagikan hasil pekerjaanmu dengan tutor atau dengan tim kamu, kamu harus mengatur repositori tersebut agar dapat diakses melalui Internet. Untuk melakukan ini, kamu harus menaruh salinan dari repositori lokalmu ke repositori git daring seperti [GitHub](https://github.com).
+1. Go to your repository page on GitHub.
+2. Copy the clone URL with HTTPS.
+3. Open a command prompt or shell and navigate to a different directory outside of the local repository directory you created earlier.
+4. Execute the command git clone &lt;URL&gt; where &lt;URL&gt; is the URL of the repository to be cloned.
+5. Note that the name of the new directory that has been created is the same as the name of your repository.
 
-1.  Bukalah [GitHub](https://github.com) menggunakan _web browser_ favoritmu.
-2.  Buatlah akun baru atau akun yang kamu punya jika kamu telah melakukan registrasi sebelum mengikuti tutorial ini.
-3.  Buat repositori baru bernama **My First Repo** dan buka laman repositori. Pastikan kamu mengatur _project visibility_ menjadi **public**.
-4.  Cari dan klik tombol **clone** pada laman repositorimu. Perhatikan bahwa terdapat dua tipe cara untuk meng-_clone_ repositori, yaitu dengan menggunakan **HTTPS** dan **SSH**. Salin URL yang menggunakan **HTTPS**.
-5.  Perbarui repositori git lokalmu agar semua _commit_ dapat disimpan di repositori GitHub-mu. Gunakan perintah `git remote add origin <URL_REPOSITORY>` dan gunakan URL yang tadi kamu salin sebagai argumen dari perintah tersebut.
+At this stage, you actually have 3 repositories: (1) the original, local repository, (2) the online repository on GitHub that is connected to the first repository, and (3) another repository that you cloned from the repository (2). Now try to add a new commit in the repository (1), push to the repository (2), and download (git term: pull) to the repository (3).
 
-    ```bash
-    git remote add origin <URL_REPOSITORY>
-    ```
+1. Open the local repository directory that you initiated earlier for the first time.
+2. Modify the README.md file by adding a string that describes your hobby on the seventh line.
 
-    Contoh:
+Example:
+```
+Name    : Adrian Holovaty
 
-    ```bash
-    git remote add origin https://github.com/adrianholovaty/my-first-repo.git
-    ```
+NPM     : 1006123456
 
-    > `git remote add origin` akan memberi tahu repositori lokal untuk menambahkan _path_ bernama **origin** yang menunjuk ke URL yang diberikan. Dengan begitu, kamu dapat menyimpan semua _commit_ yang kamu buat ke repositori daring menggunakan perintah `git push`.
+Class  : Z
 
-6.  Untuk menyimpan semua _commit_ ke repositori daring di GitHub, eksekusi perintah `git push`. Kamu juga harus menambahkan nama **remote** dan **branch** yang akan diunggah (atau di-_push_).
+Hobby    : Ngoding
+```
 
-    ```bash
-    git push -u <REMOTE_NAME> <DEFAULT_BRANCH>
-    ```
+3. Save the file and add it to the local git repository.
+4. Commit the file and push it to GitHub.
+5. Check your GitHub repository page. Make sure README.md is up to date. You can compare it to the previous version by checking the diff between the last commit and the previous commit.
+6. Open the local repository directory cloned repository from GitHub.
+7. Update the repository by executing the command git pull origin main.
+8. Check the repository that you cloned. You can see that the README.md file has also been updated.
 
-    Contoh:
+Congratulations! You should at least know the basic git commands you can use to manage your work on git and GitHub. You might ask why do we need to go to the trouble of doing this add-commit-push-pull skill? Why don't we just use Dropbox or Google Drive?
 
-    ```bash
-    git push -u origin main
-    ```
-    > `git push` akan memerintah git untuk mengunggah semua _commit_ yang ada di _branch_ lokal `main` ke repositori yang ditunjuk oleh _remote_ `origin`. flag `-u` akan memastikan pemanggilan `git push` saat _branch_ `main` aktif akan di kirim ke _branch_ `main` di `origin`.  
+It's true that Dropbox, Google Drive, or other cloud storage services are easier to use. However, these tools are used for more general things. These tools are not specifically designed to deal with changes to software artifacts, especially when changes are made simultaneously and involve multiple parties. Git, as a version control system, can ensure the integrity of all changes when there are multiple parties working simultaneously on a single repository. You will learn more about how to use version control systems in teamwork later in this course and later courses (IK: Advanced Programming, SI: Enterprise-Scale Programming).
 
-7.  Perhatikan laman repositori GitHub kamu. Kamu akan melihat file kamu berhasil disimpan dan dapat diakses di GitHub.
+## Tutorial: Branch and Merge
 
-Kamu juga bisa unduh (**_clone_**) repositori git lainnya ke komputermu. Cobalah untuk membuat salinan dari repositori di GitHub pada direktori yang berbeda dalam komputermu.
+After learning some of the fundamentals of git, you will begin to learn some more advanced concepts of git. In application development, we as developers will work more with others as a team. Fortunately, git has features to facilitate collaboration between developers. Some of these features are branch and merge.
 
-1.  Bukalah laman repositori kamu di GitHub.
-2.  Salin URL _clone_ dengan **HTTPS**.
-3.  Bukalah _command prompt_ atau _shell_ dan navigasi ke direktori berbeda di luar direktori repositori lokal yang telah kamu buat sebelumnya.
-4.  Eksekusi perintah `git clone <URL>` dengan keterangan `<URL>` adalah URL repositori yang akan di-_clone_.
-5.  Perhatikan bahwa nama direktori baru yang telah dibuat sama dengan nama dari repositorimu.
+In general, branch is a git feature that allows a source code stored in git to have another version or usually a branch that contains changes according to the needs and developers who develop it. Generally, after we do a git push, the changes we save will go to the branch we are referring to. The usefulness of this branch is to avoid collisions, conflicts and race conditions in terms of making changes while under development.
 
-Pada tahap ini, kamu sebenarnya sudah punya 3 repositori: (1) orisinil, repositori lokal, (2) repositori daring di GitHub yang telah terkoneksi dengan repositori pertama, dan (3) repositori lainnya yang kamu _clone_ dari repositori (2). Sekarang coba tambahkan _commit_ baru di repositori (1), _push_ ke repositori (2), dan unduh (istilah git: **pull**) ke repositori (3).
+As for merge, it is a git feature used to merge a change that has been stored in one branch into the target branch. When doing git merge, merge conflict events can occur. Merge conflict is a conflict that occurs when there are changes to the same file in two different branches or when a file has been deleted in the first branch, but the file exists and has changed in the second branch. To resolve merge conflicts, developers can usually use the GUI that has been prepared by git on GitHub. However, if the platform cannot accommodate the merge conflict process, usually developers will be asked to resolve it in their local repository.
 
-1.  Bukalah direktori repositori lokal yang kamu insiasi sebelumnya untuk pertama kalinya.
-2.  Ubah file `README.md` dengan menambahkan _string_ yang mendeskripsikan hobi kamu pada baris ketujuh.
+Now we will try to apply the concept of branch and merge.
 
-    Contoh:
+1. In the local git directory that we have worked with in the previous tutorial, create a new branch in the repository.
 
-    ```
-    Nama    : Adrian Holovaty
+    git checkout -b <BRANCH_NAME>
 
-    NPM     : 1006123456
+Example:
 
-    Kelas   : Z
+    git checkout -b second
 
-    Hobi    : Ngoding
-    ```
+Now, a new branch has been created. You can see what branches are present in your local repository with the git branch command. To switch to another branch, you can do it directly with the git checkout <NAME_BRANCH> command.
 
-3.  Simpan file tersebut dan tambahkan ke repositori git lokal.
-4.  _Commit_ file tersebut dan _push_ ke GitHub.
-5.  Cek laman repositori GitHub kamu. Pastikan `README.md` sudah ter-_update_. Kamu bisa membandingkannya dengan versi sebelumnya dengan mengecek _diff_ antara _commit_ terakhir dengan _commit_ sebelumnya.
-6.  Bukalah direktori repositori lokal hasil _clone_ repositori dari GitHub.
-7.  _Update_ repositori tersebut dengan mengeksekusi perintah `git pull origin main`.
-8.  Cek repositori yang kamu _clone_. Kamu dapat melihat bahwa file `README.md` juga telah ter-_update_.
+2. Make a change to the README.md file by changing your hobby in line seven to another hobby.
 
-Selamat! Anda setidaknya telah mengetahui perintah git dasar yang dapat kamu gunakan untuk mengelola pekerjaanmu di git dan GitHub. Kamu mungkin bertanya mengapa kita perlu bersusah-susah melakukan skilus _add-commit-push-pull_ ini? Mengapa kita tidak gunakan Dropbox atau Google Drive saja? 
+Example:
 
-Benar bahwa Dropbox, Google Drive, atau layanan _cloud storage_ lainnya lebih mudah digunakan. Namun, _tools_ tersebut digunakan untuk hal yang lebih umum. _Tools_ tersebut tidak dibuat secara spesifik untuk mengatasi perubahan terhadap artefak-artefak perangkat lunak, khususnya ketika ada perubahan yang dilakukan secara **bersamaan** dan melibatkan banyak pihak. git, sebagai _version control system_, dapat memastikan integritas dari semua perubahan ketika ada beberapa pihak yang bekerja secara bersamaan dalam satu repositori. Kamu akan belajar lebih lanjut mengenai cara menggunakan _version control system_ di lingkup keja tim selanjutnya di mata kuliah ini dan mata kuliah selanjutnya (IK: Advanced Programming, SI: Enterprise-Scale Programming).
+    Name: Adrian Holovaty
+    
+    NPM : 1006123456
+    
+    Grade : Z
+    
+    Hobbies : Sleep
 
-## Tutorial: Branch dan Merge
+3. Save the file and add it to the local git repository.
 
-Setelah mempelajari beberapa dasar dari git, kamu akan mulai mempelajari beberapa konsep lanjutan dari git. Pada pengembangan aplikasi, kita sebagai _developer_ akan lebih banyak bekerja sama dengan orang lain sebagai tim. Beruntungnya, git memiliki fitur untuk mengakomodasi kolaborasi antar developer. Beberapa fitur yang dimaksud adalah _branch_ dan _merge_. 
+4. Commit the file and push it to GitHub.
 
-Secara sederhana, _branch_ adalah fitur git yang memungkinkan sebuah _source code_ yang disimpan pada git memiliki versi lain atau biasanya cabang yang berisikan perubahan-perubahan sesuai dengan kebutuhan dan _developer_ yang mengembangkannya. Umumnya setelah kita melakukan `git push`, perubahan yang kita simpan akan masuk ke dalam cabang yang dituju oleh kita. Kegunaan _branch_ ini adalah untuk menghindari tabrakan, konflik serta _race condition_ dalam hal melakukan perubahan ketika sedang dalam pengembangan.
+5. Check your GitHub repository page. Under the branches option in your repository, you can now see that there is a new branch that you just created.
 
-Adapun _merge_ adalah fitur git yang digunakan untuk menggabungkan suatu perubahan yang telah disimpan dalam satu _branch_ ke dalam _branch_ target. Pada saat melakukan `git merge`, kejadian _merge conflict_ dapat terjadi. _Merge conflict_ adalah sebuah konflik yang terjadi apabila terdapat perubahan pada file yang sama dalam dua _branch_ berbeda atau ketika satu file telah dihapus pada _branch_ pertama, namun berkas tersebut ada dan mengalami perubahan pada _branch_ kedua. Untuk menyelesaikan _merge conflict_, biasanya _developer_ dapat menggunakan GUI yang telah disiapkan oleh git pada GitHub. Namun apabila platform tersebut sedang tidak dapat mengakomodasi proses _merge conflict_, biasanya _developer_ akan diminta untuk menyelesaikannya di repositori lokal mereka.
+6. Now merge the new branch into the main branch of the repository. You can do this by selecting the pull request tab on your repository page on GitHub and selecting the new pull request option.
 
-Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
+7. Choose the main branch as the base and your new branch as the compare. After selecting these branches, you can see the differences between the two branches that will be merged. Choose create pull request to merge the two branches.
 
-1. Pada direktori git lokal yang telah kita kerjakan pada tutorial sebelumnya, buatlah sebuah _branch_ baru di repositori tersebut.
+8. After that, you will enter a form page to fill in information about the pull request that you will do. You can fill in a description of the pull request and change the title of the pull request. For now just let it stay and choose create pull request.
 
-    ```bash
-    git checkout -b <NAMA_BRANCH>
-    ```
+9. GitHub will automatically check and compare between the two branches that you want to merge. If there is no conflict, you can immediately select merge pull request.
 
-    Contoh:
+10. The two branches are now merged. You can see the changes you made in the new branch have been saved or incorporated into the main branch.
 
-      ```bash
-      git checkout -b second
-      ```
+## Tutorial: Initialize a Django Project
 
-    > Sekarang, sebuah branch baru telah dibuat. Kamu bisa melihat branch apa saja yang ada di repositori lokal dengan command `git branch`. Untuk melakukan _switching_ ke branch lain, kamu dapat langsung melakukannya dengan perintah `git checkout <NAMA_BRANCH>`.
+1. Create a new directory with the name `django_exercise` and change the current directory into ‘django_exercise.
 
-2. Buatlah sebuah perubahan pada file README.md dengan mengubah hobi kamu di baris ketujuh ke hobi lain.
-
-    Contoh:
-
-    ```
-    Nama    : Adrian Holovaty
-
-    NPM     : 1006123456
-
-    Kelas   : Z
-
-    Hobi    : Tidur
-    ```
-
-3.  Simpan file tersebut dan tambahkan ke repositori git lokal.
-
-4.  _Commit_ file tersebut dan _push_ ke GitHub.
-
-5.  Cek laman repositori GitHub kamu. Pada pilihan branch yang ada di repositori kamu, sekarang kamu dapat melihat terdapat branch baru yang baru saja kamu buat.
-
-6. Sekarang _merge_ atau gabungkan _branch_ baru tersebut ke branch utama dari repositori. Kamu dapat melakukannya dengan memilih tab `pull request` pada halaman repositori kamu di GitHub dan memilih opsi `new pull request`.
-
-7. Pilihlah _branch_ main sebagai base dan _branch_ baru kamu sebagai _compare_. Setelah memilih _branch_ tersebut, kamu dapat melihat perbedaan antara dua branch yang akan digabungkan. Pilihlah `create pull request` untuk menggabungkan kedua _branch_ tersebut.
-
-8. Setelah itu, kamu akan masuk ke sebuah halaman form untuk mengisi informasi tentang _pull request_ yang akan kamu lakukan. Kamu dapat mengisi deskripsi tentang _pull request_ serta mengubah judul dari _pull request_. Untuk saat ini diamkan saja dulu dan langsung pilihlah `create pull request`.
-
-9. GitHub akan secara otomatis melakukan cek dan membandingkan antara kedua _branch_ yang ingin digabungkan. Apabila tidak ada konflik, kamu bisa langsung memilih `merge pull request`.
-
-10. Sekarang kedua _branch_ telah tergabung. Kamu bisa melihat perubahan yang kamu lakukan di branch baru telah tersimpan atau tergabung dalam _branch_ main.
-
-## Tutorial: Django Init
-
-1. Buatlah sebuah direktori baru bernama `django_exercise` dan masuklah ke dalam direktori tersebut.
-2. Bukalah _command prompt_ atau _shell_ dan buatlah sebuah _virtual environment_. _Virtual environment_ ini berguna untuk mengisolasi _package_ serta _dependencies_ dari aplikasi sehingga tidak bertabrakan dengan versi lain yang ada pada komputermu. Kamu dapat membuat _virtual environment_ dengan perintah:
+2. Open a _command prompt_ or _shell_ and create a _virtual environment_. The _virtual environment_ is used to isolate the _package_ and _dependencies_ from the application so the application doesn't conflict with the other version of packages or dependencies that already installed in your computer. You can create a _virtual environment_ with command:
     ```bash
     python -m venv env
     ```
-3. Nyalakan _virtual environment_ yang telah dibuat dengan perintah berikut. Pastikan saat ini kamu sedang berada pada direktori `django_exercise` yang telah dibuat sebelumnya. Perhatikan pula bahwa Windows dengan Unix memiliki perintah yang berbeda. Apabila virtual environment berhasil dinyalakan, kamu dapat melihat sebuah teks `(env)` di posisi paling kiri dari baris input _shell_ milikmu.
+
+3. Activate the virtual environment that has been made with the command below. Make sure that right now you’re in the directory `django_exercise` that has been made in the first step. Please note that Windows and Unix have different commands. If the environment has successfully activated, you can see a text `(env)` in the left position of the input row of your shell/command prompt.
     ```
     Windows:
     env\Scripts\activate.bat
@@ -284,7 +247,7 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
     pip install -r requirements.txt
     ```
 
-4. Instal _dependencies_ yang diperlukan untuk menjalankan aplikasi di lokal dengan perintah `pip install <NAMA_DEPENDENCIES>`. Adapun nama _dependencies_ yang perlu kamu instal dapat kamu lihat di bawah ini.
+4. Install the required dependencies to run the application in your local computer with command `pip install <DEPENDENCIES_NAME>`. The _dependencies_ name that you need to install can be seen below.
   - django 
   - gunicorn
   - whitenoise
@@ -292,33 +255,33 @@ Sekarang kita akan mencoba untuk menerapkan konsep _branch_ dan _merge_.
   - requests
   - urllib3
 
-5. Simpan daftar _dependencies_ yang sudah kamu instal ke dalam sebuah file `txt`. Kamu dapat menggunakan perintah `pip freeze > requirements.txt`. 
+5. Save the _dependencies_ list that you’ve installed to a `txt` format file. You can use command prompt/shell with command: `pip freeze > requirements.txt`. 
 
-6. Buatlah sebuah proyek Django dengan perintah `django-admin startproject <NAMA_PROYEK> .` dengan keterangan `<NAMA_PROYEK>` disesuaikan dengan nama yang kamu inginkan dan `.` merupakan keterangan untuk memberitahu `django_admin` untuk menginisiasi proyek Django di direktori saat ini sebagai _root_ dari proyek.
+6. Create a Django project with command `django-admin startproject <PROJECT_NAME>.` on your command line/shell. Please note that `<PROJECT_NAME>` is a name of the project that you want and `.` in the end of the line of command was to tell the `django-admin` to initiate a Django project with current directory as a `root` of the project.
 
-7. Eksekusi perintah `python manage.py runserver` di Windows atau `./manage.py runserver` di OS berbasis Unix untuk menjalankan aplikasi Django. Pastikan bahwa file `manage.py` ada pada direktori yang aktif pada _shell_ kamu saat ini.
+7. With command prompt/shell, execute command `python manage.py runserver` (Windows) or `./manage.py runserver` (OS with unix based) to run the Django application. Make sure that ‘manage.py’ file exists within the active directory on your current command prompt/shell.
 
-8. Bukalah `http://localhost:8000` menggunakan _browser_ favoritmu untuk melihat aplikasi Django yang telah kamu buat. Kamu sekarang dapat melihat sebuah roket sedang meluncur di halaman tersebut. Selamat! Kamu telah berhasil membuat aplikasi Django dari awal.
+8. Open your favorite browser and navigate to `http://localhost:8000` to see the Django application that you've made. Now, you can see a rocket is flying in the browser page. Congratulations! You’ve successfully made a Django application from scratch.
 
-9. Untuk mematikan server Django yang sedang berjalan, kamu dapat menggunakan tombol `Ctrl+C` pada Windows/Linux atau `Command+C` pada MacOS.
+9. To terminate a running Django server, you can use `CTRL+C` with your keyboard (Windows/Linux) or `Command+C` (Mac OS).
 
-10. Untuk mematikan _virtual enviroment_, kamu dapat mengeksekusi perintah `deactivate` pada _shell_ yang sedang kamu gunakan. Teks `(env)` akan segera hilang yang menandakan bahwa _virtual environment_ telah dinonaktifkan.
+10. To terminate a virtual environment, you can execute the command `deactivate` in a shell that you used for the previous steps. `(env)` text will soon disappear and it shows that a virtual environment has been successfully terminated.
 
-## Tutorial: Melakukan Deploy Aplikasi Django ke Heroku
+## Tutorial: Deploy a Django Application with Heroku
 
-Setelah kamu belajar tentang git dan GitHub serta mempelajari cara membuat aplikasi Django, kamu akan mempelajari cara memanfaatkan GitHub untuk melakukan _deployment_ aplikasi Django ke Internet secara otomatis. Di PBP ini, kamu akan memanfaatkan Heroku sebagai _host_ dari aplikasi yang akan kamu _deploy_.
+After you learn about git, GitHub, and how to make a Django application, you’ll learn how to utilize GitHub to automate the deployment of your Django application. In this course, you’ll learn how to use Heroku as a host for your application that you want to deploy.
 
-1. Buatlah sebuah repositori baru di GitHub kamu yang akan digunakan sebagai repositori aplikasi Django.
+1. Create a new repository with your GitHub account that you’ll use as a repository for your Django application.
 
-2. Lakukanlah `git init` pada direktori `django_exercise` yang telah kamu kerjakan sebelumnya dan atur _origin_ dari repositori git lokal baru tersebut ke repositori GitHub yang telah kamu buat.
+2. Execute command `git init` with a command line/shell in `django_exercise` directory that you’ve used before in the previous tutorial and set the origin of your git local repository to the GitHub repository that you’ve made in the previous step.
 
-3. Buatlah sebuah file bernama `Procfile` yang berisikan skrip berikut. Berkas ini akan digunakan oleh Heroku untuk membaca aktivitas log aplikasi ke sistem _monitoring_ internal Heroku. Isi dari berkas tersebut adalah sebagai berikut.
+3. Create a file with the name `Procfile` that contains a script below. This file will be used by Heroku to read the log activity of your application to Heroku internal monitoring system. The contents of the script can be seen below.
     ```
-    web: gunicorn aplikasi_django.wsgi --log-file -
+    web: gunicorn django_project.wsgi --log-file -
     ```
-> Ubah `aplikasi_django` sesuai dengan nama proyek Django yang ingin kamu _deploy_.
+> Change `django_project` according to your Django project name that you want to deploy.
 
-4. Buatlah sebuah berkas baru bernama `dpl.yml` di _.github/workflows_ dari repositori kamu. Berkas ini digunakan untuk mengeksekusi _deployment_ oleh _runner_ dari GitHub Actions. Salin dan tempel baris skrip di bawah ini ke dalam berkas `dpl.yml`:
+4. Create a new file with name `dpl.yml` in _.github/workflows_ folder from your current repository. This file is used to execute  _deployment_ by _runner_ from GitHub Actions. Copy and paste script below to file `dpl.yml`:
     ```
     name: Deploy
 
@@ -359,22 +322,22 @@ Setelah kamu belajar tentang git dan GitHub serta mempelajari cara membuat aplik
             environment: production
     ```
 
-5. Buatlah sebuah berkas `.gitignore`. Berkas ini berfungsi untuk memberi tahu git mengenai berkas atau direktori mana sajakah yang tidak boleh ikut di-_push_ ke repositori daring milikmu. Kamu dapat mengisi berkas tersebut dengan menyalin isi berkas `.gitignore` dari [website](https://djangowaves.com/tips-tricks/gitignore-for-a-django-project/) berikut.
+5. Create a file with the name `.gitignore`. This file is used to tell git which files or directories that shouldn't be pushed to your online repository. You can load the file by copying the contents of `.gitignore` from [website](https://djangowaves.com/tips-tricks/gitignore-for-a-django-project/) below.
 
-6. Tambahkan beberapa konfigurasi berikut pada file `settings.py` proyek Django-mu:
+6. Add a few configurations below to the `settings.py` file in your Django project:
     ```
     import os
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
     ```
 
-7. Tambahkan `*` ke dalam `ALLOWED_HOSTS` pada `settings.py` untuk dapat memberikan akses ke semua _host_.
-Contoh:
+7. Add `*` to `ALLOWED_HOSTS` variable in `settings.py` file to grant access to all _host_.
+Example::
     ```
     ALLOWED_HOSTS = ["*"]
     ```
 
-8. Tambahkan _middleware_ baru ke dalam variabel `MIDDLEWARE` di `settings.py`:
+8. Add new  _middleware_ below to  `MIDDLEWARE` variable in `settings.py` file:
     ```
     MIDDLEWARE = [
         ...,
@@ -382,33 +345,35 @@ Contoh:
     ]
     ```
 
-9. `Add`, `commit`, dan `push` perubahan yang telah kamu lakukan ke GitHub milikmu.
+9. `Add`, `commit`, and `push` the changes that you have made to your GitHub repository.  
 
-Setelah kamu melakukan prosedur di atas, aplikasi Django barumu siap untuk di-_deploy_ ke Heroku. Apabila kamu membuka tab GitHub Actions di repositorimu, terlihat bahwa _workflow_ sudah berjalan namun berstatus gagal karena terdapat _error_ yang mengatakan bahwa terdapat beberapa parameter dalam proses _deployment_ yang tidak ditemukan. Hal itu terjadi karena kamu belum mengonfigurasi parameter yang dibutuhkan oleh _workflow_. Sekarang, kamu akan melakukan konfigurasi terhadap parameter tersebut.
+After you perform all the procedures above, your new Django application is ready to deploy in Heroku. If you open the GitHub Actions tab in your repository, it seems that a _workflow_ is already running but the status is failed because there's an error that says there are some parameters in _deployment_ process that were not found. This thing happened because you’re not yet configure the parameters needed by the _workflow_. 
+Now, you’ll configure those parameters.
+>Make sure that you’ve a Heroku account and have made the Heroku application.<br />
+> Please read README in _root_ of PBP repository to learn how to create an account and application on Heroku.
 
-> Pastikan sebelumnya kamu telah memiliki akun Heroku dan telah membuat sebuah aplikasi Heroku.<br />
-> Silakan baca README pada _root_ repositori PBP untuk melihat cara membuat akun dan aplikasi Heroku.
 
-1. Salin API Key dari akun kamu. API Key dapat kamu temukan di `Account Settings -> API Key`. Simpanlah API Key beserta informasi tentang aplikasi Heroku kamu pada file teks dengan format berikut:
+1.  Copy API Key from your account. API Key can be found in `Account Settings -> API Key`. Keep your API Key and the information about your Heroku application in a text file with given format:
     ```
-    HEROKU_API_KEY: <VALUE_API_KEY_ANDA>
-    HEROKU_APP_NAME: <NAMA_APLIKASI_HEROKU_ANDA>
+    HEROKU_API_KEY: <YOUR_API_KEY_VALUE>
+    HEROKU_APP_NAME: <YOUR_HEROKU_APPLICATION_NAME>
     ```
 
-2. Bukalah konfigurasi repositori GitHub kamu dan bukalah bagian Secrets untuk GitHub Actions (`Settings -> Secrets -> Actions`).
+2. Open your GitHub repository configuration and open the Secrets section for GitHub Actions (`Settings -> Secrets -> Actions`).
 
-3. Tambahkan variabel `repository secret` baru untuk melakukan _deployment_. Pasangan Name-Value dari variabel yang akan kamu buat dapat kamu ambil dari informasi yang kamu catat pada file teks sebelumnya. Contohnya adalah sebagai berikut.
+3. Add a new `repository secret` variable to do the _deployment_. Key-Value pair from the variable that you’ll make can be obtained from the information that you noted in the previous text file. Example can be seen below:
     ```
     (NAME)HEROKU_APP_NAME
-    (VALUE)APLIKASI-SAYA
+    (VALUE)MY-APPLICATION
     ```
-4. Simpan variabel-variabel tersebut.
 
-5. Bukalah tab GitHub Actions dan jalankan kembali _workflow_ yang gagal.
+4. Keep those variables.
 
-Setelah _workflow_ kamu jalankan kembali dan status _deployment_ menjadi sukses (dapat kamu lihat terdapat simbol centang hijau pada repositori kamu), kamu dapat mengakses aplikasi milikmu di `https://<nama-aplikasi-heroku>.herokuapp.com`. Selamat! Sekarang aplikasi Django milikmu dapat diakses di Internet.
+5. Open GitHub Actions and  re-run the failed _workflow_.
 
-## Sumber-Sumber Tambahan
+After you re-run _workflow_ and _deployment_ status become success (can be seen from the green checklist symbol on your repository), you can access the application in `https://<heroku-application-name>.herokuapp.com`. Congratulations! Now, you’re Django application can be accessed from the internet.
+
+## Extra Resources
 
 - [git Tutorials & Training by Atlassian](https://www.atlassian.com/git/tutorials)
 - [Try git in your Web browser](https://try.github.io)
@@ -417,12 +382,15 @@ Setelah _workflow_ kamu jalankan kembali dan status _deployment_ menjadi sukses 
   [its application in git](http://think-like-a-git.net/sections/graphs-and-git.html)
 - [How to Write a git Commit Message](https://chris.beams.io/posts/git-commit/)
 
-## Kontributor
+## Contributors
 
 - Rafi Indrawan Dirgantara
 - Mohamad Rifqy Zulkarnaen
 - Muhammad Athallah
 - Muhammad Azis Husein
+- Zuhal 'Alimul Hadi (EN Translator)
+- Dinda Adriani Siregar (EN Translator)
+- Winaldo Amadea Hestu (EN Translator)
 
 ## Credits
 
