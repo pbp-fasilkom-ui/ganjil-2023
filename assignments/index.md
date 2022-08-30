@@ -35,21 +35,18 @@ Selain itu, Anda juga perlu menuliskan esai refleksi atas apa yang telah Anda pe
 
 ## Aturan dan Skema Penilaian
 
-Tutorial, Esai dan Tugas Lab PBP Ganjil 2022/2023 berkontribusi kepada nilai akhir PBP dengan total **18%**. Untuk setiap pekerjaan yang dikerjakan, Anda bisa mendapatkan nilai dengan rentang **A** (4) sampai **E** (0). Beberapa aspek beserta bobotnya yang perlu Anda perhatikan dalam mengerjakan lab dan tugas adalah sebagai berikut.
+Tutorial, Esai dan Tugas Lab PBP Ganjil 2022/2023 berkontribusi kepada nilai akhir PBP dengan total **20%**.
+Skema penilaian untuk **tutorial dan tugas pemrograman** adalah sebagai berikut:
+1. **A** jika **semua checklist** dikerjakan
+2. **B** jika **80% checklist** dikerjakan
+3. **C** jika setidaknya **setengah checklist** dikerjakan
+4. **D** jika hanya **30% checklist** dikerjakan
+5. **E** jika tidak mengerjakan
 
-1. Fungsionalitas program (45 poin)
-2. Program dijalankan tanpa error (10 poin)
-3. Kenyamanan penggunaan program (5 poin)
-4. Validasi input (5 poin)
-5. Standar penulisan kode (10 poin)
-6. Dokumentasi (10 poin)
-7. Efisiensi (10 poin)
-8. Persyaratan submisi (5 poin)
-
-Anda juga perlu menuliskan esai refleksi atas pekerjaan yang telah anda kumpulkan. Beberapa aspek beserta bobotnya yang perlu Anda perhatikan dalam pengerjaan esai refleksi adalah sebagai berikut.
-1. Orisinalitas karya dan keatraktifan judul atau topik yang diangkat (10 poin)
+Sedangkan untuk **tugas esai**, akan dinilai dengan skema sebagai berikut:
+1. Orisinalitas karya dan keatraktifan judul (10 poin)
 2. Format penulisan (10 poin)
-3. Penggunaan bahasa (15 poin)
+3. Penggunaan bahasa Indonesia yang baik dan benar (15 poin)
 4. Ketajaman analisis permasalahan (30 poin)
 5. Manfaat dan urgensi permasalahan yang diangkat (15 poin)
 6. Simpulan dan saran (15 poin)
