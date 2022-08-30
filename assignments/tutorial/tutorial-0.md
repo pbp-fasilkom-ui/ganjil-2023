@@ -313,10 +313,12 @@ Setelah kamu belajar tentang git dan GitHub serta mempelajari cara membuat aplik
 2. Lakukanlah `git init` pada direktori `django_exercise` yang telah kamu kerjakan sebelumnya dan atur _origin_ dari repositori git lokal baru tersebut ke repositori GitHub yang telah kamu buat.
 
 3. Buatlah sebuah file bernama `Procfile` yang berisikan skrip berikut. Berkas ini akan digunakan oleh Heroku untuk membaca aktivitas log aplikasi ke sistem _monitoring_ internal Heroku. Isi dari berkas tersebut adalah sebagai berikut.
+
     ```
     web: gunicorn aplikasi_django.wsgi --log-file -
     ```
-> Ubah `aplikasi_django` sesuai dengan nama proyek Django yang ingin kamu _deploy_.
+
+    > Ubah `aplikasi_django` sesuai dengan nama proyek Django yang ingin kamu _deploy_.
 
 4. Buatlah sebuah berkas baru bernama `dpl.yml` di _.github/workflows_ dari repositori kamu. Berkas ini digunakan untuk mengeksekusi _deployment_ oleh _runner_ dari GitHub Actions. Salin dan tempel baris skrip di bawah ini ke dalam berkas `dpl.yml`:
     ```
