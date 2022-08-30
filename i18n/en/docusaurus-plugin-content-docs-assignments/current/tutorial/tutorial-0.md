@@ -228,7 +228,7 @@ Example:
 
 ## Tutorial: Initialize a Django Project
 
-1. Create a new directory with the name `django_exercise` and change the current directory into ‘django_exercise.
+1. Create a new directory with the name `django_exercise` and change the current directory into `django_exercise`.
 
 2. Open a _command prompt_ or _shell_ and create a _virtual environment_. The _virtual environment_ is used to isolate the _package_ and _dependencies_ from the application so the application doesn't conflict with the other version of packages or dependencies that already installed in your computer. You can create a _virtual environment_ with command:
     ```bash
@@ -276,9 +276,11 @@ After you learn about git, GitHub, and how to make a Django application, you’l
 2. Execute command `git init` with a command line/shell in `django_exercise` directory that you’ve used before in the previous tutorial and set the origin of your git local repository to the GitHub repository that you’ve made in the previous step.
 
 3. Create a file with the name `Procfile` that contains a script below. This file will be used by Heroku to read the log activity of your application to Heroku internal monitoring system. The contents of the script can be seen below.
+    
     ```
     web: gunicorn django_project.wsgi --log-file -
     ```
+
 > Change `django_project` according to your Django project name that you want to deploy.
 
 4. Create a new file with name `dpl.yml` in _.github/workflows_ folder from your current repository. This file is used to execute  _deployment_ by _runner_ from GitHub Actions. Copy and paste script below to file `dpl.yml`:
@@ -332,10 +334,10 @@ After you learn about git, GitHub, and how to make a Django application, you’l
     ```
 
 7. Add `*` to `ALLOWED_HOSTS` variable in `settings.py` file to grant access to all _host_.
-Example::
-    ```
-    ALLOWED_HOSTS = ["*"]
-    ```
+Example:
+  ```
+  ALLOWED_HOSTS = ["*"]
+  ```
 
 8. Add new  _middleware_ below to  `MIDDLEWARE` variable in `settings.py` file:
     ```
