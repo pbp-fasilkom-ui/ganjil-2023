@@ -2,13 +2,15 @@
 sidebar_label: Tugas 1
 ---
 
+import Countdown from "@site/src/components/Countdown"
+
 # Tugas 1: Menulis Esai
 ## Informasi Tugas
 ### Submission:
 Submission Slot SCELE (link to be announced)
 
 ### Deadline: 
-Kamis, 8 September 2022 Jam 12.00
+<Countdown deadline={new Date("08 September 2022 12:00 GMT+7")} />
 
 ### Deliverables: 
 Tulislah sebuah esai minimal 1000 kata yang mengandung poin-poin yang sebagai berikut:
