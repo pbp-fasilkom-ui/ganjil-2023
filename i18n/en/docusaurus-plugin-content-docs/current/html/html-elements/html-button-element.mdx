@@ -10,23 +10,38 @@ import CodeEditor from "@site/src/components/CodeEditor"
 import { buttonExample } from "@site/src/data/examples"
 
 # &lt;button&gt; - Button
-Elemen button adalah elemen yang dapat digunakan untuk menampilkan sebuah tombol di halaman web. Elemen button dapat didefinisikan dengan `<button></button>`.
 
-### Fungsi Button
-- Sebagai link apabila di-wrap dengan `<a></a>`
-- Sebagai trigger untuk submisi form apabila di-wrap dengan `<form></form>`
-- Sebagai trigger untuk kode JavaScript apabila digunakan bersama dengan `<script></script>`
+The button element is an element that can be used to display a clickable button
+in a web page. It can be defined by using a pair of `<button>` and `</button>`
+tag.
 
-### Daftar Atribut Button
-- `id`: ID dari button yang digunakan sebagai *identifier* unik. Berguna saat button digunakan untuk JavaScript.
-- `name`: Nama dari button (digunakan saat button berada didalam `<form></form>`).
-- `value`: Value yang di-represent oleh button (digunakan saat button berada di dalam `<form></form>`).
-- `disabled`: Variabel yang menentukan apakah button dimatikan. Dapat bernilai `true` atau `false`.
-- `onclick`: Kode JavaScript yang akan di-eksekusi ketika button diklik.
+You can use button to:
 
-### Contoh Penggunaan
+-  Create a link that displayed as a button. You need to put the button tag as
+   the text value of an `<a>` tag
+-  Create a trigger for submitting data contained in one or more elements
+   within a `<form>` tag
+-  Create a trigger for invoking JavaScript code that defined as value of
+   `<script>` tag
+
+## Possible Attributes
+
+-  `id`: Unique identifier of the element in the HTML page. It is usually used
+   as unique reference to the element in a JavaScript code.
+-  `name`: Name of the button. It is used to give text label to the associated
+   value when the tag is defined in a `<form>` tag.
+-  `value`: A value represented by the button when the tag is defined in a
+   `<form>` tag. It is usually contain the data that may be submitted to the
+   backend.
+-  `disabled`: A boolean flag that determines whether the button is disabled,
+   i.e. interactable by the user.
+-  `onclick`: Contains a JavaScript code that will be executed whenever the
+   button is clicked.
+
+## Usage Example
+
 <Tabs>
     <TabItem value="example1" label="Button" default>
         <CodeEditor defaultValue={buttonExample} />
     </TabItem>
-</Tabs> 
+</Tabs>
