@@ -12,13 +12,11 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 1. Tutorial Mingguan
 2. [Pendahuluan](#pendahuluan)
 3. [Aturan dan Skema Penilaian](#aturan-dan-skema-penilaian)
-4. [Tutorial: Permulaan](#tutorial-permulaan)
-5. [Tutorial: Cara Mengerjakan](#tutorial-cara-mengerjakan)
-6. [Tutorial: Melakukan pull dari upstream](#tutorial-melakukan-pull-dari-upstream)
-7. [Tutorial: Menjalankan Aplikasi Django](#tutorial-menjalankan-aplikasi-django)
-8. [Tutorial: Mendeploy Aplikasi](#tutorial-mendeploy-aplikasi)
-9. [Sumber Bacaan](#sumber-bacaan)
-10. [Credit](#credit)
+4. [Tutorial: Cara Mengerjakan](#tutorial-cara-mengerjakan)
+5. [Tutorial: Menjalankan Aplikasi Django](#tutorial-menjalankan-aplikasi-django)
+6. [Tutorial: Mendeploy Aplikasi](#tutorial-mendeploy-aplikasi)
+7. [Sumber Bacaan](#sumber-bacaan)
+8. [Credit](#credit)
 
 
 ## Pendahuluan
@@ -56,43 +54,15 @@ Setiap pekerjaan yang telah diselesaikan oleh mahasiswa harus didemonstrasikan k
 1. Demonstrasi pekerjaan tutorial/tugas perlu dilakukan **paling lambat seminggu setelah deadline pengumpulan**. Waktu yang dialokasikan beserta jam akan disesuaikan dengan asisten dosen Anda masing-masing.
 2. Apabila terdapat halangan sehingga Anda tidak dapat mendemonstrasikan pekerjaan Anda kepada asisten dosen dalam rentang waktu yang ditentukan, Anda perlu mengontak asisten dosen Anda serta mengirimkan email kepada dosen untuk susulan demonstrasi pekerjaan.
 
-## Tutorial: Permulaan
-
-Jika Anda sebelumnya belum pernah mengerjakan Tutorial Lab 1,
-
-1. `fork` repositori ini ke akun GitHub milik Anda yang mana nantinya repositori ini akan secara otomatis di-copy ke akun GitHub Anda.
-2. Bukalah halaman repositori anda di URL `https://github.com/<YOURNAME>/pbp-lab-2023` dengan keterangan `<YOURNAME>` sebagai GitHub username Anda.
-3. Atur URL untuk Clone ke HTTPS dan copy URL tersebut ke clipboard.
-4. Clone repositori tersebut ke komputer Anda dengan menggunakan command `git clone https://github.com/<YOURNAME>/pbp-lab-2023.git <PATH>` dengan keterangan `PATH` sebagai direktori tujuan.
-5. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://github.com/pbp-fasilkom-ui/pbp-lab-2023` untuk menambahkan remote upstream.
-6. Pastikan bahwa repository Anda memiliki visibiltas `Public`. Anda dapat mengaturnya pada halaman **Edit Project**.
-7. Beritahukan kepada asisten dosen Anda bahwa URL dari repositori milik Anda untuk keperluan evaluasi dan penilaian.
-
-Jika Anda pernah mengerjakan Tutorial Lab 1,
-
-1. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://github.com/pbp-fasilkom-ui/pbp-lab-2023` untuk menambahkan remote upstream.
-2. Pastikan bahwa repository Anda memiliki visibiltas `Public`. Anda dapat mengaturnya pada halaman **Edit Project**.
-3. Beritahukan kepada asisten dosen Anda bahwa URL dari repositori milik Anda untuk keperluan evaluasi dan penilaian.
-
-
 ## Tutorial: Cara Mengerjakan
-1. Misalkan Anda hendak mengerjakan tutorial lab 2. Pergilah ke dalam direktori yang berisikan README.md dari tutorial lab 2.
-2. Untuk memastikan tutorial lab 2 tidak terganggu dengan tutorial lain, buatlah sebuah Django App yang spesifik untuk pengerjaan tutorial lab 2 dengan menggunakan perintah `python manage.py startapp lab_2` pada console.
-3. Baca dan pahamilah dengan teliti berkas README. Berkas ini memuat tugas serta instruksi yang perlu Anda selesaikan.
-4. Kerjakan tutorial tersebut.
+1. Misalkan Anda hendak mengerjakan tutorial lab 2. Bukalah README.md untuk tutorial 2 yang ada pada website PBP
+2. Baca dan pahamilah dengan teliti berkas README. Berkas ini memuat tugas serta instruksi yang perlu Anda selesaikan.
+3. Kerjakan tutorial tersebut.
+4. Anda dapat mengerjakan tutorial-tutorial tersebut pada repositori yang sudah Anda buat sebelumnya maupun membuat sebuah repositori baru.
 5. Gunakan `git add <FILES/DIRECTORIES>` atau `git rm <FILES/DIRECTORIES>` untuk stage/unstage berkas yang nantinya akan Anda simpan ke Git.
 6. Apabila Anda ingin menyimpan progres Anda secara lokal, Anda dapat melakukan **commit** ke Git. Gunakan perintah `git commit -m "<MESSAGE>"` dengan keterangan `<MESSAGE>` sebagai deskripsi pekerjaan yang akan Anda simpan.
 7. Ulangi langkah 4-6 hingga Anda selesai mengerjakan tugas Anda.
 8. Setelah Anda siap untuk mengumpulkan pekerjaan Anda atau Anda ingin menyimpannya pada repositori GitHub Anda, lakukan sebuah **push**. Anda dapat menggunakan perintah `git push origin <NAMA_BRANCH>` dengan keterangan `<NAMA_BRANCH>` sebagai _branch_ yang Anda tuju untuk penyimpanan di GitHub.
-
-
-## Tutorial: Melakukan pull dari upstream
-
-Apabila terdapat _update_ dari `upstream`, Anda dapat memperoleh _update commit_ tersebut dan mengintegrasikannya ke dalam repositori Anda secara lokal dengan menggunakan perintah `git pull upstream master`.
-
-Ketika Anda melakukan pull dari upstream, Merge Conflicts dapat terjadi pada komputer lokal Anda maupun GitHub karena repositori berubah-ubah setiap minggunya dan mungkin terdapat perubahan yang bersinggungan dengan branch `master` yang ada pada repositori Anda.
-
-Jika terdapat Merge Conflicts, gunakan commits terbaru yang berasal dari repositori `upstream`. Setelah Anda menyelesaikan segala konflik yang terjadi dan sukses menggabungkannya ke `branch` Anda, jangan lupa untuk melakukan `push` lagi ke repositori GitHub Anda dengan perintah `git push origin <NAMA_BRANCH>`.
 
 ## Tutorial: Menjalankan Aplikasi Django
 
