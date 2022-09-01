@@ -6,13 +6,13 @@ import Countdown from "@site/src/components/Countdown"
 
 # Tugas 1: Menulis Esai
 ## Informasi Tugas
-### Submission:
-Submission Slot SCELE (link to be announced)
+### Pengumpulan:
+Tugas dikumpulkan dalam format penamaan: Kelas_NPM.pdf atau .doc [di SCELE](https://scele.cs.ui.ac.id/mod/assign/view.php?id=121450)
 
-### Deadline: 
+### Tenggat Waktu: 
 <Countdown deadline={new Date("08 September 2022 12:00 GMT+7")} />
 
-### Deliverables: 
+### Deskripsi Tugas: 
 Tulislah sebuah esai minimal 1000 kata yang mengandung poin-poin yang sebagai berikut:
 1. Apa itu platform?
 2. Apa itu web platform dan mobile platform? Apa contohnya? Dari contoh-contoh platform yang disebutkan, mana yang terbaik? Mana yang termudah untuk pemula? Analisis dan tulis sumber-sumber pendukung
