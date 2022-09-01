@@ -3,41 +3,61 @@ sidebar_label: Lab 0
 sidebar_position: 1
 ---
 
-# Lab 0: Basic git (on GitHub) and Deployment Django Application
+# Lab 0: Basic Git (on GitHub) and Deploying Django Application
 
-Platform Based Programming (CSGE602022) - Organized by Faculty of Computer Science University of Indonesia, Odd Term 2022/2023
+Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Term 2022/2023
 
 ---
 
 ## Learning Goals
 
-After completed this tutorial, student expected to:
-- Understand basic git commands that you need to know to work on application project.
-- Uses basic git commands you need to know to work on app projects.
-- Create a local and online git repository (GitHub).
-- Added a remote between the local git repository and its counterpart on GitHub.
-- Understand branching in git and able to do merge requests/pull requests.
-- Deploy Django applications on Heroku.
+After completing this tutorial, you will be able to:
 
-## Git Introductions
+-  Create a local Git repository and share the repository publicly on a Git
+   hosting provider such as GitHub
+-  Perform basic Git commands that you need to know to work on a software
+   development project
+-  Perform a basic Git workflow such as creating a branch and making a
+   merge/pull request
+-  Synchronise your Git history (i.e. the commits) from local repository to an
+   online repository
+-  Deploy a Django application to a Platform-as-a-Service provider such as
+   Heroku
+
+## Introduction to Git
 
 In your life as a Computer Science or Information Systems student, you may have used a version control system. One that you might use is the undo feature in the text editor. When you make a mistake, you can revert to a time before you made a mistake with the undo feature. Another example is when you work on a document collaboratively on Google Drive, you can see every change made in the document and you can revert to the previous changes.
 
-In this tutorial, you will learn about a version control system called git. git is a version control system commonly used to track changes to software artifacts such as source code, HTML pages, or stylesheets. Git will record the changes that occur to your work as a series of commits from the oldest commits to the newest commits. The change is like a graph where nodes represent a commit and directed edge(s) represent the relationship between a commit and the previous commit.
+In this tutorial, you will learn about a version control system called [Git][]. Git is a version control system commonly used to track changes to software artifacts such as source code, HTML pages, or stylesheets. Git will record the changes that occur to your work as a series of commits from the oldest commits to the newest commits. The change is like a graph where nodes represent a commit and directed edge(s) represent the relationship between a commit and the previous commit.
 
-Don't worry if you are still unfamiliar with terminology such as: node, edge, and graph. You will learn more about it in the Data Structures & Algorithms and Discrete Mathematics courses.
+> Note: Don't worry if you are still unfamiliar with terminology such as:
+> _node_, _edge_, and _graph_. You will learn more about it in the Data
+> Structures & Algorithms and Discrete Mathematics course.
 
-Before doing this tutorial and the following tutorials, make sure you have installed the following tools:
-- Git
-- Python (latest version)
-- EditorConfig
-- A good text editor or IDE, such as Vim, Visual Studio Code, Sublime, or PyCharm.
+Before doing this tutorial and any subsequent tutorials, make sure you have
+installed the following tools:
 
-Whatever your choice of text editor, try to learn to use vim. Vim is the standard text editor used in git. At least learn how to navigate using the hjkl key and operate the editor in NORMAL mode (example: :w, :q, :wq, ESC key to switch NORMAL mode, and i to switch to INSERT mode).
+-  [Git][]
+-  [Python][] (Latest version: `3.10.6` at the time of writing)
+-  A good text editor or IDE, such as:
+   -  [Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/)
+      with [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and
+      [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+      extension
+   -  [PyCharm Community Edition](https://www.jetbrains.com/pycharm/)
+   -  [Vim](https://www.vim.org/)
 
-To shorten this tutorial document, how to install and configure each equipment can be seen via the link above.
+Whatever your choice of text editor or IDE, try to learn how to use Vim. Vim is
+the standard text editor you can find when operating in an environment without
+graphical user interface such as a Linux server. At least, learn how to navigate
+through the document loaded in `vim` using the `h`, `j`, `k`, and `l` key, and
+operate the editor in NORMAL mode (example: `:w`, `:q`, `:wq`, ESC key to switch
+NORMAL mode, and `i` to switch to INSERT mode).
 
-## Tutorial: Basic git and GitHub
+To shorten this tutorial document, please refer to the documentation of each
+mentioned tools above to know how to install and configure them.
+
+## Tutorial: Basic Git and GitHub
 
 1. Open a command prompt or your favorite shell. If you are using Windows, use git Bash or cmd (only applicable if you have added the path to the git executable folder to PATH in the environment variable). If you are using a Unix-based OS (Linux or Mac OS), you can use a shell that is available on your OS, such as bash.
 
@@ -57,7 +77,8 @@ git config user.name "<NAME>"
 git config user.email "<EMAIL>"
 ```
 
-example:
+Example:
+
 ```bash
 git config user.name "Adrian Holovaty"
 git config user.email "adrian.holovaty@ui.ac.id"
@@ -118,11 +139,16 @@ You just created a local git repository and started monitoring changes to a file
 4. Find and click the clone button on the repository page. Note that there are two types of ways to clone a repository: HTTPS and SSH. Copy the URL that uses HTTPS.
 5. Update your local git repository so that all commits can be stored in your GitHub repository. Use the command git remote add origin <URL_REPOSITORY> and use the URL you copied earlier as an argument to the command.
 
+> Note: If you are connected to the wireless network at the university,
+> e.g. `Hotspot - UI`, or working from a PC in the lab, you can only clone
+> Git repository using HTTPS.
+
 ```bash
 git remote add origin <URL_REPOSITORY>
 ```
 
-example:
+Example:
+
 ```bash
 git remote add origin https://github.com/adrianholovaty/my-first-repo.git
 ```
@@ -203,11 +229,11 @@ Now, a new branch has been created. You can see what branches are present in you
 Example:
 
     Name: Adrian Holovaty
-    
+
     NPM : 1006123456
-    
+
     Grade : Z
-    
+
     Hobbies : Sleep
 
 3. Save the file and add it to the local git repository.
@@ -248,14 +274,14 @@ Example:
     ```
 
 4. Install the required dependencies to run the application in your local computer with command `pip install <DEPENDENCIES_NAME>`. The _dependencies_ name that you need to install can be seen below.
-  - django 
+  - django
   - gunicorn
   - whitenoise
   - psycopg2-binary
   - requests
   - urllib3
 
-5. Save the _dependencies_ list that you’ve installed to a `txt` format file. You can use command prompt/shell with command: `pip freeze > requirements.txt`. 
+5. Save the _dependencies_ list that you’ve installed to a `txt` format file. You can use command prompt/shell with command: `pip freeze > requirements.txt`.
 
 6. Create a Django project with command `django-admin startproject <PROJECT_NAME>.` on your command line/shell. Please note that `<PROJECT_NAME>` is a name of the project that you want and `.` in the end of the line of command was to tell the `django-admin` to initiate a Django project with current directory as a `root` of the project.
 
@@ -276,7 +302,7 @@ After you learn about git, GitHub, and how to make a Django application, you’l
 2. Execute command `git init` with a command line/shell in `django_exercise` directory that you’ve used before in the previous tutorial and set the origin of your git local repository to the GitHub repository that you’ve made in the previous step.
 
 3. Create a file with the name `Procfile` that contains a script below. This file will be used by Heroku to read the log activity of your application to Heroku internal monitoring system. The contents of the script can be seen below.
-    
+
     ```
     web: gunicorn django_project.wsgi --log-file -
     ```
@@ -347,9 +373,9 @@ Example:
     ]
     ```
 
-9. `Add`, `commit`, and `push` the changes that you have made to your GitHub repository.  
+9. `Add`, `commit`, and `push` the changes that you have made to your GitHub repository.
 
-After you perform all the procedures above, your new Django application is ready to deploy in Heroku. If you open the GitHub Actions tab in your repository, it seems that a _workflow_ is already running but the status is failed because there's an error that says there are some parameters in _deployment_ process that were not found. This thing happened because you’re not yet configure the parameters needed by the _workflow_. 
+After you perform all the procedures above, your new Django application is ready to deploy in Heroku. If you open the GitHub Actions tab in your repository, it seems that a _workflow_ is already running but the status is failed because there's an error that says there are some parameters in _deployment_ process that were not found. This thing happened because you’re not yet configure the parameters needed by the _workflow_.
 Now, you’ll configure those parameters.
 >Make sure that you’ve a Heroku account and have made the Heroku application.<br />
 > Please read README in _root_ of PBP repository to learn how to create an account and application on Heroku.
@@ -397,3 +423,6 @@ After you re-run _workflow_ and _deployment_ status become success (can be seen 
 ## Credits
 
 This document was based on [Exercise 0: Introduction to Git](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises), written by the 2017 Advanced Programming Teaching Team ([@addianto](https://gitlab.com/addianto), [@muhammad.ardhan](https://gitlab.com/muhammad.ardhan), [@fbenarto](https://gitlab.com/fbenarto), et al.) and [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab), written by 2021 Platform Based Programming Teaching Team ([@prakashdivyy](https://gitlab.com/prakashdivyy)). Every tutorial and instruction in this repository is designed in such a way that students can complete this tutorial during the lab session.
+
+[Git]: https://git-scm.com/
+[Python]: https://www.python.org/

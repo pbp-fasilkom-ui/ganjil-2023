@@ -118,7 +118,7 @@ const config = {
             items: [
               {
                 label: 'GitHub - Contribute Here',
-                href: 'https://github.com/pbp-fasilkom-ui/pbp0',
+                href: 'https://github.com/pbp-fasilkom-ui/ganjil-2023',
               },
             ],
           },
