@@ -40,14 +40,7 @@ Tutorial, Essay, and Lab assignment PBD Odd 2022/2023 contribute to the final gr
 4. **D** if only **30% checklist** is done
 5. **E** if not doing all of the checklists
 
-While **essay assignment**, will be graded by the following scheme:
-1. Originality of work and title attractiveness (10 points)
-2. Writing format (10 points)
-3. Good and right use of English (15 points)
-4. Sharpness level of problem analysis (30 points)
-5. The benefits and urgency from the issues raised (15 points)
-6. Conclusion and Suggestion (15 points)
-7. References (5 points)
+Please check SCELE for **essay assignment** grading scheme.
 
 Each task that has been done by the student must be demonstrated to the teaching assistant. The following details are the rules that students need to pay attention to:
 
@@ -194,4 +187,4 @@ Here are some reading sources that might help during the learning process:
 
 ## Credit
 
-This document was based on [Exercise 0: Introduction to Git](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises),  written by the 2017 Advanced Programming Teaching Team ([@addianto](https://gitlab.com/addianto),  [@muhammad.ardhan](https://gitlab.com/muhammad.ardhan),  [@fbenarto](https://gitlab.com/fbenarto), et al.) and [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab), written by 2021 Platform Based Programming Teaching Team ([@prakashdivyy](https://gitlab.com/prakashdivyy)). Every tutorial and instruction in this repository is designed in such a way that students can complete this tutorial during the lab session.
+This document was based on [Exercise 0: Introduction to Git](https://gitlab.com/CSUI-AdvProg-2017/lab-exercises), written by the 2017 Advanced Programming Teaching Team ([@addianto](https://gitlab.com/addianto), [@muhammad.ardhan](https://gitlab.com/muhammad.ardhan), [@fbenarto](https://gitlab.com/fbenarto), et al.) and [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab), written by 2021 Platform Based Programming Teaching Team ([@prakashdivyy](https://gitlab.com/prakashdivyy)). Every tutorial and instruction in this repository is designed in such a way that students can complete this tutorial during the lab session.
