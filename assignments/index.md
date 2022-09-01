@@ -9,7 +9,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Daftar Konten
 
-1. Tutorial Mingguan
+1. [Tugas dan Tutorial Mingguan](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/)
 2. [Pendahuluan](#pendahuluan)
 3. [Aturan dan Skema Penilaian](#aturan-dan-skema-penilaian)
 4. [Tutorial: Cara Mengerjakan](#tutorial-cara-mengerjakan)
