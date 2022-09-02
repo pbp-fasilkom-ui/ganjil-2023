@@ -10,20 +10,23 @@ import CodeEditor from "@site/src/components/CodeEditor"
 import { imgExample } from "@site/src/data/examples"
 
 # &lt;img&gt; - Image
-Elemen image adalah elemen yang dapat digunakan untuk menampilkan gambar di sebuah halaman web. Elemen image dapat didefinisikan dengan menggunakan tag `<img />`.
+
+The image element is an element for displaying an image in a web page. It can
+be defined by using a single `<img />` tag.
 
 Untuk memberi tahu browser image yang harus ditampilkan, kalian harus mendefinisikan value dari atribut `src` pada tag image. Selain itu terdapat pula beberapa atribut lain yang mengatur properti dari gambar seperti yang dituliskan pada bagian selanjutnya.
 
-### Daftar Atribut Image Tag
+## Possible Attributes
+
 - `src`: URL yang ingin dituju
 - `alt`: Deskripsi dari image yang ditampilkan (digunakan ketika image tidak dapat di-load dan untuk accessibility)
 - `height`: Set height dari image yang ingin ditampilkan (sebaiknya menggunakan CSS saja)
 - `width`: Set width dati image yang ingin ditampilkan (sebaiknya menggunakan CSS saja)
 
-### Contoh Penggunaan
+## Usage Example
+
 <Tabs>
     <TabItem value="example1" label="Menampilkan Gambar" default>
         <CodeEditor defaultValue={imgExample} />
     </TabItem>
 </Tabs>
- 
