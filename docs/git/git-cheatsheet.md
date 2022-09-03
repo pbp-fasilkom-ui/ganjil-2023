@@ -4,74 +4,77 @@ sidebar_label: Git Cheatsheet
 
 # Git Cheatsheet
 
-## Basic Operations
-### View current branch status
-#### Use `git status`
+## Operasi Sederhana
+### Melihat status branch
+#### Gunakan `git status`
+Untuk mengecek status dari sebuah projek git, anda dapat menggunakan command `git status` di terminal. Command ini akan memberikan kalian informasi mengenai *commit* serta *unstaged/staged file* yang ada pada projek kalian.
 ```bash
 git status
 ```
-To check the status of your current git project, you can use the `git status` command. This command will give you an overview of any unpushed commits and the details of any untracked/staged files that you might have in your current project. 
 
-**Do not forget to check this command before you start developing on a new feature**. You definitely do not want to work for 30-60 minutes on a functionality only to find out that you did it in the wrong branch. It is the programmer's equivalent of *"drawing art on the wrong layer"*.
+**Jangan lupa untuk cek branch kalian menggunakan command ini sebelum membuat sebuah fitur baru**. Anda pasti tidak ingin mengerjakan sebuah fitur untuk 30-60 menit hanya untuk menemukan bahwa anda membuat fitur tersebut di branch yang salah. Kesalahan ini adalah ekuivalen dari *"Menggambar pada layer yang salah"* untuk seorang programmer.
 
-### Staging (Adding) Files
-#### Adding a single file
+### Staging (Menambahkan) File
+#### Menambahkan satu file
 ```bash
 git add <file_name>
 ```
 
-#### Adding multiple files
+#### Menambahkan banyak file sekaligus
 ```bash
 git add <file-1> <file-2> <file-3> ... <file-n>
 ```
 
-#### Adding all unadded files
+#### Menambahkan semua file yang belum di-*stage*
+Gunakan command ini apabila kalian ingin *stage* semua file pada projek.
 ```bash
 git add .
 ```
 
 ### Commit
-#### Commit using default text editor (vi in most cases)
+#### Membuat *Commit* dengan *default text editor* (pada umumnya `vi`)
 ```bash
 git commit
 ```
 
-Note that `vi` has a **very steep** learning curve, so it is not recommended to use this mode for writing commit messages. In general if you find yourself in this editor, exit it by doing the following:
-1. Press `:` (`SHIFT + ;`)
-2. Type `q!` and press `ENTER`
-3. Continue creating a commit by using `git commit -m "<MESSAGE>"`
+Ingat bahwa membuat commit menggunakan `vi` memiliki tingkat kesulitan yang cukup tinggi. Apabila kalian tidak sengaja memasuki mode ini, keluar dari editor tersebut dengan melakukan hal berikut ini:
+1. Ketik `:`
+2. Ketik `q!` dan pencet `ENTER`
+3. Buat kembali commit dengan menggunakan `git commit -m "<MESSAGE>"`
 
-#### Commit using command line flag (`git commit -m`)
+#### Membuat *Commit* dengan command line flag `-m` (recommended)
 ```bash
 git commit -m "COMMIT MESSAGE HERE"
 ```
 
-### Branch
-In general when switching branches you can use either `git checkout` or `git switch`. Online tutorials will usually teach you how to change branches using `git checkout`, but it is up to you which one to use.
+Ingat bahwa sebelum melakukan commit, anda harus terlebih dahulu [menambahkan file yang ingin di-commit ke staging area](#staging-menambahkan-file)
 
-#### Switching Branches
-##### Option 1: using `git checkout`
+### Branch
+Pada umumnya, kalian dapat menggunakan command `git checkout` atau `git switch` untuk melakukan operasi pada branch. Tutorial di Google dan StackOverflow biasanya menggunakan command `git checkout`, tapi kalian dipersilahkan untuk menggunakan kedua command tersebut.
+
+#### Pindah Branch
+##### Opsi 1: menggunakan `git checkout`
 ```bash
 git checkout <branch_name>
 ```
 
-##### Option 2: using `git switch`
+##### Opsi 2: menggunakan `git switch`
 ```bash
 git switch <branch_name>
 ```
 
-#### Creating A New Branch (based on current branch)
-##### Option 1: using `git checkout`
+#### Membuat Branch Baru (berdasarkan branch yang aktif)
+##### Opsi 1: menggunakan `git checkout`
 ```bash
 git checkout -b <branch_name>
 ```
 
-##### Option 2: using `git switch`
+##### Opsi 2: using `git switch`
 ```bash
 git switch -c <branch_name>
 ```
 
-Branches are used to manage multiple versions of your code. This is useful when working in a team and/or to have a separate space for implementing features of your website so it can be more easily managed.
+Branch digunakan untuk mengelola kode yang memiliki banyak versi/variasi. Fitur ini berguna saat kalian bekerja dalam sebuah tim dan/atau membutuhkan segregasi antara fitur yang sedang di-implementasikan agar lebih mudah untuk dikelola.
 
-**You should always take advantage of branches in complex projects**, especially when doing group work as it minimizes the risk of having conflicts between you and your co-workers.
+**Anda sebaiknya selalu memanfaatkan fitur branch pada proyek yang kompleks**, terutama saat sedang mengerjakan tugas kelompok agar dapat meminimalisir kesempatan terjadinya *merge conflict* antara anda dengan anggota kelompok yang lainnya.
 
