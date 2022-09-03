@@ -10,20 +10,35 @@ import CodeEditor from "@site/src/components/CodeEditor"
 import { imgExample } from "@site/src/data/examples"
 
 # &lt;img&gt; - Image
-Elemen image adalah elemen yang dapat digunakan untuk menampilkan gambar di sebuah halaman web. Elemen image dapat didefinisikan dengan menggunakan tag `<img />`.
 
-Untuk memberi tahu browser image yang harus ditampilkan, kalian harus mendefinisikan value dari atribut `src` pada tag image. Selain itu terdapat pula beberapa atribut lain yang mengatur properti dari gambar seperti yang dituliskan pada bagian selanjutnya.
+The image element is an element for displaying an image in a web page. It can
+be defined by using a single `<img />` tag.
 
-### Daftar Atribut Image Tag
-- `src`: URL yang ingin dituju
-- `alt`: Deskripsi dari image yang ditampilkan (digunakan ketika image tidak dapat di-load dan untuk accessibility)
-- `height`: Set height dari image yang ingin ditampilkan (sebaiknya menggunakan CSS saja)
-- `width`: Set width dati image yang ingin ditampilkan (sebaiknya menggunakan CSS saja)
+To display an image in the page, you need to provide a value to `src` attribute
+in the tag. There are also other attributes you can define in the tag to
+customise how the image is displayed. The attributes are explained in [Possible Attributes](#possible-attributes).
 
-### Contoh Penggunaan
+## Possible Attributes
+
+-  `src`: The address (i.e. URL) pointing to the location where the image is
+   stored.
+-  `alt`: Textual description of the image that will be read by screen reader
+   commonly used by visual-impaired people. It is also used as stand-in value
+   that will be displayed by the browser if the image cannot be loaded.
+-  `height`: Set the height of the image.
+-  `width`: Set the width of the image.
+
+> Note: As you progress in learning about Web design, you will notice that
+> you can set the dimension of an image using HTML attribute and CSS.
+> The recommended approach in defining the dimension, and the style of an
+> image in general, is to use CSS. The main purpose of HTML is to define a
+> **structure** to a web page, while CSS' is to tell browser how to display
+> the elements in the page.
+
+## Usage Example
+
 <Tabs>
-    <TabItem value="example1" label="Menampilkan Gambar" default>
+    <TabItem value="example1" label="Display Images" default>
         <CodeEditor defaultValue={imgExample} />
     </TabItem>
 </Tabs>
- 

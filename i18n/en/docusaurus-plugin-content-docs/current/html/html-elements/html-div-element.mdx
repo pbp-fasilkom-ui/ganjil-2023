@@ -10,23 +10,32 @@ import CodeEditor from "@site/src/components/CodeEditor"
 import { containerExample1, containerExample2 } from "@site/src/data/examples"
 
 # &lt;div&gt; - Container
-Elemen div atau container yang dapat digunakan untuk menggabungkan beberapa elemen kedalam satu elemen gabungan.
 
-Elemen ini **sangat berguna** dalam mengimplementasikan layout yang lebih kompleks karena memungkinkan kita mengaplikasikan CSS style untuk positioning dan penampilan ke masing-masing kelompok komponen.
+The _div_ (container) is an element used for encapsulating multiple elements as
+a composite. It can be defined by using a pair of `<div>` and `</div>` tag.
 
-Tanpa menggunakan container, akan **sangat sulit** atau bahkan **tidak mungkin** untuk mengatur posisi sekelompok elemen pada halaman dengan rapih, sehingga elemen ini adalah elemen yang fundamental. 
+It is **really important** to know how to use container element because it
+allows us to create a more advanced page layout, combined with CSS for
+positioning and styling the elements in the composite. It would be very hard, or
+even impossible, to nicely layout a composite without the help of container.
 
-### Beberapa Fungsi Container
-- Mempermudah manajemen elemen pada sebuah page yang kompleks.
-- Memungkinkan kita membagi sebuah halaman menjadi beberapa bagian terpisah.
-- Bersama dengan CSS dapat digunakan untuk memposisikan sekelompok elemen relatif terhadap halaman (misal ke bagian tengah halaman).
+You can use _div_ (container) to:
 
-### Contoh Penggunaan
+-  Define a set of elements as a composite in a complex page layout.
+-  Organise a page layout into several sections where each section may have
+   their own purpose in providing functionality to the user, e.g. one section
+   is defined for displaying a list of items, while another section is for
+   displaying advertisement.
+-  Set the position of a group of elements relative to the page with a help
+   from the provided CCS.
+
+## Usage Example
+
 <Tabs>
-    <TabItem value="example1" label="Mengelompokkan Elemen" default>
+    <TabItem value="example1" label="Elements Grouping" default>
         <CodeEditor defaultValue={containerExample1} />
     </TabItem>
-    <TabItem value="example2" label="Memposisikan Sekelompok Elemen">
+    <TabItem value="example2" label="Elements Positioning">
         <CodeEditor defaultValue={containerExample2} />
     </TabItem>
-</Tabs> 
+</Tabs>

@@ -22,7 +22,7 @@ The essay should answer the following questions:
 2. How a software is developed and run on a platform?
 3. What is Web platform and mobile platform?
 4. Mention some of Web platforms and mobile platforms you found in the wild (Internet)
-5. Based on your findings form (4), do analysis and comparison to see:
+5. Based on your findings from (4), do analysis and comparison to see:
    1. Which one is the "best" for building Web application and mobile
       application? Please be specific on the criteria being used when comparing
       the platforms
@@ -36,10 +36,13 @@ The criteria for the essay:
 -  Minimum 1000 words, excluding bibliography
 -  The essay consists of an introductory paragraph, content, conclusion, and
    also a bibliography
--  The document is written into a PDF file (`.pdf`)
+-  The essay is typed by using text editor or office suite (e.g. Google Docs,
+   Microsoft Word)
+-  The written essay is exported to a PDF file (`.pdf`) prior to submission to
+   [SCELE][].
 -  The file name format of the PDF file must match the following rule:
    `StudentID_YourName_Assignment1.pdf`
-   - For example: `2106123456_RickeyAstley_Assignment1.pdf`
+   -  For example: `2106123456_RickeyAstley_Assignment1.pdf`
 
 The essay will be graded by using this [grading rubric (click)](https://web.gccaz.edu/English/Assessment/Spring07/Final/ArgumentRubric.htm).
 

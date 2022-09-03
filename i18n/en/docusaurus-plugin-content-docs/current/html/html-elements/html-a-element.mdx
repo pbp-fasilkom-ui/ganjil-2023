@@ -10,24 +10,42 @@ import CodeEditor from "@site/src/components/CodeEditor"
 import { anchorExample1, anchorExample2 } from "@site/src/data/examples"
 
 # &lt;a&gt; - Anchor
-Elemen anchor adalah elemen yang dapat digunakan untuk membuat link ke situs lain di internet (termasuk situs yang sama dengan page yang sedang dikunjungi). Elemen anchor dapat didefinisikan dengan menggunakan tag `<a></a>`
 
-Link yang ingin dituju oleh elemen anchor dapat didefinisikan dengan memberikan atribut href ke anchor tag yang nilainya berupa string URL.
+The anchor element is an element to create a link to another website on the
+Internet. It is also can be used to create a link to another element in the same
+website. The element can be defined by using a pair of `<a>` and `</a>` tag.
 
-#### Daftar Atribut Anchor Tag:
-- `href`: URL yang ingin dituju
-- `target`: Target window dimana halaman akan dibuka. Dapat memiliki nilai sebagai berikut:
-  - `_self`: Buka link pada halaman yang sama (default).
-  - `_blank`: Buka link pada halaman baru.
-  - `_parent`: Buka link pada halaman *parent* (khusus untuk iframe).
+To use anchor element, you need to specify the location of the targeted element,
+which can be another website or an element in the same website), in a property
+named `href` in the opening tag of an anchor element. The location is usually a
+string representing a URL. For example:
 
-### Contoh Penggunaan
+```html
+<a href="https://github.com">GitHub</a>
+```
+
+The example above will make `GitHub` text to become a link to GitHub website,
+which located at `https://github.com`.
+
+## Possible Attributes
+
+The following is the list of possible attributes in an anchor tag:
+
+-  `href`: Contains the address, usually written as URI/URL value, to the
+   targeted element.
+-  `target`: How the browser will open the link. The possible values:
+   -  `_self`: Opens the link in the same window.
+   -  `_blank`: Opens the link in a new window.
+   -  `_parent`: Opens the link at the parent's page (only applicable when the
+      anchor tag is defined as the value of a `<iframe>` tag).
+
+## Usage Example
+
 <Tabs>
-    <TabItem value="example1" label="Elemen teks sebagai link" default>
+    <TabItem value="example1" label="Text element as a link" default>
         <CodeEditor defaultValue={anchorExample1} />
     </TabItem>
-    <TabItem value="example2" label="Elemen non-teks sebagai link">
+    <TabItem value="example2" label="Non-text element as a link">
         <CodeEditor defaultValue={anchorExample2} />
     </TabItem>
 </Tabs>
- 
