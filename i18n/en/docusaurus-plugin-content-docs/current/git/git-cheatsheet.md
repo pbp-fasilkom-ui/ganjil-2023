@@ -12,7 +12,7 @@ git status
 ```
 To check the status of your current git project, you can use the `git status` command. This command will give you an overview of any unpushed commits and the details of any untracked/staged files that you might have in your current project. 
 
-**Do not forget to check this command before you start developing on a new feature**. You definitely do not want to work for 30-60 minutes on a functionality only to find out that you did it in the wrong branch. It is the programmer's equivalent of *"drawing art on the wrong layer"*.
+**Do not forget to check this command before you start developing on a new feature**. You definitely do not want to work for 30-60 minutes on a functionality only to find out that you did it in the wrong branch.
 
 ### Staging (Adding) Files
 #### Adding a single file

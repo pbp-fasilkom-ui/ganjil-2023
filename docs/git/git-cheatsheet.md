@@ -12,7 +12,7 @@ Untuk mengecek status dari sebuah proyek git, anda dapat menggunakan command `gi
 git status
 ```
 
-**Jangan lupa untuk cek branch kalian menggunakan command ini sebelum membuat sebuah fitur baru**. Anda pasti tidak ingin mengerjakan sebuah fitur untuk 30-60 menit hanya untuk menemukan bahwa anda membuat fitur tersebut di branch yang salah. Kesalahan ini adalah ekuivalen dari *"Menggambar pada layer yang salah"* untuk seorang programmer.
+**Jangan lupa untuk cek branch kalian menggunakan command ini sebelum membuat sebuah fitur baru**. Anda pasti tidak ingin mengerjakan sebuah fitur untuk 30-60 menit hanya untuk menemukan bahwa anda membuat fitur tersebut di branch yang salah.
 
 ### Staging (Menambahkan) File
 #### Menambahkan satu file
