@@ -7,7 +7,7 @@ sidebar_label: Git Cheatsheet
 ## Operasi Sederhana
 ### Melihat status branch
 #### Gunakan `git status`
-Untuk mengecek status dari sebuah projek git, anda dapat menggunakan command `git status` di terminal. Command ini akan memberikan kalian informasi mengenai *commit* serta *unstaged/staged file* yang ada pada projek kalian.
+Untuk mengecek status dari sebuah proyek git, anda dapat menggunakan command `git status` di terminal. Command ini akan memberikan kalian informasi mengenai *commit* serta *unstaged/staged file* yang ada pada projek kalian.
 ```bash
 git status
 ```
@@ -26,7 +26,7 @@ git add <file-1> <file-2> <file-3> ... <file-n>
 ```
 
 #### Menambahkan semua file yang belum di-*stage*
-Gunakan command ini apabila kalian ingin *stage* semua file pada projek.
+Gunakan command ini apabila kalian ingin *stage* semua file pada proyek.
 ```bash
 git add .
 ```
