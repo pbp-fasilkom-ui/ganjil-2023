@@ -25,7 +25,7 @@ git add <file_name>
 git add <file-1> <file-2> <file-3> ... <file-n>
 ```
 
-#### Adding all unadded files
+#### Adding all unstaged files
 ```bash
 git add .
 ```
@@ -33,10 +33,11 @@ git add .
 ### Commit
 #### Commit using default text editor (vi in most cases)
 ```bash
+# If using vi: Write commit message by pressing 'i' to enter insert mode, type your commit message, press 'ESCAPE' to exit insert mode, then type :wq to save.
 git commit
 ```
 
-Note that `vi` has a **very steep** learning curve, so it is not recommended to use this mode for writing commit messages. In general if you find yourself in this editor, exit it by doing the following:
+Note that `vi` has a **very steep** learning curve. If you accidentally find yourself in this editor, exit it by doing the following:
 1. Press `:` (`SHIFT + ;`)
 2. Type `q!` and press `ENTER`
 3. Continue creating a commit by using `git commit -m "<MESSAGE>"`

@@ -34,10 +34,11 @@ git add .
 ### Commit
 #### Membuat *Commit* dengan *default text editor* (pada umumnya `vi`)
 ```bash
+# If using vi: Write commit message by pressing 'i' to enter insert mode, type your commit message, press 'ESCAPE' to exit insert mode, then type :wq to save.
 git commit
 ```
 
-Ingat bahwa membuat commit menggunakan `vi` memiliki tingkat kesulitan yang cukup tinggi. Apabila kalian tidak sengaja memasuki mode ini, keluar dari editor tersebut dengan melakukan hal berikut ini:
+Ingat bahwa membuat commit menggunakan `vi` cukup sulit apabila anda tidak pernah menggunakan editor tersebut sebelumnya. Apabila kalian tidak sengaja memasuki mode ini, anda dapat keluar dari editor dengan melakukan hal berikut:
 1. Ketik `:`
 2. Ketik `q!` dan pencet `ENTER`
 3. Buat kembali commit dengan menggunakan `git commit -m "<MESSAGE>"`
