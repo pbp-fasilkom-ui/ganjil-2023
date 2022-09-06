@@ -86,7 +86,7 @@ Now that you've configured your repository and Django project, you'll learn how 
                 "fields":{
                     "item_name": "iPhone 14 Pro Maag",
                     "item_price":"14000000",
-                    "description: "It gives you ulcers because it's expensive."
+                    "description": "It gives you ulcers because it's expensive."
                 }
         },
         {
