@@ -6,5 +6,9 @@
   "sidebar.tutorialSidebar.category.Tutorial": {
     "message": "Tutorial",
     "description": "The label for category Tutorial in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tugas": {
+    "message": "Tugas",
+    "description": "The label for category Tugas in sidebar tutorialSidebar"
   }
 }

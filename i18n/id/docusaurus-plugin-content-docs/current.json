@@ -10,5 +10,9 @@
   "sidebar.defaultSidebar.category.Elemen HTML": {
     "message": "Elemen HTML",
     "description": "The label for category Elemen HTML in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Git": {
+    "message": "Git",
+    "description": "The label for category Git in sidebar defaultSidebar"
   }
 }
