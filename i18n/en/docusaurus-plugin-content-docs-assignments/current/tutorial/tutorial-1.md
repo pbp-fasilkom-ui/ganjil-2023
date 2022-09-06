@@ -34,7 +34,7 @@ The flow of a request being processed in Django is as follows. First, incoming r
 
 2. Enter a repository name to your liking. Make sure your repository is public so it can later be checked out by teaching assistants. The Include all branches section does not need to be checked.
 
-3. Clone the new repository to your computer with the command git clone <URL_REPOSITORI> with the description <URL_REPOSITORI> adjusted to the repository link you just created.
+3. Clone the new repository to your computer with the command `git clone <URL_REPOSITORY>` with the description <URL_REPOSITORY> adjusted to the repository link you just created.
 
 4. Enter the repository that you have cloned on your computer and create a virtual environment with the following command.
 
@@ -48,23 +48,23 @@ The flow of a request being processed in Django is as follows. First, incoming r
         Unix (Linux & Mac OS):
         source env/bin/activate
 
-6. Install the dependencies required to run the Django project with the pip install -r requirements.txt command.
+6. Install the dependencies required to run the Django project with the `pip install -r requirements.txt` command.
 
-7. Run the Django project you've created with the python manage.py runserver command and open http://localhost:8000 in your favorite browser to test if it runs properly.
+7. Run the Django project you've created with the `python manage.py runserver` command and open `http://localhost:8000` in your favorite browser to test if it runs properly.
 
 Now that you've configured your repository and Django project, you'll learn how to create a django-app.
 
 ## Tutorial: Creating a Django App along with Model Configuration
 
-1. Create a django-app named wishlist with the python command manage.py startapp wishlist.
+1. Create a django-app named wishlist with the python command `python manage.py startapp wishlist`.
 
-2. Open settings.py in the project_django folder and add the wishlist app to the INSTALLED_APPS variable to register the django-app you've created into your Django project. An example is as follows.
+2. Open `settings.py` in the `project_django` folder and add the wishlist app to the `INSTALLED_APPS` variable to register the django-app you've created into your Django project. An example is as follows.
 
         INSTALLED_APPS = [
             ...,
             'wishlist',
         ]
-3. Open the models.py file in the wishlist folder and add the following code snippet.
+3. Open the `models.py` file in the wishlist folder and add the following code snippet.
 
         from django.db import models
         
@@ -73,11 +73,11 @@ Now that you've configured your repository and Django project, you'll learn how 
             item_price = models.IntegerField()
             description = models.TextField()
 
-4. Run the python manage.py makemigrations command to prepare to migrate the model schema into the local Django database.
+4. Run the `python manage.py makemigrations` command to prepare to migrate the model schema into the local Django database.
 
-5. Run the python manage.py migrate command to deploy the created model schema into the local Django database.
+5. Run the `python manage.py migrate` command to deploy the created model schema into the local Django database.
 
-6. Create a folder called fixtures inside the wishlist application folder and create a file called initial_wishlist_data.json containing the following code.
+6. Create a folder called `fixtures` inside the wishlist application folder and create a file called `initial_wishlist_data.json` containing the following code.
 
         [
             {
@@ -109,11 +109,12 @@ Now that you've configured your repository and Django project, you'll learn how 
             }
         ]
 
-7. Run the python manage.py command loaddata initial_wishlist_data.json to load the data into the local Django database.
+7. Run the command `python manage.py loaddata initial_wishlist_data.json` to load the data into the local Django database.
 
 ## Tutorial: Implement Basic Views
 
 1. Open `views.py` that is located in the `wishlist` folder and create a function that accepts the parameter `request` and returns the `render(request, "wishlist.html")`. The example can be seen below.
+
     ```
     def show_wishlist(request):
         return render(request, "wishlist.html")
@@ -180,13 +181,15 @@ If a page appears containing _wishlist_ table, congratulations! You've successfu
     }
     ```
 3. Add context as the third parameter to the render function return in the function you created earlier. The data contained in the context variable will also be rendered by Django so that later you can display the data on the HTML page.
+    
     ```
     return render(request, "wishlist.html", context)
     ```
-Now, you will learn to map data that has been rendered in the views function to be able to display it on an HTML page. To do this mapping, you can use the special template syntax found in Django, namely {{data}}. If you're interested in knowing more about the syntax of Django's templates, you can read and learn more about Django's template tags documentation.
+
+Now, you will learn to map data that has been rendered in the views function to be able to display it on an HTML page. To do this mapping, you can use the special template syntax found in Django, namely `{{data}}`. If you're interested in knowing more about the syntax of Django's templates, you can read and learn more about Django's template tags documentation.
 
 1. Open the HTML file that you created earlier in the templates folder in the wishlist directory.
-2. Change Fill me! which is in the HTML &lt;p&gt; tag to {{name}} to display your name on the HTML page. Examples are as follows.
+2. Change Fill me! which is in the HTML &lt;p&gt; tag to `{{name}}` to display your name on the HTML page. Examples are as follows.
     ```
     ...
     <h5>Name: </h5>
@@ -194,7 +197,8 @@ Now, you will learn to map data that has been rendered in the views function to 
     ...
     ```
 
-3. To display a list of items into a table, you need to iterate over the list_item variable that you have rendered into the HTML. Note that you can't call the item list directly as you did in step 2 because the list_item variable is a container containing objects. You also need to call the specific variable/attribute name of the object in the container to call the data from that object. Examples are as follows.
+3. To display a list of items into a table, you need to iterate over the `list_item` variable that you have rendered into the HTML. Note that you can't call the item list directly as you did in step 2 because the `list_item` variable is a container containing objects. You also need to call the specific variable/attribute name of the object in the container to call the data from that object. Examples are as follows.
+    
     ```
     ...
     {% comment %} Add data below {% endcomment %}
@@ -207,6 +211,7 @@ Now, you will learn to map data that has been rendered in the views function to 
     {% endfor %}
     ...
     ```
+
 Now, try to refresh the page and see if the data you entered into the views also appears on the web page. If it appears, then congratulations! You've successfully connected models with views and templates while learning the basics of Django's template syntax.
 
 Next, please add, commit, and push the changes you've made to save them to the GitHub repository.
@@ -217,7 +222,7 @@ Finally finished! Congratulations, you've made it this far following the tutoria
 
 After you have completed all of the tutorials above, hopefully now you will understand better and in the future, you will be able to explore more with the Django framework in creating a web application.
 
-A few tips and tricks to survive as a developer (and Fasilkom UI student) in the future; Familiarize yourself with google, youtube and stack overflow. This website is the "light" that will help you deal with the errors you encounter while coding! In fact, a Software Engineer who works at Google always "learns" from the three knights when they are faced with problems. Therefore, do not hesitate to tell them!
+A few tips and tricks to survive as a developer in the future; Familiarize yourself with google, youtube and stack overflow. This website is the "light" that will help you deal with the errors you encounter while coding! In fact, a Software Engineer who works at Google always "learns" from the three websites mentioned when they are faced with problems. Therefore, do not hesitate to tell them!
 
 ![Petuah Hidup sebagai Anak Fasilkom](https://pbs.twimg.com/media/EWDAn-XWkAs3Y5T.jpg)
 
@@ -227,7 +232,7 @@ A few tips and tricks to survive as a developer (and Fasilkom UI student) in the
 ## Further Reading Resources
 - [Django Documentation](https://docs.djangoproject.com/en/4.1/)
 - [Created Initial Data in Django Project](https://docs.djangoproject.com/en/4.1/howto/initial-data/)
-- [Knowing Django Framework](https://www.contohapps.com/2020/12/mengenal-django-framework.html)
+- [Django Framework](https://www.tutorialspoint.com/python_web_development_libraries/python_web_development_libraries_django_framework.htm)
 - [Why Django is the Best Web Framework for Your Project](https://steelkiwi.com/blog/why-django-best-web-framework-your-project/)
 
 ## Contributors
