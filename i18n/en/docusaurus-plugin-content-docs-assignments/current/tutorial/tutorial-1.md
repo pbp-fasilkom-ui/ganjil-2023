@@ -56,9 +56,9 @@ Now that you've configured your repository and Django project, you'll learn how 
 
 ## Tutorial: Creating a Django App along with Model Configuration
 
-1. Create a django-app named wishlist with the python command `python manage.py startapp wishlist`.
+1. Create a django-app named `wishlist` with the python command `python manage.py startapp wishlist`.
 
-2. Open `settings.py` in the `project_django` folder and add the wishlist app to the `INSTALLED_APPS` variable to register the django-app you've created into your Django project. An example is as follows.
+2. Open `settings.py` in the `project_django` folder and add the `wishlist` app to the `INSTALLED_APPS` variable to register the django-app you've created into your Django project. An example is as follows.
 
         INSTALLED_APPS = [
             ...,
@@ -77,7 +77,7 @@ Now that you've configured your repository and Django project, you'll learn how 
 
 5. Run the `python manage.py migrate` command to deploy the created model schema into the local Django database.
 
-6. Create a folder called `fixtures` inside the wishlist application folder and create a file called `initial_wishlist_data.json` containing the following code.
+6. Create a folder called `fixtures` inside the `wishlist` application folder and create a file called `initial_wishlist_data.json` containing the following code.
 
         [
             {
@@ -166,13 +166,13 @@ If a page appears containing _wishlist_ table, congratulations! You've successfu
 
 ## Tutorial: Connecting Models with Views and Templates
 
-1. In the views function you have created, import the models you created earlier into the views.py file. You will use this class to retrieve data from the database. Examples are as follows.
+1. In the views function you have created, import the models you created earlier into the `views.py` file. You will use this class to retrieve data from the database. Examples are as follows.
     ```
     from django.shortcuts import render
     from wishlist.models import WishlistItem
     ...
     ```
-2. Add the code snippet below to the function you created earlier. This code snippet serves to call the query function to the database model and store the query results into a variable. Adjust the contents of the variable name with your name, yes.
+2. Add the code snippet below to the function you created earlier. This code snippet serves to call the query function to the database model and store the query results into a variable. Adjust the contents of the variable `name` with your name.
     ```
     data_wishlist_item = WishlistItem.objects.all()
     context = {
