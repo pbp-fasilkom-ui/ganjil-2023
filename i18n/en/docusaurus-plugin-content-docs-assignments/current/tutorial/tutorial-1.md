@@ -111,6 +111,58 @@ Now that you've configured your repository and Django project, you'll learn how 
 
 7. Run the python manage.py command loaddata initial_wishlist_data.json to load the data into the local Django database.
 
+## Tutorial: Implement Basic Views
+
+1. Open `views.py` that is located in the `wishlist` folder and create a function that accepts the parameter `request` and returns the `render(request, "wishlist.html")`. The example can be seen below.
+    ```
+    def show_wishlist(request):
+        return render(request, "wishlist.html")
+    ```
+
+2. Create a folder named `templates` inside the `wishlist` application folder and create a file named `wishlist.html` inside the `templates` folder that you've just created. Fill the content of the `wishlist.html` with the following _template_.
+    
+    ```
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h5>Name: </h5>
+    <p>Fill me!</p>
+
+    <table>
+        <tr>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Description</th>
+        </tr>
+        {% comment %} Add the data below this line {% endcomment %}
+    </table>
+
+    {% endblock content %}
+    ```
+
+3. Create a file inside the `wishlist` application folder named `urls.py` for _routing_ to the `views` function that you've created so that your HTML page can be displayed within your browser. The contents of `urls.py` can be seen below.
+    
+    ```
+    from django.urls import path
+    from wishlist.views import show_wishlist
+
+    app_name = 'wishlist'
+
+    urlpatterns = [
+        path('', show_wishlist, name='show_wishlist'),
+    ]
+    ```
+
+4. Also register the `wishlist` application in `urls.py` that is located in `project_django` folder by adding the following code snippet below to `urlpatterns` variable.
+    
+    ```
+    path('wishlist/', include('wishlist.urls')),
+    ```
+
+5. Run your Django project with the command `python manage.py runserver` and open [http://localhost:8000/wishlist/](http://localhost:8000/wishlist/) in your favorite browser to see the page that you've created.
+
+If a page appears containing _wishlist_ table, congratulations! You've successfully done _routing_ a `views` function that can _rendering_ an HTML page. However, as you can see, there's no data on that `wishlist` table. You also can see it's not clear who the `wishlist` belongs to, so you want to display your name on the `wishlist` page. Now, you will learn how to display data to HTML from the Django local _database_ as well as the data or variables that you've defined in your `views.py` file.
+
 ## Tutorial: Connecting Models with Views and Templates
 
 1. In the views function you have created, import the models you created earlier into the views.py file. You will use this class to retrieve data from the database. Examples are as follows.
@@ -181,7 +233,7 @@ A few tips and tricks to survive as a developer (and Fasilkom UI student) in the
 ## Contributors
 - Mohamad Rifqy Zulkarnaen
 - Muhammad Athallah
-- Muhammad Azis Husein
+- Muhammad Azis Husein (EN translator)
 - Firlandi A. R. Ansyari (EN translator)
 - Winaldo Amadea (EN translator)
 - Zuhal 'Alimul Hadi (EN translator)
