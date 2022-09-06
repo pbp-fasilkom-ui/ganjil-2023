@@ -22,7 +22,7 @@ Django is a _web framework_ that uses the Python programming language. This _web
 
 ## The Concept of Models, Views, and Templates (MVT)
 
-![Visualization of a running Django application](https://1.bp.blogspot.com/-u-n0WYPhc3o/X9nFtvNZB-I/AAAAAAAADrE/kD5gMaz4kNQIZyaUcaJJFVpDxdKrfoOwgCLcBGAsYHQ/s602/3.%2BPython%2BDjango%2B-%2BModul%2B2_Page2_Image5.jpg)
+![Visualization of a running Django application](https://krify.co/wp-content/uploads/2019/06/Django-Work-flow.jpg)
 
 Django is a _framework_ that follows the MVT (Model-View-Template) structure. MVT is a derivative of the MVC (Model-View-Controller) structure, but the  _model_ is more focused on the object that defines the entities in the _database_ and their configuration, the _views_ serve as the main logic of the application that will process incoming requests, and the _template_ serves as the views that will be returned to the user. 
 
