@@ -169,7 +169,7 @@ If a page appears containing _wishlist_ table, congratulations! You've successfu
 1. In the views function you have created, import the models you created earlier into the `views.py` file. You will use this class to retrieve data from the database. Examples are as follows.
     ```
     from django.shortcuts import render
-    from wishlist.models import WishlistItem
+    from wishlist.models import ItemWishlist
     ...
     ```
 2. Add the code snippet below to the function you created earlier. This code snippet serves to call the query function to the database model and store the query results into a variable. Adjust the contents of the variable `name` with your name.
