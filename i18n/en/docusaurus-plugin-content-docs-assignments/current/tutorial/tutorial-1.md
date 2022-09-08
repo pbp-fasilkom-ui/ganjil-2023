@@ -174,7 +174,7 @@ If a page appears containing _wishlist_ table, congratulations! You've successfu
     ```
 2. Add the code snippet below to the function you created earlier. This code snippet serves to call the query function to the database model and store the query results into a variable. Adjust the contents of the variable `name` with your name.
     ```
-    data_wishlist_item = WishlistItem.objects.all()
+    data_wishlist_item = ItemWishlist.objects.all()
     context = {
         'list_item': data_wishlist_item,
         'name': 'Cinoy'
