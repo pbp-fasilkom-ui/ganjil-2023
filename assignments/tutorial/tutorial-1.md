@@ -197,7 +197,7 @@ Apabila muncul sebuah halaman yang berisikan tabel _wishlist_, maka selamat! Kam
     ...
     ```
 
-2. Tambahkan potongan kode di bawah ini ke dalam fungsi yang sudah kamu buat sebelumnya. Potongan kode ini berfungsi untuk memanggil fungsi _query_ ke _model database_ dan menyimpan hasil _query_ tersebut ke dalam sebuah variabel.
+2. Tambahkan potongan kode di bawah ini ke dalam fungsi `show_wishlist` yang sudah kamu buat sebelumnya. Potongan kode ini berfungsi untuk memanggil fungsi _query_ ke _model database_ dan menyimpan hasil _query_ tersebut ke dalam sebuah variabel.
 
     Sesuaikan isi variabel `nama` dengan nama kalian, ya. :wink:
     
