@@ -169,4 +169,4 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
     ...
     ```
 
-6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/json/<id> (sesuaikan dengan _path url_ yang dibuat dan id yang diinginkan) di browser favoritmu untuk melihat hasilnya.
+6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/json/`<id>` (sesuaikan dengan _path url_ yang dibuat dan id yang diinginkan) di browser favoritmu untuk melihat hasilnya.

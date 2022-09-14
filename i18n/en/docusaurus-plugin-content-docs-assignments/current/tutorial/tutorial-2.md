@@ -169,4 +169,4 @@ Notes: **In this tutorial, you will use the project you created in the previous 
     ...
     ```
 
-6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/json/<id> (match the url path created and the ID data wanted) in your preferred browser to see the results.
+6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/json/`<id>` (match the url path created and the ID data wanted) in your preferred browser to see the results.
