@@ -99,7 +99,7 @@ Notes: **In this tutorial, you will use the project you created in the previous 
     ...
     ```
 
-7. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/xml/ (match the url path created) in your favorite browser to see the results.
+7. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/xml/ (match the url path created) in your favorite browser to see the results.
 
 ## Tutorial on Returning Data in JSON Form
 
@@ -132,7 +132,7 @@ Notes: **In this tutorial, you will use the project you created in the previous 
     ...
     ```
 
-6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/json/ (match the url path created) in your preferred browser to see the results.
+6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/json/ (match the url path created) in your preferred browser to see the results.
 
 ## Tutorial on Returning Data in XML/JSON Form Based on ID
 
@@ -169,4 +169,4 @@ Notes: **In this tutorial, you will use the project you created in the previous 
     ...
     ```
 
-6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/json/`<id>` (match the url path created and the ID data wanted) in your preferred browser to see the results.
+6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/json/`<id>` (match the url path created and the ID data wanted) in your preferred browser to see the results.

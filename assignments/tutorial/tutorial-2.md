@@ -101,7 +101,7 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
     ...
     ```
 
-7. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/xml/ (sesuaikan dengan _path url_ yang dibuat) di browser favoritmu untuk melihat hasilnya.
+7. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/wishlist/xml/ (sesuaikan dengan _path url_ yang dibuat) di browser favoritmu untuk melihat hasilnya.
 
 ## Tutorial Mengembalikan Data dalam Bentuk JSON
 
@@ -133,7 +133,7 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
     ...
     ```
 
-6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/json/ (sesuaikan dengan _path url_ yang dibuat) di browser favoritmu untuk melihat hasilnya.
+6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/wishlist/json/ (sesuaikan dengan _path url_ yang dibuat) di browser favoritmu untuk melihat hasilnya.
 
 ## Tutorial Mengembalikan Data Berdasarkan ID dalam Bentuk JSON/XML
 
@@ -169,4 +169,4 @@ Catatan: Pada tutorial ini, kamu akan menggunakan proyek yang sudah kamu buat pa
     ...
     ```
 
-6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/json/`<id>` (sesuaikan dengan _path url_ yang dibuat dan id yang diinginkan) di browser favoritmu untuk melihat hasilnya.
+6. Jalankan proyek Django-mu dengan perintah `python manage.py runserver` dan bukalah http://localhost:8000/wishlist/json/`<id>` (sesuaikan dengan _path url_ yang dibuat dan id yang diinginkan) di browser favoritmu untuk melihat hasilnya.
