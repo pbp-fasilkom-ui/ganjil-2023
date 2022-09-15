@@ -4,21 +4,27 @@ sidebar_label: Lab 2
 
 # Lab 2: Data Delivery
 
-Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science, University of Indonesia, Odd Semester 2022/2023
+Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
 
 ---
 
 ## Learning Objectives
-After finishing this tutorial, students are expected to:
-- Knowing XML and JSON as one a Data Delivery method
-- Understand how XML and JSON can be one of the Data Delivery methods
-- Understand how to get data specifically based on data IDs and delivered it with XML / JSON
+
+After completing this tutorial, you will be able to:
+
+-  Understand XML and JSON as data delivery format
+-  Serialize (or, convert) a Python object into XML or JSON string
+-  Retrieve one or more data objects from a persistent data source
+-  Implement a function that returns an HTTP response containing XML or JSON
+   string
 
 ## Introduction to Data Delivery
-When developing a platform, there's a time when we need to send the data from one stack to another. The delivered data can be sent in various forms. Some examples of commonly used data formats are HTML, XML, and JSON. You've learned the data delivery implementation in HTML form in the previous tutorial. In this tutorial, you'll learn about XML and JSON.     
+
+When developing on a platform, there's a time when we need to send the data from one stack to another. The delivered data can be sent in various forms. Some examples of commonly used data formats are HTML, XML, and JSON. You've learned the data delivery implementation in HTML form in the previous tutorial. In this tutorial, you'll learn about XML and JSON.
 
 ## XML (Extensible Markup Language)
-XML stands for Extensible Markup Language. XML designed as <em>self-descriptive</em>, so by reading the XML file we can understand what's information we want to convey from the written data. XML is used a lot for web and mobile applications to save and send data. XML is just information wrapped in a tag. We need to write a program to send, receive, save, and display that information.
+
+XML stands for Extensible Markup Language. XML designed as _self-descriptive_, so by reading the XML file we can understand what's information we want to convey from the written data. XML is used a lot for web and mobile applications to save and send data. XML is just information wrapped in a tag. We need to write a program to send, receive, save, and display that information.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -30,15 +36,13 @@ XML stands for Extensible Markup Language. XML designed as <em>self-descriptive<
 </phone>
 ```
 
-The XML files above is <em>self-descriptive</em>
-- There's a brand information
-- There's a type of information
-- There's a color information
-- There's a size of memory information
+The XML text above is _self-descriptive_. It means that every attributes that
+describe a phone are described in the data itself. You can infer that the XML
+contains information about a red-colored iPhone 14 Plus made by Apple.
 
-XML Document create a structure like <em>tree</em> that started from <em>root</em>, then branch, and ends at the leaves. The XML document need to contain a <em>root</em> element that's the parent for other elements. In the example above, `<phone>` is a <em>root</em> element.
+XML Document create a structure like _tree_ that started from _root_, then branch, and ends at the leaves. The XML document need to contain a _root_ element that's the parent for other elements. In the example above, `<phone>` is a _root_ element.
 
-For the line `<?xml version="1.0" encoding="UTF-8"?>` it's commonly referred as **XML Prolog**. XML prolog is optional, but if it exists, it must be at the beginning of the document. In XML documents, all elements must have a closing tag. XML tag is <em>case sensitive</em>, so that `<phone>` tag is different from `<Phone>` tag.
+For the line `<?xml version="1.0" encoding="UTF-8"?>` it's commonly referred as **XML Prolog**. XML prolog is optional, but if it exists, it must be at the beginning of the document. In XML documents, all elements must have a closing tag. XML tag is _case sensitive_, so that `<phone>` tag is different from `<Phone>` tag.
 
 ## JSON (JavaScript Object Notation)
 
@@ -106,7 +110,7 @@ Notes: **In this tutorial, you will use the project you created in the previous 
 1. Open views.py in the wishlist folder and create a new function that accepts a request parameter.
 
 2. Create a variable in the function that stores the query results of all the data in the ItemsWishlist.
-    
+
     ```python
     data = ItemsWishlist.objects.all()
     ```
@@ -139,7 +143,7 @@ Notes: **In this tutorial, you will use the project you created in the previous 
 1. Open views.py in the wishlist folder and create a new function that accepts a request and an ID parameter.
 
 2. Create a variable in the function that stores the query results of the data with specific ID in the ItemsWishlist.
-    
+
     ```python
     data = ItemsWishlist.objects.filter(pk=id)
     ```
