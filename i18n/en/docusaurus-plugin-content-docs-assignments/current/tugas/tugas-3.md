@@ -2,7 +2,7 @@
 sidebar_label: Assignment 3
 ---
 
-# Tugas 3: Implement Data Delivery using Django
+# Assignment 3: Implement Data Delivery using Django
 
 Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Term 2022/2023
 
