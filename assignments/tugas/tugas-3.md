@@ -23,7 +23,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
     - [ ] `release_date` untuk mendeskripsikan kapan film dirilis
     - [ ] `review` untuk mendeskripsikan _review_ untuk film tersebut
 - [ ] Menambahkan minimal 10 data untuk objek `MyWatchList` yang sudah dibuat di atas
-- [ ] Mengimplementasikan sebuah fitur untuk menyajikan data di poin 4 dalam tiga format:
+- [ ] Mengimplementasikan sebuah fitur untuk menyajikan data yang telah dibuat sebelumnya dalam tiga format:
     - [ ] HTML
     - [ ] XML
     - [ ] JSON 
@@ -35,7 +35,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
 - [ ] Membuat sebuah `README.md` yang berisi tautan menuju aplikasi Heroku yang sudah kamu _deploy_ serta jawaban dari beberapa pertanyaan berikut:
     - [ ] Jelaskan perbedaan antara JSON, XML, dan HTML!
     - [ ] Jelaskan mengapa kita memerlukan _data delivery_ dalam pengimplementasian sebuah platform?
-    - [ ] Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 3 di atas.
+    - [ ] Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
 - [ ] Mengakses tiga URL di poin 6 menggunakan Postman, menangkap _screenshot_, dan menambahkannya ke dalam `README.md`
 - [ ] Menambahkan _unit test_ pada `tests.py` untuk menguji bahwa tiga URL di poin 6 dapat mengembalikan respon `HTTP 200 OK`
 

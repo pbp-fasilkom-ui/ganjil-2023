@@ -23,7 +23,7 @@ Checklist for this assignment is as follows:
     - [ ] `release_date` to describe when the film was released
     - [ ] `review` to describe the review for the film
 - [ ] Add 10 data minimal for the `MyWatchList` object that has been created above. 
-- [ ] Implement a feature to present the data in **point 4** with three formats:  
+- [ ] Implement a feature to present the data added before with three formats:  
     - [ ] HTML
     - [ ] XML
     - [ ] JSON 
@@ -35,7 +35,7 @@ Checklist for this assignment is as follows:
 - [ ] Create a `README.md` which contains a link to the Heroku app that you've deployed and answer the following questions:
     - [ ] Explain the difference between JSON, XML, and HTML!
     - [ ] Explain why we need the data delivery in implementing a platform.
-    - [ ] Explain how you can implement point 1 to 3 above.
+    - [ ] Explain how you can implement the checklists above.
 - [ ] Access three URLs in point 6 using Postman, take screenshots, and add them to `README.md`.
 - [ ] Create unit test in `tests.py` to test that the three URLs in point 6 can return an `HTTP 200 OK` response.
 
