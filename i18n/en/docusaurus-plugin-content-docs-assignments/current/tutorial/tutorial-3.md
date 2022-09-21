@@ -2,7 +2,7 @@
 sidebar_label: Lab 3
 ---
 
-# Lab 3: Form, Authentication, Session, and Cookie
+# Lab 3: Form, Authentication, Session and Cookie
 
 Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science, University of Indonesia, Odd Semester 2022/2023
 

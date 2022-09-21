@@ -2,7 +2,7 @@
 sidebar_label: Lab 3
 ---
 
-# Lab 3: Form, Authentication, Session, and Cookie
+# Lab 3: Form, Authentication, Session, dan Cookie
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Gasal 2022/2023
 
