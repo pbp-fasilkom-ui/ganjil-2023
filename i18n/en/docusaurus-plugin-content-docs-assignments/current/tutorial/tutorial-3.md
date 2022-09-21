@@ -63,7 +63,7 @@ Here are some links that can expand your knowledge related to this material:
 - [Cookies History](https://www.youtube.com/watch?v=I01XMRo2ESg)
 - [Cookies vs. Local Storage vs. Session](https://www.youtube.com/watch?v=AwicscsvGLg)
 
-## Lab: Creating a Registration Form
+## Tutorial: Creating a Registration Form
 
 Notes: In this lab, you will use the project that you have created in the previous tutorial.
 
@@ -153,7 +153,7 @@ We will make the previously created wishlist page access to be restricted, with 
     ```
 
 We have added an account registration form and created the `register` mechanism. Next, we will create a _login_ form for users to authenticate their accounts.
-## Lab: Creating a Login Form
+## Tutorial: Creating a Login Form
 
 1. Open `views.py` in the `wishlist` folder and create a function named `login_user` that accepts a `request` parameter.
 
