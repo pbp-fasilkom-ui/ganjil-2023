@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Lab 0: Basic Git (on GitHub) and Deploying Django Application
 
-Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Term 2022/2023
+Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
 
 ---
 

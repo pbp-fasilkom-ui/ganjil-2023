@@ -65,112 +65,109 @@ Data in JSON is stored in the form of keys and values. In the example above, the
 
 Notes: **In this tutorial, you will use the project you created in the previous tutorial.**
 
-1. Open views.py in the wishlist folder and create a function that accepts request parameters.
+1. Open `views.py` in `wishlist` app folder and create a function that accepts
+   a request object.
+2. Import `HttpResponse` class and `serializers` function:
 
-2. Add import HttpResponse and Serializer at the very top.
+   ```python
+   from django.http import HttpResponse
+   from django.core import serializers
+   ```
+3. Create a variable inside the function that stores the query results of all the
+   data in `ItemWishlist`:
 
-    ```python
-    from django.http import HttpResponse
-    from django.core import serializers
-    ```
-
-3. Create a variable inside the function that stores the query results of all the data in ItemWishlist.
-
-    ```python
-    data = ItemWishlist.objects.all()
-    ```
-
-
+   ```python
+   data = ItemWishlist.objects.all()
+   ```
 4. Add a return function in the form of an HttpResponse that contains the query result data parameter that has been serialized into XML and the content_type="application/xml" parameter.
 
-    ```python
-    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
-    ```
-
-
+   ```python
+   return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+   ```
 5. Open urls.py in the wishlist folder and import the function you created earlier.
 
-    ```python
-    from wishlist.views import show_xml #customize to the name of the function created
-    ```
-
-
+   ```python
+   from wishlist.views import show_xml # Customize to the name of the function created
+   ```
 6. Add the url path to the urlpatterns to access the imported function.
 
-    ```python
-    ...
-    path('xml/', show_xml, name='show_xml'), #customize the name of the function created
-    ...
-    ```
-
+   ```python
+   ...
+   path('xml/', show_xml, name='show_xml'), # Customize the name of the function created
+   ...
+   ```
 7. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/xml/ (match the url path created) in your favorite browser to see the results.
 
 ## Tutorial on Returning Data in JSON Form
 
-1. Open views.py in the wishlist folder and create a new function that accepts a request parameter.
+1. Open `views.py` in `wishlist` app folder and create a new function that
+   accepts a request parameter.
+2. Create a variable in the function that stores the query results of all the data in `ItemsWishlist`:
 
-2. Create a variable in the function that stores the query results of all the data in the ItemsWishlist.
+   ```python
+   data = ItemsWishlist.objects.all()
+   ```
+3. Add a return statement that returns an `HttpResponse` object:
 
-    ```python
-    data = ItemsWishlist.objects.all()
-    ```
+   ```python
+   return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+   ```
+4. Open `urls.py` in `wishlist` app folder and import the function you created earlier:
 
-3. Add a return function in the form of HttpResponse which contains the query result data parameter that has been serialised into JSON and the content_type="application/json" parameter.
+   ```python
+   from wishlist.views import show_json  # Adjust the name of the function created
+   ```
+5. Add the URL path to `urlpatterns` list to map incoming request with URL `json/` to
+   be handled by the new function:
 
-    ```python
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-    ```
-
-4. Open urls.py in the wishlist folder and import the function you created earlier.
-
-    ```python
-    from wishlist.views import show_json # adjust the name of the function created
-    ```
-
-
-5. Add the url path to the urlpatterns to access the imported function.
-
-    ```python
-    ...
-    path('json/', show_json, name='show_json'), #customise the name of the function created
-    ...
-    ```
-
+   ```python
+   ...
+   path('json/', show_json, name='show_json'),  # Customize the name of the function created
+   ...
+   ```
 6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/json/ (match the url path created) in your preferred browser to see the results.
 
 ## Tutorial on Returning Data in XML/JSON Form Based on ID
 
-1. Open views.py in the wishlist folder and create a new function that accepts a request and an ID parameter.
+1. Open `views.py` in `wishlist` app folder and create a new function that
+   accepts a request and an ID parameter.
+2. Create a variable in the function that stores the query results of the data
+   with specific ID in `ItemsWishlist`:
 
-2. Create a variable in the function that stores the query results of the data with specific ID in the ItemsWishlist.
+   ```python
+   data = ItemsWishlist.objects.filter(pk=id)
+   ```
+3. Add a return statement that returns an `HttpResponse` object. The response
+   object should contain the result of data serialization (JSON or XML) and the
+   description of the content type that encapsulated in the response. For example:
 
-    ```python
-    data = ItemsWishlist.objects.filter(pk=id)
-    ```
+   ```python
+   // JSON Format
+   return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
-3. Add a return function in the form of HttpResponse which contains the query result data parameter that has been serialised into XML or JSON and `content_type` parameter with `"application/xml"` value (if the format is XML) or `"application/json"` value (if the format is JSON).
+   // XML Format
+   return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+   ```
+4. Open `urls.py` in `wishlist` app folder and import the function you created
+   earlier:
 
-    ```python
-    // JSON Format
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+   ```python
+   from wishlist.views import show_json_by_id  # Customize the name of the function created
+   ```
+5. Add a new, parameterized URL path pattern into `urlpatterns` list. A URL
+   path pattern may contain a parameter. The parameter is written in format of
+   `<T:N>` where `T` is a data type (e.g. `int`, `str`) and `N` is the name of
+   parameter. The new URL path pattern should map incoming request toward
+   `/json/<some ID>` to the new function that you imported in previous step.
+   For example:
 
-    // XML Format
-    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
-    ```
-
-4. Open urls.py in the wishlist folder and import the function you created earlier.
-
-    ```python
-    from wishlist.views import show_json_by_id #customise the name of the function created
-    ```
-
-
-5. Add the url path to the urlpatterns to access the imported function.
-
-    ```python
-    ...
-    path('json/<int:id>', show_json_by_id, name=’show_json_by_id’), #customise the name of the function created
-    ...
-    ```
-
-6. Run your Django project with the `python manage.py runserver` command and open http://localhost:8000/wishlist/json/`<id>` (match the url path created and the ID data wanted) in your preferred browser to see the results.
+   ```python
+   ...
+   path('json/<int:id>', show_json_by_id, name=’show_json_by_id’),  # Customize the name of the function created
+   ...
+   ```
+6. Run your Django project with `python manage.py runserver` command and open
+   `http://localhost:8000/wishlist/json/<id>` using web browser. `<id>` is the
+   ID value of the desired data. If the data with given ID found and processed
+   by Django, the response will contain a JSON string and delivered to your web
+   browser.
