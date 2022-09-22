@@ -39,7 +39,7 @@ The checklist for this assignment is as follows:
     - [ ] http://localhost:8000/todolist/create-task contains the task creation form.
     - [ ] http://localhost:8000/todolist/logout contains the logout mechanism.
 - [ ] Deploy your project to the Heroku that you have created so that it can later be accessed by your friends via the Internet.
-- [ ] Create **two** user accounts and **three** dummy data using the `Task` model on each account.
+- [ ] Create **two** user accounts and **three** dummy data using the `Task` model on each account at Heroku application website.
 - [ ] Create a `README.md` in the `todolist` folder that contains the link to your deployed Heroku application and the answers to the following questions:
     - [ ] What does `{% csrf_token %}` do in the `<form>` element? What happens if there is no such "code snippet" in the `<form>` element?
     - [ ] Can we create the `<form>` element manually (without using a generator like `{{ form.as_table }}`)? Explain generally how to create `<form>` manually.
