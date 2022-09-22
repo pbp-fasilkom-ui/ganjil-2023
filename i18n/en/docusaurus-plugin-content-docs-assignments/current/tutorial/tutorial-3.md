@@ -4,7 +4,7 @@ sidebar_label: Lab 3
 
 # Lab 3: Form, Authentication, Session and Cookie
 
-Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science, University of Indonesia, Odd Semester 2022/2023
+Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
 
 ---
 
@@ -69,310 +69,272 @@ Notes: In this lab, you will use the project that you have created in the previo
 
 We will make the previously created wishlist page access to be restricted, with the aim that users who want to access the wishlist page must have an account and log in to the website in order to gain access.
 
-1. Run the virtual environment first.
-
+1. Run the virtual environment in the project
 2. Open `views.py` in the `wishlist` folder and create a function named `register` that accepts a `request` parameter.
-
 3. Import `redirect`, `UserCreationForm`, and `messages` at the very top.
 
+   ```python title="./wishlist/views.py"
+   from django.shortcuts import redirect
+   from django.contrib.auth.forms import UserCreationForm
+   from django.contrib import messages
+   ```
+4. Add the code snippet below to the `register` function you created earlier.
+   It is used to automatically generate a registration form and generate a user
+   account when data is _submitted_ from the form.
 
-    ```python
-    from django.shortcuts import redirect
-    from django.contrib.auth.forms import UserCreationForm
-    from django.contrib import messages
-    ```
+   ```python title="./wishlist/views.py"
+   def register(request):
+       form = UserCreationForm()
 
-4. Add the code snippet below to the `register` function you created earlier. This snippet of code serves to automatically generate a registration form and generate a user account when data is _submitted_ from the form.
+       if request.method == "POST":
+           form = UserCreationForm(request.POST)
+           if form.is_valid():
+               form.save()
+               messages.success(request, 'Account successfully created!')
+               return redirect('wishlist:login')
 
-    ```python
-    def register(request):
-        form = UserCreationForm()
+       context = {'form':form}
+       return render(request, 'register.html', context)
+   ```
+5. Create a new HTML file named `register.html` in `wishlist/templates` folder.
+   The content of `register.html` can be filled with the following _template_ example.
 
-        if request.method == "POST":
-            form = UserCreationForm(request.POST)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Account successfully created!')
-                return redirect('wishlist:login')
-        
-        context = {'form':form}
-        return render(request, 'register.html', context)
-    ```
+   ```html title="./wishlist/templates/register.html"
+   {% extends 'base.html' %}
 
-5. Create a new HTML file with the name `register.html` in the `wishlist/templates` folder. The content of `register.html` can be filled with the following _template_.
+   {% block meta %}
+   <title>Account Registration</title>
+   {% endblock meta %}
 
-    ```html
-    {% extends 'base.html' %}
+   {% block content %}
 
-    {% block meta %}
-    <title>Account Registration</title>
-    {% endblock meta %}
-    
-    {% block content %}  
-    
-    <div class = "login">
-        
-        <h1>Registration Form</h1>  
-    
-            <form method="POST" >  
-                {% csrf_token %}  
-                <table>  
-                    {{ form.as_table }}  
-                    <tr>  
-                        <td></td>
-                        <td><input type="submit" name="submit" value="Register"/></td>  
-                    </tr>  
-                </table>  
-            </form>
+   <div class = "login">
+       <h1>Registration Form</h1>
 
-        {% if messages %}  
-            <ul>   
-                {% for message in messages %}  
-                    <li>{{ message }}</li>  
-                    {% endfor %}  
-            </ul>   
-        {% endif %}
+           <form method="POST" >
+               {% csrf_token %}
+               <table>
+                   {{ form.as_table }}
+                   <tr>
+                       <td></td>
+                       <td><input type="submit" name="submit" value="Register"/></td>
+                   </tr>
+               </table>
+           </form>
 
-    </div>  
-    
-    {% endblock content %}
-    ```
+       {% if messages %}
+           <ul>
+               {% for message in messages %}
+                   <li>{{ message }}</li>
+                   {% endfor %}
+           </ul>
+       {% endif %}
 
+   </div>
+
+   {% endblock content %}
+   ```
 6. Open `urls.py` in the `wishlist` folder and import the function you created earlier.
 
-    ```python
-    from wishlist.views import register #customize with the name of the function created
-    ```
+   ```python title="./wishlist/urls.py"
+   from wishlist.views import register # Customize with the name of the function created
+   ```
+7. Add _path url_ to `urlpatterns` to route incoming request with matching URL
+   pattern (i.e. `/register/`) to be handled by `register` function:
 
-7. Add _path url_ to `urlpatterns` to access the imported function.
-
-    ```python
-    ...
-    path('register/', register, name='register'), #customize with the name of the function created
-    ...
-    ```
+   ```python title="./wishlist/urls.py"
+   path('register/', register, name='register'), # Customize with the name of the function created
+   ```
 
 We have added an account registration form and created the `register` mechanism. Next, we will create a _login_ form for users to authenticate their accounts.
+
 ## Tutorial: Creating a Login Form
 
 1. Open `views.py` in the `wishlist` folder and create a function named `login_user` that accepts a `request` parameter.
-
 2. Add _import_ `authenticate` and `login` at the very top.
 
-    ```python
-    from django.contrib.auth import authenticate, login
-    ```
-
+   ```python title="./wishlist/views.py"
+   from django.contrib.auth import authenticate, login
+   ```
 3. Add the code snippet below to the `login` function you created earlier. This piece of code serves to authenticate users who want to _login_.
 
-    ```python
-    def login_user(request):
-        if request.method == 'POST':
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('wishlist:show_wishlist')
-            else:
-                messages.info(request, 'Wrong Username or Password!')
-        context = {}
-        return render(request, 'login.html', context)
-    ```
-
+   ```python title="./wishlist/views.py"
+   def login_user(request):
+       if request.method == 'POST':
+           username = request.POST.get('username')
+           password = request.POST.get('password')
+           user = authenticate(request, username=username, password=password)
+           if user is not None:
+               login(request, user)
+               return redirect('wishlist:show_wishlist')
+           else:
+               messages.info(request, 'Wrong Username or Password!')
+       context = {}
+       return render(request, 'login.html', context)
+   ```
 4. Create a new HTML file with the name `login.html` in the `wishlist/templates` folder. The content of `login.html` can be filled with the following _template_.
 
-    ```html
-    {% extends 'base.html' %}
+   ```html title="./wishlist/templates/login.html"
+   {% extends 'base.html' %}
 
-    {% block meta %}
-    <title>Login</title>
-    {% endblock meta %}
-    
-    {% block content %}
+   {% block meta %}
+   <title>Login</title>
+   {% endblock meta %}
 
-    <div class = "login">
+   {% block content %}
 
-        <h1>Login</h1>
+   <div class = "login">
 
-        <form method="POST" action="">
-            {% csrf_token %}
-            <table>
-                <tr>
-                    <td>Username: </td>
-                    <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-                </tr>
-                        
-                <tr>
-                    <td>Password: </td>
-                    <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-                </tr>
+       <h1>Login</h1>
 
-                <tr>
-                    <td></td>
-                    <td><input class="btn login_btn" type="submit" value="Login"></td>
-                </tr>
-            </table>
-        </form>
+       <form method="POST" action="">
+           {% csrf_token %}
+           <table>
+               <tr>
+                   <td>Username: </td>
+                   <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+               </tr>
 
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}		
-            
-        Don't have an account? <a href="{% url 'wishlist:register' %}">Create Account</a>
+               <tr>
+                   <td>Password: </td>
+                   <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+               </tr>
 
-    </div>
+               <tr>
+                   <td></td>
+                   <td><input class="btn login_btn" type="submit" value="Login"></td>
+               </tr>
+           </table>
+       </form>
 
-    {% endblock content %}
-    ```
+       {% if messages %}
+           <ul>
+               {% for message in messages %}
+                   <li>{{ message }}</li>
+               {% endfor %}
+           </ul>
+       {% endif %}
 
+       Don't have an account? <a href="{% url 'wishlist:register' %}">Create Account</a>
+
+   </div>
+
+   {% endblock content %}
+   ```
 5. Open `urls.py` in the `wishlist` folder and import the function you created earlier.
 
-    ```python
-    from wishlist.views import login_user #customize with the name of the function created
-    ```
+   ```python title="./wishlist/urls.py"
+   from wishlist.views import login_user  # Customize with the name of the function created
+   ```
+6. Add _path url_ to `urlpatterns` to associate incoming request containing
+   `login` URL to be handled by `login_user` function:
 
-6. Add _path url_ to `urlpatterns` to access the imported function.
-
-    ```python
-    ...
-    path('login/', login_user, name='login'), #customize with the name of the function created
-    ...
-    ```
+   ```python title="./wishlist/urls.py"
+   path('login/', login_user, name='login'),  # Customize with the name of the function created
+   ```
 
 We have added the account's _login_ form and created the `login` mechanism. Next, we will create a _logout_ mechanism and add a _logout_ button to the _wishlist_ page.
 
 ## Tutorial: Creating a Logout Function
 
 1. Open `views.py` in the `wishlist` folder and create a function named `logout_user` that accepts the request parameter.
+2. Import `logout` function at the very top of `views.py` file:
 
-2. Add import `logout` at the very top.
-
-    ```python
-    from django.contrib.auth import logout
-    ```
-
+   ```python title="./wishlist/views.py"
+   from django.contrib.auth import logout
+   ```
 3. Add the code snippet below into the `logout` function you created earlier. This code snippet serves to perform the _logout_ mechanism.
 
-    ```python
-        def logout_user(request):
-            logout(request)
-            return redirect('wishlist:login')
-    ```
-
-
+   ```python title="./wishlist/views.py"
+   def logout_user(request):
+       logout(request)
+       return redirect('wishlist:login')
+   ```
 4. Open the `wishlist.html` file in the `wishlist/templates` folder.
-
 5. Add the code snippet below after the _end tag table_ (`</table>`) in the `wishlist.html` file. This code snippet serves to add a logout button.
 
-    ```html
-    ...
-    <button><a href="{% url 'wishlist:logout' %}">Logout</a></button>
-    ...
-    ```
-
-
+   ```html title="./wishlist/templates/wishlist.html"
+   <button><a href="{% url 'wishlist:logout' %}">Logout</a></button>
+   ```
 6. Open `urls.py` in the `wishlist` folder and import the function you created earlier.
-    ```python
-    from wishlist.views import logout_user #customize with the name of the function created
-    ```
 
-7. Add the _url path_ into the `urlpatterns` to access the imported function.
+   ```python title="./wishlist/urls.py"
+   from wishlist.views import logout_user  # Customize with the name of the function created
+   ```
+7. Add the _url path_ into the `urlpatterns` to handle incoming request toward `logout` path:
 
-    ```python
-    ...
-    path('logout/', logout_user, name='logout'), #customize with the name of the function created
-    ...
-    ```
+   ```python title="./wishlist/urls.py"
+   path('logout/', logout_user, name='logout'),  # Customize with the name of the function created
+   ```
 
 We have created a `logout` mechanism and completed the authentication system on the `wishlist` project. Next, we will restrict _wishlist_ page access so that unauthenticated users cannot access the wishlist page.
 
 ## Tutorial: Restricting Wishlist Page Access
 
-1. Open `views.py` in the `wishlist` folder and add _import_ `login_required` at the very top.
+1. Open `views.py` in the `wishlist` folder and add _import_ `login_required`
+   function at the very top.
 
-    ```python
-    from django.contrib.auth.decorators import login_required
-    ```
+   ```python title="./wishlist/views.py"
+   from django.contrib.auth.decorators import login_required
+   ```
+2. Add the code `@login_required(login_url='/wishlist/login/')` above the `show_wishlist` function so that the _wishlist_ page can only be accessed by logged in (authenticated) users.
 
-
-2.  Add the code `@login_required(login_url='/wishlist/login/')` above the `show_wishlist` function so that the _wishlist_ page can only be accessed by logged in (authenticated) users.
-
-    ```python
-    ...
-    @login_required(login_url='/wishlist/login/')
-    def show_wishlist(request):
-    ...
-    ```
-
+   ```python title="./wishlist/views.py"
+   @login_required(login_url='/wishlist/login/')
+   def show_wishlist(request):
+   ```
 
 After restricting wishlist page access, run your Django project with `python manage.py runserver` command and open http://localhost:8000/wishlist in your favorite browser to see the results.
-
 
 ## Tutorial: Add _Cookies_
 
 Now, we'll see the use of _cookies_ with _last login_ data and display it to _wishlist_ page.
 
 1. Please _logout_ first if you're running your Django application and already logged in.
-
 2. Open `views.py` that located in `wishlist` folder and add _import_ `HttpResponseRedirect`, `reverse`, and `datetime` at the top of your file.
 
-    ```python
-    import datetime
-    from django.http import HttpResponseRedirect
-    from django.urls import reverse
-    ```
-
+   ```python title="./wishlist/views.py"
+   import datetime
+   from django.http import HttpResponseRedirect
+   from django.urls import reverse
+   ```
 3. In `login_user` function. we'll add the function to add _cookie_ named `last_login` to see when the was the last time a user logged in. Change the code in `if user is not None` block to the following piece of code:
 
-    ```python
-    ...
-    if user is not None:
-        login(request, user) # login first
-        response = HttpResponseRedirect(reverse("wishlist:show_wishlist")) # create response
-        response.set_cookie('last_login', str(datetime.datetime.now())) # create last_login cookie and add it to response
-        return response
-    ...
-    ```
+   ```python title="./wishlist/views.py"
+   if user is not None:
+       login(request, user) # login first
+       response = HttpResponseRedirect(reverse("wishlist:show_wishlist")) # create response
+       response.set_cookie('last_login', str(datetime.datetime.now())) # create last_login cookie and add it to response
+       return response
+   ```
 
 4. In the `show_wishlist` function, add the snippet code below `show_wishlist`,  `'last_login': request.COOKIES['last_login']` t the `context` variable. The following example is the code that already changed:
 
-    ```python
-    context = {
-        'list_item': data_wishlist_item,
-        'name': 'Cinoy',
-        'last_login': request.COOKIES['last_login'],
-    }
-    ```
-
+   ```python title="./wishlist/views.py"
+   context = {
+       'list_item': data_wishlist_item,
+       'name': 'Cinoy',
+       'last_login': request.COOKIES['last_login'],
+   }
+   ```
 5. Change `logout_user` function to the following code snippet below. The following code will add `last_login` _cookie_ removal mechanism when the user is logged out.
 
-    ```python
-    def logout_user(request):
-        logout(request)
-        response = HttpResponseRedirect(reverse('wishlist:login'))
-        response.delete_cookie('last_login')
-        return response
-    ```
-
+   ```python title="./wishlist/views.py"
+   def logout_user(request):
+       logout(request)
+       response = HttpResponseRedirect(reverse('wishlist:login'))
+       response.delete_cookie('last_login')
+       return response
+   ```
 6. Open the `wishlist.html` file and add the following code snippet below between the table and the _logout_ button to display the _last login_ information.
 
-    ```html
-    ...
-    <h5>Last Login: {{ last_login }}</h5>
-    ...
-    ```
-
+   ```html title="./wishlist/templates/wishlist.html"
+   <h5>Last Login: {{ last_login }}</h5>
+   ```
 7. Please _refresh_ your _login_ page (or run your Django project with the command `python manage.py runserver` if you haven't run your project yet) and try to _login_. The  _last login_ information will display in the `wishlist` page.
-
 8. To see the data of `last_login` cookie, you can access the feature of _inspect element_ and open the _Application/Storage_ tab. Click _Cookies_ and you'll see the available _cookies_ data. Besides `last_login`, you can also view `sessionid` and `csrftoken` data. Here is an example of how it looks.
 
-    ![Picture of Wishlist Page and the cookies data](https://cdn.discordapp.com/attachments/793469428809465886/1021921104601829476/unknown.png)
-
+   ![Picture of Wishlist Page and the cookies data](https://cdn.discordapp.com/attachments/793469428809465886/1021921104601829476/unknown.png)
 9. If you _logout_ from your application and open the _cookie_ history, you'll see that the _cookie_ that you created before was removed and will be remade when you _login_ again.
 
 ## The Final Word
@@ -387,6 +349,6 @@ As always, don't forget to `add`, `commit`, and `push` the changes you made to s
 
 - Muhammad Athallah
 - Muhammad Azis Husein
-- Zuhal 'Alimul Hadi 
+- Zuhal 'Alimul Hadi
 - Winaldo Amadea (EN Translator)
 - Firlandi A. R. Ansyari (EN Translator)
