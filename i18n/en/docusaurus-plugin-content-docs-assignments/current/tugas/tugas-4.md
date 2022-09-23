@@ -21,7 +21,11 @@ The checklist for this assignment is as follows:
 - [ ] Create a `Task` model that has the following attributes:
     - [ ] `user` to associate the task with the user who created the task.
 
-        > You can use the model type `models.ForeignKey` with the parameter `User`. To learn more about `ForeignKey` in Django, you can read the Django documentation (or click [here](https://docs.djangoproject.com/en/4.1/ref/models/fields/#foreignkey)).
+        > You can use the model type `models.ForeignKey` with the parameter `User`.
+        > 
+        > To learn more about `ForeignKey` in Django, you can read the Django documentation (or click [here](https://docs.djangoproject.com/en/4.1/ref/models/fields/#foreignkey)).
+        >
+        > To learn more about `User` model in Django, click [here](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/).
     
     - [ ] `date` to describe the date the task was created.
     - [ ] `title` to describe the title of the task.

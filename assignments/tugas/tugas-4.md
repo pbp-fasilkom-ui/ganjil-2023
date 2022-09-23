@@ -21,7 +21,11 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
 - [ ] Membuat sebuah model `Task` yang memiliki atribut sebagai berikut:
     - [ ] `user` untuk menghubungkan _task_ dengan pengguna yang membuat _task tersebut_.
 
-        > Kamu dapat menggunakan tipe model `models.ForeignKey` dengan parameter `User`. Untuk mempelajari lebih lanjut mengenai `ForeignKey` pada Django, silakan baca dokumentasi Django (atau silakan klik [disini](https://docs.djangoproject.com/en/4.1/ref/models/fields/#foreignkey)).
+        > Kamu dapat menggunakan tipe model `models.ForeignKey` dengan parameter `User`.
+        > 
+        > Untuk mempelajari lebih lanjut mengenai `ForeignKey` pada Django, silakan baca dokumentasi Django (atau silakan klik [disini](https://docs.djangoproject.com/en/4.1/ref/models/fields/#foreignkey)).
+        > 
+        > Untuk mempelajari lebih lanjut mengenai model `User` pada Django, silakan klik [disini](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/).
     
     - [ ] `date` untuk mendeskripsikan tanggal pembuatan _task_.
     - [ ] `title` untuk mendeskripsikan judul _task_.
