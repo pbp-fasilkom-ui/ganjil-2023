@@ -106,7 +106,7 @@ Selamat mengerjakan. 😄
             <b>Bonus (5%)</b>
             <ul>
                 <li>Unit Test (<em>passed</em>) untuk semua aspek, diharapkan <em>code coverage</em> bisa mencapai minimal 80%</li>
-                <li>GitHub Pipelines sudah terkonfigurasi hingga <em>deployment</em></li>
+                <li>GitHub Actions (CI/CD) sudah terkonfigurasi hingga <em>deployment</em></li>
                 <li>README.md pada GitHub yang berisi <em>pipeline status</em></li>
             </ul>
         </td>
