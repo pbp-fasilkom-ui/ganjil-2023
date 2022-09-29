@@ -281,6 +281,7 @@ Seperti biasa, jangan lupa untuk melakukan `add`, `commit`, dan `push` perubahan
 - Christopher Ekaputra Loe
 - Zefanya Soplantila
 - Rafi Indrawan Dirgantara
+- Muhammad Abdurrahman Basyah
 - Muhammad Athallah
 
 ## Credits

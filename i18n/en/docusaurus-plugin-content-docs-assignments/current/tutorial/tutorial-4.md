@@ -281,6 +281,7 @@ As always, don't forget to `add`, `commit`, and `push` your changes to save them
 - Christopher Ekaputra Loe
 - Zefanya Soplantila
 - Rafi Indrawan Dirgantara
+- Muhammad Abdurrahman Basyah
 - Muhammad Athallah
 - Zuhal 'Alimul Hadi (EN Translator)
 
