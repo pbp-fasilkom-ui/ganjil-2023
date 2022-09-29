@@ -23,13 +23,13 @@ Perlu diperhatikan selain tujuan pembelajaran khusus seperti tertulis di atas, p
 
 Sebagai selingan, bila rekan-rekan lelah dan bingung menghadapi _error_ yang belum kunjung terselesaikan, berikut ini ada video yang cukup populer dan mudah-mudahan bisa menambah semangat untuk tetap teguh mengerjakan dan berlatih demi kesuksesan di kemudian hari.
 
-[https://youtu.be/42-hh-iMJJI](https://youtu.be/42-hh-iMJJI)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/42-hh-iMJJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br /><br />
 
 Selamat mengerjakan. 😄
 
-## Aturan Umum Tugas Kelompok 
+## Aturan Umum Tugas Kelompok
 
-1. Satu kelompok terdiri atas 5-7 orang. Pembagian kelompok dapat dilihat [disini](https://docs.google.com/spreadsheets/d/1JF-GmUqdlwyvogW1_A1kZdrMWuAoNH3yjAC_EzJ7BcQ/edit?usp=sharing). 
+1. Satu kelompok terdiri atas 5-7 orang. Pembagian kelompok dapat dilihat [disini](https://docs.google.com/spreadsheets/d/1JF-GmUqdlwyvogW1_A1kZdrMWuAoNH3yjAC_EzJ7BcQ/edit?usp=sharing).
 2. Satu kelompok membuat satu repositori Git yang digunakan oleh seluruh anggota kelompok untuk bekerja sama. Kumpulkan tautan repositori ke Scele.
 3. Setiap kelompok dipersilakan mencari ide sendiri mengenai aplikasi yang akan dibuat. Tema aplikasi berhubungan dengan isu-isu yang dibahas dalam G20. Referensi isu-isu yang dibahas dalam G20 adalah sebagai berikut.
     - https://www.g20.org/g20-presidency-of-indonesia/#priorities
