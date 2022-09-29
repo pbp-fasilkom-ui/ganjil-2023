@@ -16,7 +16,7 @@ In this assignment, you will be implementing HTML, CSS, setting up static files 
 
 The _Checklist_ for this assignment is as follows:
 
-- [ ] Customize the HTML template created in [Task 4](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tugas/tugas-4) using CSS or a CSS _framework_ (such as Bootstrap, Tailwind, Bulma) with the following conditions:
+- [ ] Customize the HTML template created in [Task 4](https://pbp-fasilkom-ui.github.io/ganjil-2023/en/assignments/tugas/tugas-4) using CSS or a CSS _framework_ (such as Bootstrap, Tailwind, Bulma) with the following conditions:
 - [ ] Customize the templates for the _login_, _register_, and _create-task_ pages as attractive as possible.
 - [ ] Customize the main page _todo list_ using _cards_. (One _card_ contains one _task_).
 
