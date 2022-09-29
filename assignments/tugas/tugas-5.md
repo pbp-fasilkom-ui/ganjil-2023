@@ -25,10 +25,10 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
 	> Dokumentasi CSS menganai `Media Query` dapat diakses melalui tautan [ini](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 - [ ] Menjawab beberapa pertanyaan berikut pada `README.md` pada folder `todolist`.
-		- [ ] Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing _style_?
-    - [ ] Jelaskan tag HTML5 yang kamu ketahui.
-    - [ ] Jelaskan tipe-tipe CSS selector yang kamu ketahui.
-  	- [ ] Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+	- [ ] Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing _style_?
+	- [ ] Jelaskan tag HTML5 yang kamu ketahui.
+	- [ ] Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+	- [ ] Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
 
 ## Tenggat Waktu Pengerjaan
 

@@ -7,6 +7,7 @@ import Countdown from "@site/src/components/Countdown"
 # Assignment 5: Web Design Using HTML, CSS, and CSS Framework
 
 Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science, University of Indonesia, Odd Term 2022/2023
+
 ---
 
 ## Assignment Description
@@ -21,7 +22,7 @@ The _Checklist_ for this assignment is as follows:
 
 - [ ] Make all four customized pages become responsive.
 
-> CSS documentation on `Media Query` can be accessed through [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+    > CSS documentation on `Media Query` can be accessed through [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 - [ ] Answer the following questions in `README.md` in the `todolist` folder.
     - [ ] What is the difference between Inline, Internal, and External CSS? What are the advantages and disadvantages of each style?
