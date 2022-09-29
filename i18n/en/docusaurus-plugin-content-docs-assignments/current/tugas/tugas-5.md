@@ -24,14 +24,14 @@ The _Checklist_ for this assignment is as follows:
 > CSS documentation on `Media Query` can be accessed through [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 - [ ] Answer the following questions in `README.md` in the `todolist` folder.
-- [ ] What is the difference between Inline, Internal, and External CSS? What are the advantages and disadvantages of each style?
-- [ ] Describe the HTML5 tags that you know.
-- [ ] Describe the types of CSS selectors you know.
-- [ ] Explain how you would implement the checklist above.
+    - [ ] What is the difference between Inline, Internal, and External CSS? What are the advantages and disadvantages of each style?
+    - [ ] Describe the HTML5 tags that you know.
+    - [ ] Describe the types of CSS selectors you know.
+    - [ ] Explain how you would implement the checklist above.
 
 ## Deadline
 
-Deadline for Task 5: <Countdown deadline={new Date("October 6, 2022 12:00 GMT+7")} />
+Deadline for Task 5: <Countdown deadline={new Date("6 October 2022 12:00 GMT+7")} />
 
 The teaching assistant will check the _last commit_ of the lab assignment repository, so you do not need to collect the repository link into the submission slot.
 
