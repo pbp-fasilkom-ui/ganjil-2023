@@ -10,5 +10,9 @@
   "sidebar.tutorialSidebar.category.Tugas": {
     "message": "Tugas",
     "description": "The label for category Tugas in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tugas Kelompok": {
+    "message": "Tugas Kelompok",
+    "description": "The label for category Tugas Kelompok in sidebar tutorialSidebar"
   }
 }
