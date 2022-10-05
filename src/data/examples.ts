@@ -160,3 +160,36 @@ export const containerExample2 = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA 
     </body>
 </html>
 `
+
+export const ajaxJQueryExample = `<!-- UBAH KODE INI UNTUK MELIHAT PERUBAHANNYA DI OUTPUT -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $.get("https://api.thecatapi.com/v1/images/search", function(data) {
+            $(".cat-photo").attr("src", data[0].url)
+        });
+      });
+    });
+    </script>
+  </head>
+    <body>
+      <div>
+      <img
+          alt="cat"
+          src="https://cdn2.thecatapi.com/images/0Vz3XgaPM.jpg"
+          width="400"
+          height="400"
+          objectFit="cover"
+          class="cat-photo"
+      />
+      </div>
+
+      <button>Get a new cat!</button>
+
+    </body>
+</html>
+`
