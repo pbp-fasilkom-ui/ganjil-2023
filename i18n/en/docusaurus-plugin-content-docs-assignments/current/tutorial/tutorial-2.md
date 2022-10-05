@@ -107,10 +107,10 @@ Notes: **In this tutorial, you will use the project you created in the previous 
 
 1. Open `views.py` in `wishlist` app folder and create a new function that
    accepts a request parameter.
-2. Create a variable in the function that stores the query results of all the data in `ItemsWishlist`:
+2. Create a variable in the function that stores the query results of all the data in `ItemWishlist`:
 
    ```python title="./wishlist/views.py"
-   data = ItemsWishlist.objects.all()
+   data = ItemWishlist.objects.all()
    ```
 3. Add a return statement that returns an `HttpResponse` object:
 
@@ -137,10 +137,10 @@ Notes: **In this tutorial, you will use the project you created in the previous 
 ## Tutorial on Returning Data in XML/JSON Form Based on ID
 
 1. Open `views.py` in `wishlist` app folder and create a new function that accepts a request and an ID parameter.
-2. Create a variable in the function that stores the query results of the data with specific ID in `ItemsWishlist`:
+2. Create a variable in the function that stores the query results of the data with specific ID in `ItemWishlist`:
 
    ```python title="./wishlist/views.py"
-   data = ItemsWishlist.objects.filter(pk=id)
+   data = ItemWishlist.objects.filter(pk=id)
    ```
 3. Add a return statement that returns an `HttpResponse` object.
    The response object should contain the result of data serialization (JSON or XML) and the description of the content type that encapsulated in the response.
