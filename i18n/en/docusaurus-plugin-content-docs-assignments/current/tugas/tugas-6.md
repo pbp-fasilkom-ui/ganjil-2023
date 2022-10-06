@@ -21,7 +21,7 @@ Checklist for this assignment is as follows:
     - [ ] AJAX GET
         - [ ] Create a view that returns the whole data task in the form of JSON. 
         - [ ] Create a path containing `/todolist/json` that redirects to the new view that you've just made
-        - [ ] Lakukan pengambilan task menggunakan AJAX GET. 
+        - [ ] Do the AJAX GET method to get the list of task.
     - [ ] AJAX POST
         - [ ] Create an `Add Task` button that opens to a modal with a form to add new tasks.
 
