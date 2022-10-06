@@ -23,13 +23,13 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
         - [ ] Buatlah _path_ `/todolist/json` yang mengarah ke _view_ yang baru kamu buat.
         - [ ] Lakukan pengambilan task menggunakan AJAX GET.
     - [ ] AJAX POST
-        - [ ] Buatlah sebuah tombol `Add Task` yang membuka sebuah modal Bootstrap dengan form untuk menambahkan task.
+        - [ ] Buatlah sebuah tombol `Add Task` yang membuka sebuah modal dengan form untuk menambahkan task.
 
-            > Untuk mempelajari lebih lanjut mengenai modal Bootsrap, silakan baca dokumentasi berikut: [https://getbootstrap.com/docs/4.0/components/modal/](https://getbootstrap.com/docs/4.0/components/modal/).
+            > Untuk mempelajari lebih lanjut mengenai modal Bootstrap, silakan baca dokumentasi berikut: [https://getbootstrap.com/docs/4.0/components/modal/](https://getbootstrap.com/docs/4.0/components/modal/).
         
         - [ ] Buatlah _view_ baru untuk menambahkan task baru ke dalam _database_.
         - [ ] Buatlah _path_ `/todolist/add` yang mengarah ke _view_ yang baru kamu buat. 
-        - [ ] Hubungkan form yang telah kamu buat di dalam modal Bootstrap kamu ke _path_ `/todolist/add`
+        - [ ] Hubungkan form yang telah kamu buat di dalam modal kamu ke _path_ `/todolist/add`
         - [ ] Tutup modal setelah penambahan task telah berhasil dilakukan.
         - [ ] Lakukan _refresh_ pada halaman utama secara asinkronus untuk menampilkan _list_ terbaru tanpa _reload_ seluruh _page_.
 - [ ] Menjawab beberapa pertanyaan berikut pada `README-TWO.md` pada folder `todolist`.
