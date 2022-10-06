@@ -86,7 +86,7 @@ Jika terdapat lebih dari satu _style_ yang didefinisikan untuk suatu elemen, mak
 3. Browser default
 
 ## _Static files_ pada Django
-Pada _framework_ Django, terdapat file-file yang disebut dengan _static files_. _Static files_ merupakan file-file pendukung HTML pada suatu situs web. Contoh _static files_ antara lain seperti CSS, Javascript dan gambar. Pengaturan untuk _static files_ terletak pada file `settings.py`.
+Pada _framework_ Django, terdapat file-file yang disebut dengan _static files_. _Static files_ merupakan file-file pendukung HTML pada suatu situs web. Contoh _static files_ antara lain seperti CSS, JavaScript dan gambar. Pengaturan untuk _static files_ terletak pada file `settings.py`.
 
 ```python
   ...

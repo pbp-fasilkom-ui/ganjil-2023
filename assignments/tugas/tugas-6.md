@@ -4,7 +4,7 @@ sidebar_label: Tugas 6
 
 import Countdown from "@site/src/components/Countdown"
 
-# Tugas 6: Javascript dan AJAX
+# Tugas 6: JavaScript dan AJAX
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer
 Universitas Indonesia, Semester Ganjil 2022/2023

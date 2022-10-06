@@ -4,7 +4,7 @@ sidebar_label: Assignment 6
 
 import Countdown from "@site/src/components/Countdown"
 
-# Assignment 6 : Javascript and AJAX
+# Assignment 6 : JavaScript and AJAX
 
 Platform-Based Programming (CSGE602022) - organized by Faculty of Computer Science
 University of Indonesia, Odd Term 2022/2023
@@ -34,7 +34,7 @@ Checklist for this assignment is as follows:
   - [ ] Do a page refresh on the main page asyncronically to show the latest list without having to reload the entire page.
 - [ ] Answer the following questions on the `README-TWO.md`file inside the `todolist` folder.
   - [ ] Describe the difference between asynchronous programming with synchronous programming.
-  - [ ] When Implementing Javascript and AJAX, there is an application in the paradigms of Event-Driven Programming. Describe the reasoning for those paradigms and state some examples of its application.
+  - [ ] When Implementing JavaScript and AJAX, there is an application in the paradigms of Event-Driven Programming. Describe the reasoning for those paradigms and state some examples of its application.
   - [ ] Describe the implementation of asynchronous programming in AJAX.
   - [ ] Explain how you would implement the checklist above.
 

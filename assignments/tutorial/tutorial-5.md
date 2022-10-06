@@ -20,9 +20,9 @@ Setelah menyelesaikan tutorial ini, mahasiswa diharapkan untuk mengerti:
 - Penggunaan dasar JavaScript
 - Penggunaan AJAX
 
-## Pengenalan Javascript
+## Pengenalan JavaScript
 
-### Apa itu Javascript?
+### Apa itu JavaScript?
 
 JavaScript merupakan bahasa pemrograman multi-paradigma tingkat tinggi lintas
 platform (_cross platform high-level multi-paradigm programming language_). Sifat
@@ -64,7 +64,7 @@ berada, browser akan melihat _tag script_ tersebut, apakah tag tersebut berisi k
 JavaScript atau merujuk file eksternal JavaScript. Jika merujuk pada file eksternal JavaScript,
 maka browser akan mengunduh file tersebut terlebih dahulu.
 
-**Cara penulisan Javascript**
+**Cara penulisan JavaScript**
 
 Cara penulisan JavaScript bisa dilakukan dengan **_embedded JavaScript_** atau **_external JavaScript_**.
 Kode JavaScript dapat didefinisikan atau dituliskan secara _embedded_ pada file HTML maupun
@@ -140,7 +140,7 @@ var example = "example"; // var example merupakan sebuah string
 var example = true; // var example merupakan sebuah boolean
 ```
 
-Javascript dapat menampung banyak tipe data; mulai dari string, integer, hingga _object_ sekalipun.
+JavaScript dapat menampung banyak tipe data; mulai dari string, integer, hingga _object_ sekalipun.
 Berbeda dengan Java yang penandaan tipe datanya dibedakan dengan _head variable_ (contoh ingin
 membuat variabel dengan tipe data `int`, maka sintaknya seperti `int x = 9`), JavaScript mempunyai
 ciri khas _loosely typed_ atau _dynamic language_, yakni kalian tidak perlu menuliskan tipe data
@@ -164,7 +164,7 @@ var str5 = "Fun";
 var str6 = `PBP ${str5}`;  // Memiliki hasil yang sama seperti "PBP" + " " + str5
 ```
 
-### _Javascript Scope_
+### _JavaScript Scope_
 
 **Variabel Lokal**
 

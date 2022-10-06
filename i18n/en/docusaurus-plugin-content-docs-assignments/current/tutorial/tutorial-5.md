@@ -162,7 +162,7 @@ var str5 = "Fun";
 var str6 = `PBP${str5}`; // Has the same result as "PBP" + " " + str5
 ```
 
-### Javascript Scope
+### JavaScript Scope
 
 **Local Variables**
 
