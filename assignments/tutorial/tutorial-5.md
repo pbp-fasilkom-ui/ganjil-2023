@@ -255,7 +255,7 @@ dari `onclick` adalah penanda apa yang akan dilakukan JavaScript jika elemen ter
 Selain itu, _event_ biasanya diberikan sebuah fungsi yang berguna sebagai perintah-perintah
 untuk JavaScript. Selain itu, banyak contoh-contoh _event_ lainnya seperti `onchange`,
 `onmouseover`, `onmouseout`, dan lain sebagainya yang bisa kalian baca pada tautan
-[ini](https://www.tutorialspoint.com/javascript/javascript_events.html).
+[ini](https://www.w3schools.com/js/js_events.asp).
 
 ### JavaScript HTML & CSS DOM
 

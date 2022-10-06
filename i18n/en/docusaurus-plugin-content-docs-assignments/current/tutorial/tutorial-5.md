@@ -252,8 +252,8 @@ An event is a JavaScript capability to create a dynamic website. The meaning of 
 is to indicate what JavaScript will do if the element is pressed. In addition,
 event is usually given a function that is useful as commands for JavaScript.
 In addition, there are many other examples of event such as `onchange`,
-`onmouseover`, `onmouseout`, and so on which you can read
-[here](https://www.tutorialspoint.com/javascript/javascript_events.html).
+`onmouseover`, `onmouseout`, and so on which you can read them
+[here](https://www.w3schools.com/js/js_events.asp).
 
 ### JavaScript HTML & CSS DOM
 
