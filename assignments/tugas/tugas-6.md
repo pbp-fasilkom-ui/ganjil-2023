@@ -25,7 +25,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut:
   - [ ] AJAX POST
     - [ ] Buatlah sebuah tombol `Add Task` yang membuka sebuah modal dengan form untuk menambahkan task.
 
-            > Untuk mempelajari lebih lanjut mengenai modal Bootstrap (v5.2), silakan baca dokumentasi berikut: [Modal · Bootstrap v5.2](https://getbootstrap.com/docs/5.2/components/modal/).
+      > Untuk mempelajari lebih lanjut mengenai modal Bootstrap (v5.2), silakan baca dokumentasi berikut: [Modal · Bootstrap v5.2](https://getbootstrap.com/docs/5.2/components/modal/).
 
     - [ ] Buatlah _view_ baru untuk menambahkan task baru ke dalam _database_.
     - [ ] Buatlah _path_ `/todolist/add` yang mengarah ke _view_ yang baru kamu buat.

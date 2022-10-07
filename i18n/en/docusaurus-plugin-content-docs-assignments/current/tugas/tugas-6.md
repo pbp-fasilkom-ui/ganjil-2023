@@ -25,7 +25,7 @@ Checklist for this assignment is as follows:
   - [ ] AJAX POST
     - [ ] Create an `Add Task` button that opens to a modal with a form to add new tasks.
 
-             > To learn further about Bootstrap (v5.2) modal, please read the given documentations: [Modal · Bootstrap v5.2](https://getbootstrap.com/docs/5.2/components/modal/).
+      > To learn further about Bootstrap (v5.2) modal, please read the given documentations: [Modal · Bootstrap v5.2](https://getbootstrap.com/docs/5.2/components/modal/).
 
   - [ ] Create a view to add new tasks into the database.
   - [ ] Create a path containing `/todolist/add` that redirects to the new view that you've just made.
