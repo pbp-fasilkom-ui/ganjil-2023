@@ -21,17 +21,17 @@ Checklist for this assignment is as follows:
   - [ ] AJAX GET
     - [ ] Create a view that returns the whole data task in the form of JSON.
     - [ ] Create a path containing `/todolist/json` that redirects to the new view that you've just made
-    - [ ] Lakukan pengambilan task menggunakan AJAX GET.
+    - [ ] Do the AJAX GET method to get the list of task.
   - [ ] AJAX POST
     - [ ] Create an `Add Task` button that opens to a modal with a form to add new tasks.
 
              > To learn further about Bootstrap (v5.2) modal, please read the given documentations: [Modal · Bootstrap v5.2](https://getbootstrap.com/docs/5.2/components/modal/).
 
-    - [ ] Create a view to add new tasks into the database.
-    - [ ] Create a path containing `/todolist/add` that redirects to the new view that you've just made.
-    - [ ] Connect the form that you have made in the modal to the `/todolist/add` path.
-    - [ ] Close the modal after succesfully adding the task.
-    - [ ] Do a page refresh on the main page asyncronically to show the latest list without having to reload the entire page.
+  - [ ] Create a view to add new tasks into the database.
+  - [ ] Create a path containing `/todolist/add` that redirects to the new view that you've just made.
+  - [ ] Connect the form that you have made in the modal to the `/todolist/add` path.
+  - [ ] Close the modal after succesfully adding the task.
+  - [ ] Do a page refresh on the main page asyncronically to show the latest list without having to reload the entire page.
 - [ ] Answer the following questions on the `README-TWO.md`file inside the `todolist` folder.
   - [ ] Describe the difference between asynchronous programming with synchronous programming.
   - [ ] When Implementing Javascript and AJAX, there is an application in the paradigms of Event-Driven Programming. Describe the reasoning for those paradigms and state some examples of its application.
