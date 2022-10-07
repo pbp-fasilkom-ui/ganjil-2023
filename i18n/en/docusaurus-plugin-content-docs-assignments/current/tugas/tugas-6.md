@@ -52,5 +52,5 @@ You will get bonus points on this assignment assessment if you create the follow
   - [ ] Create a column with a delete button in the task feature.
   - [ ] Create a view that deletes the task that contains a certain ID.
   - [ ] Create a `/todolist/delete/{id}` path that takes an ID from the path and forwards it to the view.
-  - [ ] Buatlah fungsi JavaScript yang memanggil endpoint penghapusan task. Create a JavaScript function that calls the endpoint of task deletion.
+  - [ ] Create a JavaScript function that calls the endpoint of task deletion.
   - [ ] Do a refresh in the main page asyncronically that shows the latest list without reloading the entire page
