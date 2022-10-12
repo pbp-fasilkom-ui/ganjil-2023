@@ -4,7 +4,7 @@ sidebar_label: Lab 3
 
 # Lab 3: Form, Authentication, Session and Cookie
 
-Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
+Platform-Based Programming (CSGE602022) - Organized by the Faculty of Computer Science Universitas Indonesia, Odd Semester 2022/2023
 
 ---
 
@@ -12,11 +12,11 @@ Platform-Based Programming (CSGE602022) - Organized by Faculty of Computer Scien
 
 After completing this tutorial, you are expected to be able to:
 
-- Understand how to submit user-provided input using `<form>` element
-- Understand how authentication works
-- Understand the purpose of cookie and session in the context of web development
-- Understand how cookie and session work
-- Use cookie and session in the context of web development
+-  Understand how to submit user-provided input using `<form>` element
+-  Understand how authentication works
+-  Understand the purpose of cookie and session in the context of web development
+-  Understand how cookie and session work
+-  Use cookie and session in the context of web development
 
 ## Introduction to HTTP
 
@@ -32,7 +32,7 @@ Some basic concepts about HTTP:
 
 4. **Application Layer**: The website runs on the application layer. The _request/response_ process occurs at the transport layer which generally uses the TCP protocol which determines how the data will be sent. The application layer doesn't care what the transport layer does (how the data is sent, processed, etc.) because the application layer only focuses on the _request_ and _response_.
 
-    > The rest of the layers will be taught on Computer Networks course. You can search it by yourself if you want. 😉
+   > The rest of the layers will be taught on Computer Networks course. You can search it by yourself if you want. 😉
 
 5. **_Client Actions Method_**: This is the method used by the client when making a request. Example: GET, POST, PUT, DELETE, etc. A more detailed explanation can be read [here](https://www.restapitutorial.com/lessons/httpmethods.html)).
 
@@ -70,7 +70,7 @@ Notes: In this lab, you will use the project that you have created in the previo
 We will make the previously created wishlist page access to be restricted, with the aim that users who want to access the wishlist page must have an account and log in to the website in order to gain access.
 
 1. Run the virtual environment in the project
-2. Open `views.py` in the `wishlist` folder and create a function named `register` that accepts a `request` parameter.
+2. Open `views.py` in `wishlist` app folder and create a function named `register` that accepts a `request` parameter.
 3. Import `redirect`, `UserCreationForm`, and `messages` at the very top.
 
    ```python title="./wishlist/views.py"
@@ -93,7 +93,7 @@ We will make the previously created wishlist page access to be restricted, with 
                messages.success(request, 'Account successfully created!')
                return redirect('wishlist:login')
 
-       context = {'form':form}
+       context = { 'form': form }
        return render(request, 'register.html', context)
    ```
 5. Create a new HTML file named `register.html` in `wishlist/templates` folder.
@@ -126,7 +126,7 @@ We will make the previously created wishlist page access to be restricted, with 
            <ul>
                {% for message in messages %}
                    <li>{{ message }}</li>
-                   {% endfor %}
+               {% endfor %}
            </ul>
        {% endif %}
 
@@ -221,7 +221,19 @@ We have added an account registration form and created the `register` mechanism.
 
    {% endblock content %}
    ```
-5. Open `urls.py` in the `wishlist` folder and import the function you created earlier.
+
+   > Note: If you encountered `NoReverseMatch` exception when trying to open the login page,
+   > make sure `app_name` variable in `urls.py` is set to `wishlist` and the URL pattern for `register` has keyword `name` argument set to `register`.
+   > For example:
+   >
+   > ```python title="./wishlist/urls.py"
+   > # Import statements omitted for brevity
+   > app_name = "wishlist"
+   > urlpatterns = [
+   >     path("register", register", name="register"),
+   > ]
+   > ```
+5. Open `urls.py` in `wishlist` app folder and import the function you created earlier.
 
    ```python title="./wishlist/urls.py"
    from wishlist.views import login_user  # Customize with the name of the function created
@@ -237,7 +249,7 @@ We have added the account's _login_ form and created the `login` mechanism. Next
 
 ## Tutorial: Creating a Logout Function
 
-1. Open `views.py` in the `wishlist` folder and create a function named `logout_user` that accepts the request parameter.
+1. Open `views.py` in `wishlist` app folder and create a function named `logout_user` that accepts the request parameter.
 2. Import `logout` function at the very top of `views.py` file:
 
    ```python title="./wishlist/views.py"
