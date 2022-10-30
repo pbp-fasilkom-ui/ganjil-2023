@@ -97,7 +97,7 @@ Selamat mengerjakan. 😄
         </td>
         <td>
             <b>Tenggat Waktu:</b>
-            <Countdown deadline={new Date("30 October 2022 23:55 GMT+7")} />
+            <Countdown deadline={new Date("2 November 2022 23:55 GMT+7")} />
             <p><b>Kriteria Submisi:</b> Seluruh modul yang dikerjakan oleh setiap anggota kelompok sudah muncul dan dapat diakses pada proyek Django</p>
         </td>
     </tr>
