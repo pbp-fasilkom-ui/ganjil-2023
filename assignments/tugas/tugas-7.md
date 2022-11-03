@@ -4,7 +4,7 @@ sidebar_label: Tugas 7
 
 import Countdown from "@site/src/components/Countdown"
 
-# Tugas 7: Flutter _Basic Elements_
+# Tugas 7: Elemen Dasar Flutter
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer
 Universitas Indonesia, Semester Ganjil 2022/2023

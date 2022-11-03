@@ -4,7 +4,7 @@ sidebar_label: Assignment 7
 
 import Countdown from "@site/src/components/Countdown"
 
-# Assignment 7: Flutter _Basic Elements_
+# Assignment 7: Flutter Basic Elements
 
 Platform-Based Development (CSGE602022) - Organized by Faculty of Computer Science
 University of Indonesia, Odd Term 2022/2023
