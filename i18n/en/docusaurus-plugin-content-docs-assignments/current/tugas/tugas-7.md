@@ -26,7 +26,7 @@ The checklist for this assignment is as follows.
   - [ ] The + button adds a number by one unit.
   - [ ] Button - reduces the number by one unit. If counter is 0, then the - button has no effect on counter.
   - [ ] If counter is odd, the indicator text changes to "ODD" in blue.
-  - [ ] If counter is even, the indicator text changes to "EVEN" with red color.
+  - [ ] If counter is even, the indicator text changes to "EVEN" in red.
   - [ ] The number 0 is considered an even number.
 - [ ] Answer the following questions on `README.md` in the root folder.
   - [ ] Explain what is meant by stateless widget and stateful widget and explain the difference between them.
