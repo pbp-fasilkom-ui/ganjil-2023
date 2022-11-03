@@ -18,7 +18,7 @@ In this assignment, you will implement some of the basic elements of Flutter.
 The checklist for this assignment is as follows.
 
 - [ ] Create a new Flutter program with the name `counter_7`.
-- [ ] Change the program display to be as follows.
+- [ ] Change the program interface to be as below.
 
     ![Counter App](https://i.ibb.co/N7JqmCf/Selection-577.png)
 
