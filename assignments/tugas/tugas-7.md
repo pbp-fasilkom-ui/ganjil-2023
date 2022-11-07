@@ -38,7 +38,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
 
 ## Tenggat Waktu Pengerjaan
 
-Tenggat waktu pengerjaan Tugas 7: <Countdown deadline={new Date("9 November 2022 12:00 GMT+7")} />
+Tenggat waktu pengerjaan Tugas 7: <Countdown deadline={new Date("10 November 2022 12:00 GMT+7")} />
 
 Harap mengumpulkan tautan repositori yang kamu gunakan ke dalam slot submisi yang telah disediakan di SCELE.
 

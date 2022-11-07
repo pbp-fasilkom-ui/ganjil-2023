@@ -38,7 +38,7 @@ The checklist for this assignment is as follows.
 
 ## Deadline
 
-Deadline for Assignment 7: <Countdown deadline={new Date("9 November 2022 12:00 GMT+7")} />
+Deadline for Assignment 7: <Countdown deadline={new Date("10 November 2022 12:00 GMT+7")} />
 
 Please submit the repository link you are using into the submission slot provided on SCELE.
 
