@@ -2,9 +2,11 @@
 sidebar_label: "Lab 7"
 ---
 
-# Tutorial 7: Flutter Navigation, Input, dan Form
+# Lab 7: Flutter Navigation, Input, dan Form
 
 Platform-Based Development (CSGE602022) - Organized by Faculty of Computer Science, University of Indonesia, Odd Semester 2022/2023
+
+---
 
 ## Learning Objectives
 
