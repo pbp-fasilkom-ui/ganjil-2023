@@ -1,5 +1,5 @@
 ---
-sidebar_label: Tutorial 7
+sidebar_label: "Lab 7"
 ---
 
 # Tutorial 7: Flutter Navigation, Input, dan Form
