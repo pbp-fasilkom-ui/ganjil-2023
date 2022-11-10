@@ -40,7 +40,7 @@ The checklist for this assignment is as follows.
 
     ![Data](https://i.ibb.co/25nmskY/kki-data.png)
 
-- [ ] Answer the following questions in `README.md` in the root folder (please modify the `README.md` you created earlier; add subheadings for each task).
+- [ ] Answer the following questions in `README.md` in the root folder (please modify the `README.md` you created before; add subheadings for each task).
   - [ ] Explain the difference between `Navigator.push` and `Navigator.pushReplacement`.
   - [ ] List all the widgets you used in this project and explain their functions.
   - [ ] Name the types of events that exist in Flutter (example: `onPressed`).
