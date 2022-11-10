@@ -68,6 +68,12 @@ const config = {
       colorMode: {
         defaultMode: "dark",
       },
+      metadata: [
+        {
+          name: 'google-site-verification',
+          content: 'e3cclHs9HjQhuLJQyjFVf3ymBwfxaxzC-k9_UGZEuI0'
+        }
+      ],
       navbar: {
         title: 'PBP Ganjil 22/23',
         logo: {
