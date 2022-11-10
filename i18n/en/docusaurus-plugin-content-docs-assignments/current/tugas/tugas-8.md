@@ -21,7 +21,7 @@ The checklist for this assignment is as follows.
   - [ ] First navigation to the form page.
   - [ ] The second navigation to the page that displays the budget data that has been input through the form.
 
-    ![Drawer](https://i.ibb.co/st1gWcW/drawer.png)
+    ![Drawer](https://i.ibb.co/Pzh61B7/kki-drawer.png)
 
 - [ ] Add a form page
   - [ ] Add an input element with String data type in the form of budget title.
@@ -30,15 +30,15 @@ The checklist for this assignment is as follows.
   - [ ] Add a button to save the budget.
   
     ```
-    Note: you can utilize data structures like `List` to store the data created.
+    Note: You can utilize data structures like List to store the data created.
     ```
 
-    ![Form](https://i.ibb.co/gJLdwgv/form.png)
+    ![Form](https://i.ibb.co/2kRM76Y/kki-form.png)
 
 - [ ] Add a page of budget data
   - [ ] Displays all the titles, amounts, and types of budgets that have been added to the form.
 
-    ![Data](https://i.ibb.co/QQTfr5V/data.png)
+    ![Data](https://i.ibb.co/25nmskY/kki-data.png)
 
 - [ ] Answer the following questions in `README.md` in the root folder (please modify the `README.md` you created earlier; add subheadings for each task).
   - [ ] Explain the difference between `Navigator.push` and `Navigator.pushReplacement`.

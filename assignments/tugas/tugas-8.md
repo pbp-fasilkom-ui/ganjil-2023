@@ -21,7 +21,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
   - [ ] Navigasi pertama untuk ke halaman form.
   - [ ] Navigasi kedua untuk ke halaman yang menampilkan data _budget_ yang telah di-_input_ melalui form.
 
-    ![Drawer](https://i.ibb.co/st1gWcW/drawer.png)
+    ![Drawer](https://i.ibb.co/WFHW0V5/drawer.png)
 
 - [ ] Menambahkan halaman form
   - [ ] Menambahkan elemen input dengan tipe data String berupa judul _budget_.
@@ -30,7 +30,7 @@ _Checklist_ untuk tugas ini adalah sebagai berikut.
   - [ ] Menambahkan button untuk menyimpan _budget_.
     
     ```
-    Catatan: kamu bisa memanfaatkan struktur data seperti `List` untuk menyimpan data yang dibuat.
+    Catatan: Kamu bisa memanfaatkan struktur data seperti List untuk menyimpan data yang dibuat.
     ```
 
     ![Form](https://i.ibb.co/gJLdwgv/form.png)
