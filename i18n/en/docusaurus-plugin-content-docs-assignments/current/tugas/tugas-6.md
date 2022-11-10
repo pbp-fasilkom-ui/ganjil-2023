@@ -42,7 +42,7 @@ Checklist for this assignment is as follows:
 
 Deadline for Assignment 6: <Countdown deadline={new Date("13 October 2022 12:00 GMT+7")} />
 
-The teaching assistant will check the last commit of the lab assignment repository, so you do not need to collect the repository link into the submission slot.
+The teaching assistant will check the last commit of the lab assignment repository, so you do not need to submit the repository link into the submission slot.
 
 ## Bonus
 
