@@ -17,9 +17,10 @@ Pada tugas ini, kamu akan membuat sebuah *budget tracking app* sederhana menggun
 _Checklist_ untuk tugas ini adalah sebagai berikut.
 
 - [ ] Menambahkan drawer/hamburger menu pada app yang telah dibuat sebeumnya.
-- [ ] Menambahkan dua tombol navigasi pada drawer/hamburger.
-  - [ ] Navigasi pertama untuk ke halaman form.
-  - [ ] Navigasi kedua untuk ke halaman yang menampilkan data _budget_ yang telah di-_input_ melalui form.
+- [ ] Menambahkan tiga tombol navigasi pada drawer/hamburger.
+  - [ ] Navigasi pertama untuk ke halaman counter.
+  - [ ] Navigasi kedua untuk ke halaman form.
+  - [ ] Navigasi ketiga untuk ke halaman yang menampilkan data _budget_ yang telah di-_input_ melalui form.
 
     ![Drawer](https://i.ibb.co/WFHW0V5/drawer.png)
 

@@ -17,9 +17,10 @@ In this assignment, you will create a simple budget tracking app using the app c
 The checklist for this assignment is as follows.
 
 - [ ] Add a drawer/hamburger menu to the previously created app.
-- [ ] Add two navigation buttons on the drawer/hamburger.
-  - [ ] First navigation to the form page.
-  - [ ] The second navigation to the page that displays the budget data that has been input through the form.
+- [ ] Add three navigation buttons on the drawer/hamburger.
+  - [ ] The first navigation leads to the counter page.
+  - [ ] The second navigation leads to the form page.
+  - [ ] The third navigation leads to the page that displays the budget data that has been input through the form.
 
     ![Drawer](https://i.ibb.co/Pzh61B7/kki-drawer.png)
 
