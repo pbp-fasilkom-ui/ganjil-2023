@@ -38,6 +38,7 @@ class Vehicle {
 	String color;
 }
 ```
+Notes: If you encounter an error when creating a class, add the `required` keyword to each class parameter in the constructor.
 
 Up to this point, we have successfully created a _class_ named `Vehicle`. Next, we will add some code until we successfully create a `Vehicle` model. This `Vehicle` is a model that represents the response from the _web service_ call.
 
@@ -194,6 +195,8 @@ After getting the `Todo` model code via Quicktype, reopen the Flutter project an
 
 1. Create a new file in the `lib/model` folder with the name `to_do.dart`.
 2. Paste the previously copied code into the `to_do.dart` file.
+
+Notes: If you encounter an error when creating a model, add the required keyword to each model parameter in the constructor.
 
 ## Tutorial: Adding HTTP Dependencies
 

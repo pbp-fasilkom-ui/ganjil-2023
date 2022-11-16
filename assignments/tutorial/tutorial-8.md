@@ -38,6 +38,7 @@ class Mobil {
 	String color;
 }
 ```
+Catatan: Jika kamu mengalami error saat membuat class, tambahkan keyword required pada setiap parameter class pada bagian constructor.
 
 Sampai saat ini, kita telah berhasil membuat _class_. Selanjutnya, kita akan menambahkan beberapa kode sehingga terbentuk sebuah model `Mobil`. `Mobil` ini merupakan suatu model yang merepresentasikan response dari pemanggilan _web service_.
 
@@ -205,6 +206,8 @@ Setelah mendapatkan kode model melalui Quicktype, buka kembali proyek Flutter da
 1. Buatlah file baru pada folder `lib/model` dengan nama `to_do.dart`.
 
 2. Tempel kode yang telah disalin sebelumnya ke file `to_do.dart`.
+
+Catatan: Jika kamu mengalami error saat membuat model, tambahkan keyword required pada setiap parameter model pada bagian constructor.
 
 ## Tutorial: Menambahkan Dependensi HTTP
 
