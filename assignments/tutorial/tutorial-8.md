@@ -191,7 +191,7 @@ Dalam membuat model yang menyesuaikan dengan data JSON, kita dapat memanfaatkan 
 
 2. Salinlah data JSON pada situs web sebelumnya, kemudian buka situs web [Quicktype](https://app.quicktype.io/).
 
-3. Pada situs web Quicktype, ubahlah _setup name_ menjadi `Todo`, _source type_ menjadi `JSON`, dan _language_ menjadi Dart.
+3. Pada situs web Quicktype, ubahlah _setup name_ menjadi `ToDo`, _source type_ menjadi `JSON`, dan _language_ menjadi Dart.
 
 4. Tempel data JSON yang telah disalin sebelumnya ke dalam _textbox_ yang tersedia pada Quicktype.
 
