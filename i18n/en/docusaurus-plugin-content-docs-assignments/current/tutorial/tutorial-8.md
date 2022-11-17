@@ -182,7 +182,7 @@ In creating a model that adapts to JSON data, we can utilize the website [Quickt
 
 1. Open the link URL [https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10](https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10) to obtain the JSON data.
 2. Copy the JSON data from the previous link URL, then open the link URL [Quicktype](https://app.quicktype.io/).
-3. From the Quicktype website, change the _setup name_ to `Todo`, _source type_ to `JSON`, and _language_ to Dart.
+3. From the Quicktype website, change the _setup name_ to `ToDo`, _source type_ to `JSON`, and _language_ to Dart.
 4. Paste the copied JSON data into the _textbox_ provided in the Quicktype.
 
     Here is an example of the result.
@@ -191,7 +191,7 @@ In creating a model that adapts to JSON data, we can utilize the website [Quickt
 
 5. Click the `Copy Code` option in Quicktype.
 
-After getting the `Todo` model code via Quicktype, reopen the Flutter project and perform the following steps.
+After getting the `ToDo` model code via Quicktype, reopen the Flutter project and perform the following steps.
 
 1. Create a new file in the `lib/model` folder with the name `to_do.dart`.
 2. Paste the previously copied code into the `to_do.dart` file.
