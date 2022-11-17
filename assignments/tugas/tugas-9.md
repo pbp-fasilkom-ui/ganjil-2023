@@ -20,7 +20,7 @@ Pada tugas ini, kamu akan mengintegrasikan *mywatchlist* yang sudah kamu buat pa
 
 - [ ] Membuat satu file dart yang berisi model *mywatchlist*.
 
-- [ ] Menambahkan halaman *mywatchlist* yang berisi semua *watch list* yang ada pada endpoint JSON di Django yang telah kamu *deploy* ke Heroku sebelumnya (Tugas 3). Pada bagian ini, kamu cukup menampilkan judul dari setiap *mywatchlist* yang ada.
+- [ ] Menambahkan halaman *mywatchlist* yang berisi semua *watch list* yang ada pada endpoint JSON di Django yang telah kamu *deploy* ke Heroku sebelumnya ([Tugas 3](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tugas/tugas-3/)). Pada bagian ini, kamu cukup menampilkan judul dari setiap *mywatchlist* yang ada.
   - [ ] Membuat navigasi dari setiap judul *watch list* ke halaman detail
 
     ![Mywatchlist](https://i.ibb.co/dbnTnQz/mywatchlist.png)
