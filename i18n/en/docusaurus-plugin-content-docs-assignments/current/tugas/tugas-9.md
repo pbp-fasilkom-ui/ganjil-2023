@@ -18,7 +18,7 @@ The checklist for this task is as follows.
 
 - [ ] Add a navigation button on the drawer/hamburger to go to the `mywatchlist` page.
 
-- [ ] Create one dart file that contains the `mywatchlist` model.
+- [ ] Create one Dart file that contains the `mywatchlist` model.
 
 - [ ] Add a `mywatchlist`  page that contains all the *watch lists* that exist in the JSON endpoints in Django that you have *deployed* to Heroku before (Task 3). In this section, you only need to display the title of each `mywatchlist`.
 
@@ -28,7 +28,7 @@ The checklist for this task is as follows.
 
 - [ ] Add a detail page for each `mywatchlist` in the list. This page displays the title, release date, rating, *review*, and status (watched/not watched).
 
-- [ ] Added a button to go back to the `mywatchlist` list.
+- [ ] Add a button to go back to the `mywatchlist` list.
 
     ![Detail](https://i.ibb.co/rdCFcYy/detail.png)
 
