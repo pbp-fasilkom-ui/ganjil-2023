@@ -130,7 +130,7 @@ Then, what if the response from the _web service_ is a collection of JSON object
 The example can be seen below:
 
 ```dart
-List<Mobil> vehicleFromJson(String str) => List<Vehicle>.from(json.decode(str).map((vehicle) => Vehicle.fromJson(vehicle)));
+List<Vehicle> vehicleFromJson(String str) => List<Vehicle>.from(json.decode(str).map((vehicle) => Vehicle.fromJson(vehicle)));
 
 String vehicleToJson(List<Vehicle> data) => json.encode(List<dynamic>.from(data.map((vehicle) => vehicle.toJson())));
 ```
@@ -271,7 +271,7 @@ To perform the _HTTP request_, we need an additional _package_ named [http](http
 
 ## Tutorial: Display Data from Web Service
 
-1. In the `main.dart` and `form.dart` files, add the following code to add the To Do menu to the drawer we have created (place it under the ListTile form menu).
+1. In the `main.dart` and `form.dart` files, add the following code to add the To Do menu to the drawer we have created (place it under the `ListTile` form menu).
 
     ```dart
     ListTile(
