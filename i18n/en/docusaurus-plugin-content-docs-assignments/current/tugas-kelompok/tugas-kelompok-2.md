@@ -59,8 +59,9 @@ Each group member must work on a single module, and each module must:
 
 ## Grading Rubric
 
-The grading rubric can be found at the following link: [Final Group Project Rubric](https://docs.google.com/spreadsheets/d/1rMYRz1jw0JdfaiTaooLVhTBHaT6RuSQ4wUsQNRpF3CE/edit?usp=sharing). (Only viewable using the Google Workspace account for Universitas Indonesia)_
-Open the English version of the rubric in the sheet named "Final Group Project Rubric (EN)".
+The grading rubric can be found at the following link: [Final Group Project Rubric](https://docs.google.com/spreadsheets/d/1rMYRz1jw0JdfaiTaooLVhTBHaT6RuSQ4wUsQNRpF3CE/edit?usp=sharing)*. Open the English version of the rubric in the sheet named "Final Group Project Rubric (EN)".
+
+**only viewable using the Google Workspace account for Universitas Indonesia*
 
 ## Project Timeline
 
@@ -86,8 +87,6 @@ Open the English version of the rubric in the sheet named "Final Group Project R
                 </ol>
             </ul>
         </td>
-    </tr>
-    <tr>
         <td>
             <b>Due Date:</b>
             <Countdown deadline={new Date("28 November 2022 23:55 GMT+7")} />
@@ -95,7 +94,7 @@ Open the English version of the rubric in the sheet named "Final Group Project R
             <br />
             <br />
             <p>
-                <b>Submission Criteria:</b> The codebase for Flutter mobile app project that contains the project's skeleton code and `README.md` file.
+                <b>Submission Criteria:</b> The codebase for Flutter mobile app project that contains the project's skeleton code and README.md file.
             </p>
         </td>
     </tr>
@@ -121,11 +120,10 @@ Open the English version of the rubric in the sheet named "Final Group Project R
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="2">
             <b>Bonus</b>
             <p>TBA.</p>
         </td>
-        <td></td>
     </tr>
 </table>
 
