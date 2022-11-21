@@ -92,10 +92,9 @@ Rubrik dapat diakses melalui tautan berikut: [Rubrik Penilaian Proyek Tugas Kelo
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="2">
             <b>Bonus</b>
             <p>TBA.</p>
         </td>
-        <td></td>
     </tr>
 </table>
