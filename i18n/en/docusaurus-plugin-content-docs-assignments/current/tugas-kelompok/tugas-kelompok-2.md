@@ -41,7 +41,7 @@ By undertaking this group project assignment, you and your teammates are expecte
    -  Mobile app description (i.e. app name, features, users).
    -  List of features/models that clearly highlighted the person who responsible for implementing each feature/module.
    -  Integration flow with the web app that previously developed in the midterm group project.
-   -  A link to the binary executable of the mobile app (i.e. APK file) that has been released on a cloud platform (e.g. [GitHub Releases][], [Firebase App Distribution][], [Microsoft AppCenter][]).
+   -  A link to the binary executable of the mobile app (i.e. APK file) that has been released on a cloud platform (e.g. [GitHub Releases][], [Firebase App Distribution][], [Microsoft Visual Studio App Center][]).
 4. The group shall build the mobile app to run it on Android and release it on a cloud platform.
    -  At minimum, upload and release the binary executable (APK file) as a GitHub Release on the group's GitHub project page, preferably automated using CI/CD.
    -  You can also release the binary executable to Firebase App Distribution and Microsoft AppCenter. Both platforms have additional features that can be included as part of quality assurance and release process of your mobile app. For example, you can test your app by running it on multiple mobile devices on Firebase Test Lab.
@@ -78,7 +78,7 @@ TBA.
                 <ol>
                     <li>Group name and members</li>
                     <li>Brief description of the app, including the app name, features, and types of roles/users in the app</li>
-                    <li>Link to the releaseable app on GitHub Releases/Firebase App Distribution/Microsoft AppCenter</li>
+                    <li>Link to the releaseable app on GitHub Releases/Firebase App Distribution/Microsoft Visual Studio App Center</li>
                     <li>List of modules (or, features) that will be implemented</li>
                     <li>Integration flow with the <em>web service/web app</em> that previously created in the midterm group project</li>
                     <li>Instructions on how to build, run, and release the app</li>
@@ -130,4 +130,4 @@ TBA.
 
 [GitHub Releases]: https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases
 [Firebase App Distribution]: https://firebase.google.com/docs/app-distribution
-[Microsoft AppCenter]: https://appcenter.ms/
+[Microsoft Visual Studio App Center]: https://appcenter.ms/
