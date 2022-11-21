@@ -6,7 +6,7 @@ import Countdown from "@site/src/components/Countdown"
 
 # Proyek Akhir Semester
 
-**Membuat Aplikasi *Mobile* menggunakan Framework Flutter (Berkelompok)**
+**Membuat Aplikasi Mobile menggunakan Framework Flutter (Berkelompok)**
 
 ---
 
