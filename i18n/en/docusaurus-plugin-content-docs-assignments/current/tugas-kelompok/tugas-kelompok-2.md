@@ -59,7 +59,8 @@ Each group member must work on a single module, and each module must:
 
 ## Grading Rubric
 
-TBA.
+The grading rubric can be found at the following link: [Final Group Project Rubric](https://docs.google.com/spreadsheets/d/1rMYRz1jw0JdfaiTaooLVhTBHaT6RuSQ4wUsQNRpF3CE/edit?usp=sharing). (Only viewable using the Google Workspace account for Universitas Indonesia)_
+Open the English version of the rubric in the sheet named "Final Group Project Rubric (EN)".
 
 ## Project Timeline
 
