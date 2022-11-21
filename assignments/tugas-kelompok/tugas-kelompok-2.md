@@ -6,7 +6,7 @@ import Countdown from "@site/src/components/Countdown"
 
 # Proyek Akhir Semester
 
-**Membuat Aplikasi Mobile menggunakan Framework Flutter (Berkelompok)**
+**Membuat Aplikasi *Mobile* menggunakan Framework Flutter (Berkelompok)**
 
 ---
 
@@ -27,7 +27,7 @@ import Countdown from "@site/src/components/Countdown"
     - Tautan APK (Tidak harus ada pada saat Tahap I. Tautan APK dapat ditambahkan belakangan ke `README.md` setelah selesai mengerjakan Tahap II.)
 3. Deployment Aplikasi:
     - Unggah APK sebagai `Release` di Git kelompok.
-    - *Cloud Platform* seperti [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) atau [Microsoft App Center](https://appcenter.ms/).
+    - *Cloud Platform* seperti [Firebase App Distribution](https://firebase.google.com/docs/app-distribution) atau [Microsoft Visual Studio App Center](https://appcenter.ms/).
     - Gunakan logo aplikasi Anda sendiri.
 
 ## Aturan Khusus per Anggota Kelompok (Implementasi Modul)
