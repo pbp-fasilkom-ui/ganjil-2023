@@ -74,8 +74,8 @@ The grading rubric can be found at the following link: [Final Group Project Rubr
         <td>
             <b>Milestone 1 (30%)</b>
             <ul>
-                <li>A Git repository on GitHub for the group project, i.e. the source code and project management</li>
-                <li>A deployed app on Heroku</li>
+                <li>A Git repository on GitHub for the group project, i.e. the source code and project management for developing the mobile app</li>
+                <li>A deployed backend (i.e the Web app developed during midterm project) on a deployment platform such as Heroku or Fly.io</li>
                 <li>A README.md in the group project repository that describes:</li>
                 <ol>
                     <li>Group name and members</li>
