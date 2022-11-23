@@ -6,7 +6,7 @@ import Countdown from "@site/src/components/Countdown"
 
 # Proyek Akhir Semester
 
-**Membuat Aplikasi *Mobile* menggunakan Framework Flutter (Berkelompok)**
+**Membuat Aplikasi Mobile menggunakan Framework Flutter (Berkelompok)**
 
 ---
 
@@ -92,10 +92,9 @@ Rubrik dapat diakses melalui tautan berikut: [Rubrik Penilaian Proyek Tugas Kelo
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="2">
             <b>Bonus</b>
             <p>TBA.</p>
         </td>
-        <td></td>
     </tr>
 </table>
